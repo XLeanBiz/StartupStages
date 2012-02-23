@@ -14,6 +14,7 @@ public class GWTEntryPoint implements EntryPoint {
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
+		
 		BlogPanel.topics = TopicsMockup.getTopics();
 
 		RootPanel.get().clear();

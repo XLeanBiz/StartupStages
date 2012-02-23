@@ -1,5 +1,6 @@
 package com.startupstages.client.blog;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.AbsolutePanel;
@@ -20,7 +21,8 @@ public class Ideation extends Composite {
 		initWidget(absolutePanel);
 		absolutePanel.setSize("700px", "600px");
 
-		Image image = new Image("images/ideation.png");
+		Image image = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/ideation.png");
 		absolutePanel.add(image, 0, 24);
 
 		absolutePanel.add(vpBuild(), 27, 265);
@@ -29,7 +31,8 @@ public class Ideation extends Composite {
 
 		absolutePanel.add(vpLearn(), 485, 344);
 
-		Image image_1 = new Image("images/arrow.png");
+		Image image_1 = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/arrow.png");
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 

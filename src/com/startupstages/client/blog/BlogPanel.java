@@ -9,7 +9,6 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.model.Topic;
-import com.startupstages.client.model.Topic.TopicID;
 
 public class BlogPanel extends VerticalPanel {
 
