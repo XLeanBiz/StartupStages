@@ -2,38 +2,28 @@ package com.startupstages.client.model;
 
 public class Topic {
 
-    public enum TopicID {
-        VISION_STATEMENT, LEAN_CANVAS, PERSONA, TEAM, GOALS
-    }
+	public enum TopicID {
+		VISION_STATEMENT, LEAN_CANVAS, PERSONA, TEAM, GOALS, TEAM_SIZE, MARKET_RESEARCH, SURVEYS, USES, PROBLEMS_RATES, PROBLEM_CAUSES, INTERVIEWS
+	}
 
-    private TopicID topicID;
+	private String topicName;
 
-    private String topicName;
+	private String topicDescription;
 
-    private String topicDescription;
+	public String getTopicName() {
+		return topicName;
+	}
 
-    public TopicID getTopicID() {
-        return topicID;
-    }
+	public void setTopicName(String topicName) {
+		this.topicName = topicName;
+	}
 
-    public void setTopicID(TopicID topicID) {
-        this.topicID = topicID;
-    }
+	public String getTopicDescription() {
+		return topicDescription;
+	}
 
-    public String getTopicName() {
-        return topicName;
-    }
-
-    public void setTopicName(String topicName) {
-        this.topicName = topicName;
-    }
-
-    public String getTopicDescription() {
-        return topicDescription;
-    }
-
-    public void setTopicDescription(String topicDescription) {
-        this.topicDescription = topicDescription;
-    }
+	public void setTopicDescription(String topicDescription) {
+		this.topicDescription = topicDescription;
+	}
 
 }

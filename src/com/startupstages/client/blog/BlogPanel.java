@@ -37,14 +37,13 @@ public class BlogPanel extends VerticalPanel {
         this.add(stagePanel);
         stagePanel.add(new ProblemSolutionSteps());
 
-        this.add(new Label(" "));
-        this.add(new Label(" "));
+        this.add(new Label(". "));
+        this.add(new Label(". "));
 
         stepPanel.setStyleName("stepsPanel");
         stepPanel.setSize("100%", "100%");
         stepPanel.clear();
         this.add(stepPanel);
-        stepPanel.add(new Ideation());
 
         topicPanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
         topicPanel.setSize("900px", "100%");

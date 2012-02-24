@@ -9,6 +9,8 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.startupstages.client.blog.steps.Ideation;
+import com.startupstages.client.blog.steps.ProblemValidation;
 
 public class ProblemSolutionSteps extends HorizontalPanel {
 
@@ -41,8 +43,7 @@ public class ProblemSolutionSteps extends HorizontalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				BlogPanel.stepPanel.clear();
-				BlogPanel.stepPanel.add(new Ideation());
+				Ideation.initializeIdeationPanel();
 			}
 		};
 
@@ -71,8 +72,7 @@ public class ProblemSolutionSteps extends HorizontalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				BlogPanel.stepPanel.clear();
-				BlogPanel.stepPanel.add(new ProblemValidation());
+				ProblemValidation.initializeProblemValidationPanel();
 			}
 		};
 
