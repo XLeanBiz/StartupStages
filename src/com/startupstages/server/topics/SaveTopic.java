@@ -4,13 +4,26 @@ import com.startupstages.server.URLUtilities;
 
 public class SaveTopic {
 
-    private static String saveTopicUrl = "http://jsonpfy.xleanbiz.appspot.com/SaveDataService";
+	// http://jsonpfy.xleanbiz.appspot.com/SaveDataService?
+	// kind=Topic
+	// &ID=VISION_STATEMENT
+	// &fieldsKind=String&fieldsName=topicName&fieldsValue=Vision%20Statement
+	// &fieldsKind=String&fieldsName=topicDescription&fieldsValue=Test
 
-    public static void save(final String topicName, final String topicDescription) {
+	private static String saveTopicUrl = "http://jsonpfy.xleanbiz.appspot.com/SaveDataService";
 
-        String parameters = "kind=Topic&filterField=" + topicName + "&filterValue=" + topicDescription;
+	public static void save(final String topicID, final String topicName,
+			final String topicDescription) {
 
-        URLUtilities.fetchURLPost(saveTopicUrl, parameters);
+		String parameters = "?kind=Topic&ID=" + topicID;
 
-    }
+		parameters += "&fieldsKind=String&fieldsName=topicName&fieldsValue="
+				+ topicName;
+
+		parameters += "&fieldsKind=String&fieldsName=topicDescription&fieldsValue="
+				+ topicDescription;
+
+		URLUtilities.fetchURLPost(saveTopicUrl, parameters);
+
+	}
 }
