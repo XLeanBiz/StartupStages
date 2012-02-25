@@ -8,6 +8,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 
 public class URLUtilities {
@@ -19,6 +20,14 @@ public class URLUtilities {
 			throw new IllegalStateException(e);
 		}
 	}
+	
+	public static String decode(final String text) {
+		try {
+			return URLDecoder.decode(text, "UTF-8");
+		} catch (final UnsupportedEncodingException e) {
+			throw new IllegalStateException(e);
+		}
+	}	
 
 	public static String fetchURLGet(final String u, String parameters) {
 		String returnedString = "";
@@ -61,7 +70,7 @@ public class URLUtilities {
 				}
 				reader.close();
 			} else {
-				System.out.println(connection.getResponseCode());
+				System.out.println(connection.getHeaderFields());
 			}
 		} catch (final MalformedURLException e) {
 			System.out.println("MalformedURLException calling url" + u

@@ -7,6 +7,7 @@ import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
@@ -20,8 +21,9 @@ public class Ideation {
 		BlogPanel.stepPanel.add(ideationPanel());
 
 		BlogPanel.topicPanel.clear();
-		BlogPanel.topicPanel.add(new TopicPanel(BlogPanel.topics
-				.get(TopicID.VISION_STATEMENT)));
+		BlogPanel.topicPanel.add(new TopicPanel(
+				StartupStagesGlobalVariables.topics
+						.get(TopicID.VisionStatement)));
 	}
 
 	public static AbsolutePanel ideationPanel() {
@@ -65,18 +67,20 @@ public class Ideation {
 		HTML htmlBuild = new HTML("<b>BUILD:</b>", true);
 		verticalPanel.add(htmlBuild);
 
-		verticalPanel.add(new TopicAnchor(BlogPanel.topics
-				.get(TopicID.VISION_STATEMENT)));
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.VisionStatement)));
 
-		verticalPanel
-				.add(new TopicAnchor(BlogPanel.topics.get(TopicID.PERSONA)));
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Persona)));
 
-		verticalPanel.add(new TopicAnchor(BlogPanel.topics
-				.get(TopicID.LEAN_CANVAS)));
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.LeanCanvas)));
 
-		verticalPanel.add(new TopicAnchor(BlogPanel.topics.get(TopicID.TEAM)));
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Team)));
 
-		verticalPanel.add(new TopicAnchor(BlogPanel.topics.get(TopicID.GOALS)));
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Goals)));
 
 		return verticalPanel_1;
 	}
@@ -94,8 +98,8 @@ public class Ideation {
 		HTML htmlmeasure = new HTML("<b>MEASURE:</b>", true);
 		verticalPanel_3.add(htmlmeasure);
 
-		verticalPanel_3.add(new TopicAnchor(BlogPanel.topics
-				.get(TopicID.TEAM_SIZE)));
+		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.TeamSize)));
 
 		return verticalPanel_2;
 	}
@@ -113,11 +117,11 @@ public class Ideation {
 		HTML htmllearn = new HTML("<b>LEARN:</b>", true);
 		verticalPanel_5.add(htmllearn);
 
-		verticalPanel_5.add(new TopicAnchor(BlogPanel.topics
-				.get(TopicID.MARKET_RESEARCH)));
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.MarketResearch)));
 
-		verticalPanel_5.add(new TopicAnchor(BlogPanel.topics
-				.get(TopicID.SURVEYS)));
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Surveys)));
 
 		return verticalPanel_4;
 	}

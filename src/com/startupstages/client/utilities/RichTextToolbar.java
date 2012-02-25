@@ -13,7 +13,7 @@
  * Author: Erik Scholtz 
  * Web: http://blog.elitecoderz.net
  */
-package com.startupstages.client.blog.topics;
+package com.startupstages.client.utilities;
 
 import java.util.HashMap;
 

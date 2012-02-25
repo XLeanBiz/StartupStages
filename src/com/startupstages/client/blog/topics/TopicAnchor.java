@@ -8,21 +8,21 @@ import com.startupstages.client.model.Topic;
 
 public class TopicAnchor extends HTML {
 
-	public TopicAnchor(final Topic topic) {
+    public TopicAnchor(final Topic topic) {
 
-		if (topic != null) {
+        if (topic != null) {
 
-			this.setHTML("<a href=#>" + topic.getTopicName() + "</a>");
+            this.setHTML("<a href=#>" + topic.getTopicName() + "</a>");
 
-			this.addClickHandler(new ClickHandler() {
+            this.addClickHandler(new ClickHandler() {
 
-				@Override
-				public void onClick(ClickEvent event) {
+                @Override
+                public void onClick(ClickEvent event) {
 
-					BlogPanel.topicPanel.clear();
-					BlogPanel.topicPanel.add(new TopicPanel(topic));
-				}
-			});
-		}
-	}
+                    BlogPanel.topicPanel.clear();
+                    BlogPanel.topicPanel.add(new TopicPanel(topic));
+                }
+            });
+        }
+    }
 }

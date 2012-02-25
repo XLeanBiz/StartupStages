@@ -10,40 +10,66 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.model.Topic;
+import com.startupstages.client.utilities.LoadingPanel;
 
 public class TopicPanel extends VerticalPanel {
 
-    public TopicPanel(final Topic topic) {
+	public static VerticalPanel vpTopicDescription = new VerticalPanel();
 
-        this.setSpacing(20);
-        this.setWidth("900px");
+	public TopicPanel(final Topic topic) {
 
-        this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
+		this.setSpacing(20);
+		this.setWidth("900px");
 
-        Image image = new Image(GWT.getModuleBaseURL() + "startupstages/EditIcon.jpg");
-        image.addClickHandler(new ClickHandler() {
-            public void onClick(ClickEvent event) {
+		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
 
-                BlogPanel.topicPanel.clear();
-                BlogPanel.topicPanel.add(new TopicEdit(topic));
-            }
-        });
-        add(image);
+		Image image = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/EditIcon.jpg");
+		image.setSize("22px", "26px");
+		image.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
 
-        this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+				BlogPanel.topicPanel.clear();
+				BlogPanel.topicPanel.add(new TopicEdit(topic));
+			}
+		});
+		add(image);
 
-        HTML htmlName = new HTML("<font size=6 color=orange><b>" + topic.getTopicName() + "</b></font>", true);
-        add(htmlName);
+		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 
-        this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
+		HTML htmlName = new HTML("<font size=6 color=orange><b>"
+				+ topic.getTopicName() + "</b></font>", true);
+		add(htmlName);
 
-        HTML htmlReferences = new HTML("<font size=4><b>References:</b></font>", true);
-        add(htmlReferences);
+		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
 
-        HTML htmlDescription = new HTML(topic.getTopicDescription(), true);
-        add(htmlDescription);
+		HTML htmlReferences = new HTML(
+				"<font size=4><b>References:</b></font>", true);
+		add(htmlReferences);
 
-        Label label = new Label(" ");
-        add(label);
-    }
+		vpTopicDescription.clear();
+		this.add(vpTopicDescription);
+
+		getDescription(topic);
+
+		Label label = new Label(" ");
+		add(label);
+	}
+
+	private void getDescription(final Topic topic) {
+
+		if (topic.getTopicDescription() != null) {
+
+			HTML htmlDescription = new HTML(topic.getTopicDescription(), true);
+			vpTopicDescription.add(htmlDescription);
+
+		} else {
+
+			vpTopicDescription.add(new LoadingPanel());
+
+			GetTopic.get(topic);
+		}
+
+	}
+
 }

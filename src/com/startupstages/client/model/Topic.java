@@ -1,14 +1,36 @@
 package com.startupstages.client.model;
 
+import com.startupstages.client.utilities.NameGenerator;
+
 public class Topic {
 
 	public enum TopicID {
-		VISION_STATEMENT, LEAN_CANVAS, PERSONA, TEAM, GOALS, TEAM_SIZE, MARKET_RESEARCH, SURVEYS, USES, PROBLEMS_RATES, PROBLEM_CAUSES, INTERVIEWS
+		VisionStatement, LeanCanvas, Persona, Team, Goals, TeamSize, MarketResearch, Surveys, Uses, ProblemsRates, ProblemCauses, Interviews
 	}
+
+	private TopicID topicID;
 
 	private String topicName;
 
 	private String topicDescription;
+
+	public Topic() {
+
+	}
+
+	public Topic(TopicID topicID) {
+
+		this.topicID = topicID;
+		this.topicName = NameGenerator.spacedName(topicID.toString());
+	}
+
+	public TopicID getTopicID() {
+		return topicID;
+	}
+
+	public void setTopicID(TopicID topicID) {
+		this.topicID = topicID;
+	}
 
 	public String getTopicName() {
 		return topicName;

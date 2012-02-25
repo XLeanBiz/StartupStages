@@ -7,6 +7,7 @@ import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
@@ -14,94 +15,101 @@ import com.startupstages.client.model.Topic.TopicID;
 
 public class ProblemValidation {
 
-    public static void initializeProblemValidationPanel() {
+	public static void initializeProblemValidationPanel() {
 
-        BlogPanel.stepPanel.clear();
-        BlogPanel.stepPanel.add(problemValidationPanel());
+		BlogPanel.stepPanel.clear();
+		BlogPanel.stepPanel.add(problemValidationPanel());
 
-        BlogPanel.topicPanel.clear();
-        BlogPanel.topicPanel.add(new TopicPanel(BlogPanel.topics.get(TopicID.USES)));
-    }
+		BlogPanel.topicPanel.clear();
+		BlogPanel.topicPanel.add(new TopicPanel(
+				StartupStagesGlobalVariables.topics.get(TopicID.Uses)));
+	}
 
-    public static AbsolutePanel problemValidationPanel() {
+	public static AbsolutePanel problemValidationPanel() {
 
-        AbsolutePanel absolutePanel = new AbsolutePanel();
-        absolutePanel.setSize("700px", "500px");
+		AbsolutePanel absolutePanel = new AbsolutePanel();
+		absolutePanel.setSize("700px", "500px");
 
-        Image image = new Image(GWT.getModuleBaseURL() + "startupstages/problemValidation.png");
-        absolutePanel.add(image, 0, 24);
+		Image image = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/problemValidation.png");
+		absolutePanel.add(image, 0, 24);
 
-        absolutePanel.add(vpBuild(), 27, 265);
+		absolutePanel.add(vpBuild(), 27, 265);
 
-        absolutePanel.add(vpMeasure(), 245, 226);
+		absolutePanel.add(vpMeasure(), 245, 226);
 
-        absolutePanel.add(vpLearn(), 485, 344);
+		absolutePanel.add(vpLearn(), 485, 344);
 
-        Image image_1 = new Image(GWT.getModuleBaseURL() + "startupstages/arrow.png");
-        image_1.addClickHandler(new ClickHandler() {
-            public void onClick(ClickEvent event) {
+		Image image_1 = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/arrow.png");
+		image_1.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
 
-            }
-        });
-        absolutePanel.add(image_1, 503, 237);
+			}
+		});
+		absolutePanel.add(image_1, 503, 237);
 
-        return absolutePanel;
-    }
+		return absolutePanel;
+	}
 
-    private static VerticalPanel vpBuild() {
+	private static VerticalPanel vpBuild() {
 
-        VerticalPanel verticalPanel_1 = new VerticalPanel();
-        verticalPanel_1.setBorderWidth(1);
-        verticalPanel_1.setSize("150px", "100px");
+		VerticalPanel verticalPanel_1 = new VerticalPanel();
+		verticalPanel_1.setBorderWidth(1);
+		verticalPanel_1.setSize("150px", "100px");
 
-        VerticalPanel verticalPanel = new VerticalPanel();
-        verticalPanel_1.add(verticalPanel);
-        verticalPanel.setSpacing(10);
+		VerticalPanel verticalPanel = new VerticalPanel();
+		verticalPanel_1.add(verticalPanel);
+		verticalPanel.setSpacing(10);
 
-        HTML htmlBuild = new HTML("<b>BUILD:</b>", true);
-        verticalPanel.add(htmlBuild);
+		HTML htmlBuild = new HTML("<b>BUILD:</b>", true);
+		verticalPanel.add(htmlBuild);
 
-        verticalPanel.add(new TopicAnchor(BlogPanel.topics.get(TopicID.USES)));
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Uses)));
 
-        return verticalPanel_1;
-    }
+		return verticalPanel_1;
+	}
 
-    private static VerticalPanel vpMeasure() {
+	private static VerticalPanel vpMeasure() {
 
-        VerticalPanel verticalPanel_2 = new VerticalPanel();
-        verticalPanel_2.setBorderWidth(1);
-        verticalPanel_2.setSize("126px", "154px");
+		VerticalPanel verticalPanel_2 = new VerticalPanel();
+		verticalPanel_2.setBorderWidth(1);
+		verticalPanel_2.setSize("126px", "154px");
 
-        VerticalPanel verticalPanel_3 = new VerticalPanel();
-        verticalPanel_3.setSpacing(10);
-        verticalPanel_2.add(verticalPanel_3);
+		VerticalPanel verticalPanel_3 = new VerticalPanel();
+		verticalPanel_3.setSpacing(10);
+		verticalPanel_2.add(verticalPanel_3);
 
-        HTML htmlmeasure = new HTML("<b>MEASURE:</b>", true);
-        verticalPanel_3.add(htmlmeasure);
+		HTML htmlmeasure = new HTML("<b>MEASURE:</b>", true);
+		verticalPanel_3.add(htmlmeasure);
 
-        verticalPanel_3.add(new TopicAnchor(BlogPanel.topics.get(TopicID.PROBLEMS_RATES)));
+		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.ProblemsRates)));
 
-        verticalPanel_3.add(new TopicAnchor(BlogPanel.topics.get(TopicID.PROBLEM_CAUSES)));
+		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.ProblemCauses)));
 
-        return verticalPanel_2;
-    }
+		return verticalPanel_2;
+	}
 
-    private static VerticalPanel vpLearn() {
+	private static VerticalPanel vpLearn() {
 
-        VerticalPanel verticalPanel_4 = new VerticalPanel();
-        verticalPanel_4.setBorderWidth(1);
-        verticalPanel_4.setSize("150px", "100px");
+		VerticalPanel verticalPanel_4 = new VerticalPanel();
+		verticalPanel_4.setBorderWidth(1);
+		verticalPanel_4.setSize("150px", "100px");
 
-        VerticalPanel verticalPanel_5 = new VerticalPanel();
-        verticalPanel_5.setSpacing(10);
-        verticalPanel_4.add(verticalPanel_5);
+		VerticalPanel verticalPanel_5 = new VerticalPanel();
+		verticalPanel_5.setSpacing(10);
+		verticalPanel_4.add(verticalPanel_5);
 
-        HTML htmllearn = new HTML("<b>LEARN:</b>", true);
-        verticalPanel_5.add(htmllearn);
+		HTML htmllearn = new HTML("<b>LEARN:</b>", true);
+		verticalPanel_5.add(htmllearn);
 
-        verticalPanel_5.add(new TopicAnchor(BlogPanel.topics.get(TopicID.INTERVIEWS)));
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Interviews)));
 
-        return verticalPanel_4;
-    }
+		return verticalPanel_4;
+	}
 
 }
