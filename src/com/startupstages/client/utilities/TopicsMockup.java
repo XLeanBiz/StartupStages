@@ -95,13 +95,13 @@ public class TopicsMockup {
         topics.put(Topic.TopicID.Uses, uses);
 
         Topic problemsRates = new Topic();
-        problemsRates.setTopicName(NameGenerator.spacedName(Topic.TopicID.ProblemsRates.toString()));
+        problemsRates.setTopicName(NameGenerator.spacedName(Topic.TopicID.UsesRate.toString()));
         problemsRates
                 .setTopicDescription("<blockquote>Ask your customers which problems they identify most. "
                         + "<br>Rate the results."
                         + "<a href=\"http://custdevday.com/pages/about/custdevday-uses/\" target=\"_blank\">See example here</a>."
                         + "</blockquote>");
-        topics.put(Topic.TopicID.ProblemsRates, problemsRates);
+        topics.put(Topic.TopicID.UsesRate, problemsRates);
 
         Topic problemsCauses = new Topic();
         problemsCauses.setTopicName(NameGenerator.spacedName(Topic.TopicID.ProblemCauses.toString()));

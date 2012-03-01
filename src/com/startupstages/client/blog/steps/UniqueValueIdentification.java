@@ -13,25 +13,26 @@ import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
 
-public class ProblemValidation {
+public class UniqueValueIdentification {
 
-	public static void initializeProblemValidationPanel() {
+	public static void initialize() {
 
 		BlogPanel.stepPanel.clear();
-		BlogPanel.stepPanel.add(problemValidationPanel());
+		BlogPanel.stepPanel.add(getPanel());
 
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics.get(TopicID.Uses)));
+				StartupStagesGlobalVariables.topics
+						.get(TopicID.UniqueValueProposition)));
 	}
 
-	public static AbsolutePanel problemValidationPanel() {
+	public static AbsolutePanel getPanel() {
 
 		AbsolutePanel absolutePanel = new AbsolutePanel();
 		absolutePanel.setSize("700px", "500px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/problemValidation.png");
+				+ "startupstages/UniqueValueIdentification.png");
 		absolutePanel.add(image, 0, 24);
 
 		absolutePanel.add(vpBuild(), 27, 265);
@@ -45,6 +46,7 @@ public class ProblemValidation {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
+				// Branding.initialize();
 			}
 		});
 		absolutePanel.add(image_1, 503, 237);
@@ -66,7 +68,7 @@ public class ProblemValidation {
 		verticalPanel.add(htmlBuild);
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Uses)));
+				.get(TopicID.UniqueValueProposition)));
 
 		return verticalPanel_1;
 	}
@@ -83,12 +85,6 @@ public class ProblemValidation {
 
 		HTML htmlmeasure = new HTML("<b>MEASURE:</b>", true);
 		verticalPanel_3.add(htmlmeasure);
-
-		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ProblemsRates)));
-
-		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ProblemCauses)));
 
 		return verticalPanel_2;
 	}
@@ -107,7 +103,13 @@ public class ProblemValidation {
 		verticalPanel_5.add(htmllearn);
 
 		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Interviews)));
+				.get(TopicID.NonCodedMvps)));
+
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Wireframes)));
+
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.ABTests)));
 
 		return verticalPanel_4;
 	}

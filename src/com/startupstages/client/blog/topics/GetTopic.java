@@ -21,23 +21,28 @@ public class GetTopic {
 
 					public void onFailure(Throwable caught) {
 
+						// System.out.println(caught);
 					}
 
 					public void onSuccess(String jsonResult) {
 
-						JSONObject obj = (JSONObject) JSONParser
-								.parseStrict(jsonResult);
+						if (jsonResult != null) {
+							
+							JSONObject obj = (JSONObject) JSONParser
+									.parseStrict(jsonResult);
 
-						String topicDescription = ConvertJson
-								.convertToString(obj.get("topicDescription"));
+							String topicDescription = ConvertJson
+									.convertToString(obj
+											.get("topicDescription"));
 
-						StartupStagesGlobalVariables.topics.get(
-								topic.getTopicID()).setTopicDescription(
-								topicDescription);
+							StartupStagesGlobalVariables.topics.get(
+									topic.getTopicID()).setTopicDescription(
+									topicDescription);
 
-						TopicPanel.vpTopicDescription.clear();
-						TopicPanel.vpTopicDescription.add(new HTML(
-								topicDescription, true));
+							TopicPanel.vpTopicDescription.clear();
+							TopicPanel.vpTopicDescription.add(new HTML(
+									topicDescription, true));
+						}
 					}
 				});
 

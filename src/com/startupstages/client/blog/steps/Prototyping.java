@@ -13,27 +13,26 @@ import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
 
-public class Ideation {
-
+public class Prototyping {
 
 	public static void initialize() {
 
 		BlogPanel.stepPanel.clear();
-		BlogPanel.stepPanel.add(setPanel());
+		BlogPanel.stepPanel.add(getPanel());
 
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
 				StartupStagesGlobalVariables.topics
-						.get(TopicID.VisionStatement)));
+						.get(TopicID.FeaturePrototype)));
 	}
 
-	public static AbsolutePanel setPanel() {
+	public static AbsolutePanel getPanel() {
 
 		AbsolutePanel absolutePanel = new AbsolutePanel();
 		absolutePanel.setSize("700px", "500px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/ideation.png");
+				+ "startupstages/Prototyping.png");
 		absolutePanel.add(image, 0, 24);
 
 		absolutePanel.add(vpBuild(), 27, 265);
@@ -69,16 +68,10 @@ public class Ideation {
 		verticalPanel.add(htmlBuild);
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.VisionStatement)));
+				.get(TopicID.ProductionEnvironment)));
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Persona)));
-
-		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Team)));
-
-		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Goals)));
+				.get(TopicID.FeaturePrototype)));
 
 		return verticalPanel_1;
 	}
@@ -97,7 +90,10 @@ public class Ideation {
 		verticalPanel_3.add(htmlmeasure);
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.TeamSize)));
+				.get(TopicID.FeatureClicks)));
+
+		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.FeatureUse)));
 
 		return verticalPanel_2;
 	}
@@ -116,10 +112,7 @@ public class Ideation {
 		verticalPanel_5.add(htmllearn);
 
 		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.MarketResearch)));
-
-		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Surveys)));
+				.get(TopicID.UsabilityTests)));
 
 		return verticalPanel_4;
 	}

@@ -27,9 +27,9 @@ public class BlogPanel extends VerticalPanel {
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		stagePanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		stagePanel.setStyleName("stepsPanel");
+
 		stagePanel.clear();
 		this.add(stagePanel);
-		stagePanel.add(new ProblemSolutionSteps());
 
 		this.add(new Label(". "));
 		this.add(new Label(". "));
@@ -44,6 +44,5 @@ public class BlogPanel extends VerticalPanel {
 		topicPanel.setStyleName("stepsPanel");
 		topicPanel.clear();
 		this.add(topicPanel);
-
 	}
 }
