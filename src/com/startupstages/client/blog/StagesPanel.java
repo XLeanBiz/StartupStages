@@ -6,6 +6,7 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.startupstages.client.blog.steps.ProblemSolutionFitSteps;
 import com.startupstages.client.blog.steps.ProductMarketFitSteps;
+import com.startupstages.client.blog.steps.ScaleSteps;
 
 public class StagesPanel extends HorizontalPanel {
 
@@ -49,7 +50,7 @@ public class StagesPanel extends HorizontalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				ProblemSolutionFitSteps.initialize();
+				ScaleSteps.initialize();
 			}
 		});
 		this.add(scale);

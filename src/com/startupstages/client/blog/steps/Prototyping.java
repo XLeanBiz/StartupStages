@@ -29,17 +29,17 @@ public class Prototyping {
 	public static AbsolutePanel getPanel() {
 
 		AbsolutePanel absolutePanel = new AbsolutePanel();
-		absolutePanel.setSize("700px", "500px");
+		absolutePanel.setSize("590px", "470px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/Prototyping.png");
-		absolutePanel.add(image, 0, 24);
+		absolutePanel.add(image, 0, 0);
 
-		absolutePanel.add(vpBuild(), 27, 265);
+		absolutePanel.add(vpBuild(), 27, 255);
 
-		absolutePanel.add(vpMeasure(), 245, 226);
+		absolutePanel.add(vpMeasure(), 230, 215);
 
-		absolutePanel.add(vpLearn(), 485, 344);
+		absolutePanel.add(vpLearn(), 410, 337);
 
 		Image image_1 = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/arrow.png");
@@ -49,7 +49,7 @@ public class Prototyping {
 				Enhancing.initialize();
 			}
 		});
-		absolutePanel.add(image_1, 503, 237);
+		absolutePanel.add(image_1, 450, 237);
 
 		return absolutePanel;
 	}
@@ -58,7 +58,7 @@ public class Prototyping {
 
 		VerticalPanel verticalPanel_1 = new VerticalPanel();
 		verticalPanel_1.setBorderWidth(1);
-		verticalPanel_1.setSize("150px", "100px");
+		verticalPanel_1.setSize("160px", "150px");
 
 		VerticalPanel verticalPanel = new VerticalPanel();
 		verticalPanel_1.add(verticalPanel);
@@ -80,7 +80,7 @@ public class Prototyping {
 
 		VerticalPanel verticalPanel_2 = new VerticalPanel();
 		verticalPanel_2.setBorderWidth(1);
-		verticalPanel_2.setSize("126px", "154px");
+		verticalPanel_2.setSize("150px", "154px");
 
 		VerticalPanel verticalPanel_3 = new VerticalPanel();
 		verticalPanel_3.setSpacing(10);

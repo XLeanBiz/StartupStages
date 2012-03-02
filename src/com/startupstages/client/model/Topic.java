@@ -11,7 +11,7 @@ public class Topic {
         BrandName, Logo, LandingPage, Blog, FeedbackChanels, Visits, SignUps, Advertising,
         ProductionEnvironment, FeaturePrototype, FeatureClicks, FeatureUse, UsabilityTests,
         Performance, Security, CodeQuality, Satisfation, EarlyAdopters, Returns,
-        PaymentMethods, UserCost, ConversionRate, Virality, RevenuePerUser
+        PaymentMethods, CostPerUser, ConversionRate, RevenuePerUser
     }
 
 	private TopicID topicID;

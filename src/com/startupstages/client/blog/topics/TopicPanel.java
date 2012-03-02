@@ -19,7 +19,7 @@ public class TopicPanel extends VerticalPanel {
 	public TopicPanel(final Topic topic) {
 
 		this.setSpacing(20);
-		this.setWidth("900px");
+		this.setWidth("600px");
 
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
 

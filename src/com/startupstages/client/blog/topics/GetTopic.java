@@ -26,8 +26,8 @@ public class GetTopic {
 
 					public void onSuccess(String jsonResult) {
 
-						if (jsonResult != null) {
-							
+						if (jsonResult != null && !jsonResult.equals("")) {
+
 							JSONObject obj = (JSONObject) JSONParser
 									.parseStrict(jsonResult);
 

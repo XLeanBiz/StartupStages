@@ -6,7 +6,7 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class BlogPanel extends VerticalPanel {
+public class BlogPanel extends HorizontalPanel {
 
 	public static HorizontalPanel stagePanel = new HorizontalPanel();
 
@@ -16,31 +16,34 @@ public class BlogPanel extends VerticalPanel {
 
 	public BlogPanel() {
 
-		this.setStyleName("stagePanel");
+		VerticalPanel verticalPanel = new VerticalPanel();
 
-		this.setWidth("900px");
+		verticalPanel.setStyleName("stagePanel");
+		verticalPanel.setWidth("600px");
+		verticalPanel
+				.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 
-		this.add(new StagesPanel());
+		verticalPanel.add(new StagesPanel());
 
-		this.add(new Label(" "));
-
-		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		stagePanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		stagePanel.setStyleName("stepsPanel");
-
 		stagePanel.clear();
-		this.add(stagePanel);
+		verticalPanel.add(stagePanel);
 
-		this.add(new Label(". "));
-		this.add(new Label(". "));
+		verticalPanel.add(new Label(". "));
+		verticalPanel.add(new Label(". "));
 
 		stepPanel.setStyleName("stepsPanel");
-		stepPanel.setSize("100%", "100%");
+		stepPanel.setSize("95%", "95%");
 		stepPanel.clear();
-		this.add(stepPanel);
+		verticalPanel.add(stepPanel);
+		
+		verticalPanel.add(new Label(". "));
+
+		this.add(verticalPanel);
 
 		topicPanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-		topicPanel.setSize("900px", "100%");
+		topicPanel.setSize("400px", "100%");
 		topicPanel.setStyleName("stepsPanel");
 		topicPanel.clear();
 		this.add(topicPanel);

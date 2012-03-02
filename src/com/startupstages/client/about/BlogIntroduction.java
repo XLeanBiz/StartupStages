@@ -7,10 +7,11 @@ import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
+import com.startupstages.client.StartupStagesGlobalVariables;
 
 public class BlogIntroduction extends AbsolutePanel {
 
-	public BlogIntroduction(Image buttonStartBlog) {
+	public BlogIntroduction(final Image buttonStartBlog) {
 
 		this.setSize("900px", "750px");
 
@@ -45,14 +46,17 @@ public class BlogIntroduction extends AbsolutePanel {
 						+ "and move forward towards the success!</font>", true);
 		this.add(htmlTheXleanInteractive, 109, 500);
 
-		this.add(buttonStartBlog, 356, 593);
-
 		Anchor htmlNewHtml = new Anchor("Know more...");
 		htmlNewHtml.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
-				
+
+				StartupStagesGlobalVariables.blogPanel.clear();
+				StartupStagesGlobalVariables.blogPanel.add(new AboutBlog(
+						buttonStartBlog));
 			}
 		});
 		add(htmlNewHtml, 109, 560);
+
+		this.add(buttonStartBlog, 356, 593);
 	}
 }

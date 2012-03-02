@@ -23,33 +23,33 @@ public class Enhancing {
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
 				StartupStagesGlobalVariables.topics
-						.get(TopicID.FeaturePrototype)));
+						.get(TopicID.Performance)));
 	}
 
 	public static AbsolutePanel getPanel() {
 
 		AbsolutePanel absolutePanel = new AbsolutePanel();
-		absolutePanel.setSize("700px", "500px");
+		absolutePanel.setSize("590px", "470px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/Enhancing.png");
-		absolutePanel.add(image, 0, 24);
+		absolutePanel.add(image, 0, 0);
 
-		absolutePanel.add(vpBuild(), 27, 265);
+		absolutePanel.add(vpBuild(), 27, 255);
 
-		absolutePanel.add(vpMeasure(), 245, 226);
+		absolutePanel.add(vpMeasure(), 230, 215);
 
-		absolutePanel.add(vpLearn(), 485, 344);
+		absolutePanel.add(vpLearn(), 410, 337);
 
 		Image image_1 = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/arrow.png");
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				AssumptionsValidation.initialize();
+				ScaleSteps.initialize();
 			}
 		});
-		absolutePanel.add(image_1, 503, 237);
+		absolutePanel.add(image_1, 450, 237);
 
 		return absolutePanel;
 	}
@@ -58,7 +58,7 @@ public class Enhancing {
 
 		VerticalPanel verticalPanel_1 = new VerticalPanel();
 		verticalPanel_1.setBorderWidth(1);
-		verticalPanel_1.setSize("150px", "100px");
+		verticalPanel_1.setSize("150px", "150px");
 
 		VerticalPanel verticalPanel = new VerticalPanel();
 		verticalPanel_1.add(verticalPanel);
@@ -68,10 +68,13 @@ public class Enhancing {
 		verticalPanel.add(htmlBuild);
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ProductionEnvironment)));
+				.get(TopicID.Performance)));
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeaturePrototype)));
+				.get(TopicID.Security)));
+		
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.CodeQuality)));
 
 		return verticalPanel_1;
 	}
@@ -80,7 +83,7 @@ public class Enhancing {
 
 		VerticalPanel verticalPanel_2 = new VerticalPanel();
 		verticalPanel_2.setBorderWidth(1);
-		verticalPanel_2.setSize("126px", "154px");
+		verticalPanel_2.setSize("150px", "154px");
 
 		VerticalPanel verticalPanel_3 = new VerticalPanel();
 		verticalPanel_3.setSpacing(10);
@@ -90,10 +93,13 @@ public class Enhancing {
 		verticalPanel_3.add(htmlmeasure);
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeatureClicks)));
+				.get(TopicID.EarlyAdopters)));
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeatureUse)));
+				.get(TopicID.Satisfation)));
+		
+		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Returns)));
 
 		return verticalPanel_2;
 	}
@@ -110,9 +116,6 @@ public class Enhancing {
 
 		HTML htmllearn = new HTML("<b>LEARN:</b>", true);
 		verticalPanel_5.add(htmllearn);
-
-		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.UsabilityTests)));
 
 		return verticalPanel_4;
 	}

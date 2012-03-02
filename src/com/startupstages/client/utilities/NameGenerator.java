@@ -20,7 +20,7 @@ public class NameGenerator {
 							wordPosition + 1);
 					firstLetter = firstLetter.toUpperCase();
 
-					if (words[i].length() > 1) {
+					if (words[i-1].length() > 1 || words[i].length() > 1) {
 						spacedName += " ";
 					}
 

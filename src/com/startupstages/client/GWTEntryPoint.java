@@ -15,7 +15,11 @@ public class GWTEntryPoint implements EntryPoint {
 
 		RootPanel.get().clear();
 
-		RootPanel.get().add(new InitializeBlog());
+		RootPanel.get().add(StartupStagesGlobalVariables.blogPanel);
 
+		StartupStagesGlobalVariables.blogPanel.clear();
+		//StartupStagesGlobalVariables.blogPanel.add(new BlogIntroduction(
+			//	new ButtonStartBlog()));
+		StartupStagesGlobalVariables.blogPanel.add(new InitializeBlog());
 	}
 }
