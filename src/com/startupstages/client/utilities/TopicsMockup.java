@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.startupstages.client.model.Topic;
-import com.startupstages.client.model.Topic.TopicID;
 
 public class TopicsMockup {
 
@@ -94,23 +93,6 @@ public class TopicsMockup {
                 + "</blockquote>");
         topics.put(Topic.TopicID.Uses, uses);
 
-        Topic problemsRates = new Topic();
-        problemsRates.setTopicName(NameGenerator.spacedName(Topic.TopicID.UsesRate.toString()));
-        problemsRates
-                .setTopicDescription("<blockquote>Ask your customers which problems they identify most. "
-                        + "<br>Rate the results."
-                        + "<a href=\"http://custdevday.com/pages/about/custdevday-uses/\" target=\"_blank\">See example here</a>."
-                        + "</blockquote>");
-        topics.put(Topic.TopicID.UsesRate, problemsRates);
-
-        Topic problemsCauses = new Topic();
-        problemsCauses.setTopicName(NameGenerator.spacedName(Topic.TopicID.ProblemCauses.toString()));
-        problemsCauses
-                .setTopicDescription("<blockquote>Ask your customers <b>WHY</b> they identify with your idea's problems. "
-                        + "<br>Rate the results."
-                        + "<a href=\"http://custdevday.com/pages/about/custdevday-uses/\" target=\"_blank\">See example here</a>."
-                        + "</blockquote>");
-        topics.put(Topic.TopicID.ProblemCauses, problemsCauses);
 
         return topics;
     }

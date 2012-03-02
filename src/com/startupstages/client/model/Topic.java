@@ -5,11 +5,14 @@ import com.startupstages.client.utilities.NameGenerator;
 public class Topic {
 
 	public enum TopicID {
-		VisionStatement, LeanCanvas, Persona, Team, Goals, TeamSize, MarketResearch, Surveys,
-		Uses, UsesRate, ProblemCauses, Interviews,
-		UniqueValueProposition, NonCodedMvps, Wireframes, ABTests,
-		ProductionEnvironment, FeaturePrototype, FeatureClicks, FeatureUse, UsabilityTests
-	}
+        VisionStatement, Persona, Team, Goals, TeamSize, MarketResearch, Surveys, 
+        Uses, UsesRate, Interviews, Causes, 
+        UniqueValueProposition, NonCodedMVP, Wireframes, ABTests, LeanCanvas, NonCodedMVPUse,
+        BrandName, Logo, LandingPage, Blog, FeedbackChanels, Visits, SignUps, Advertising,
+        ProductionEnvironment, FeaturePrototype, FeatureClicks, FeatureUse, UsabilityTests,
+        Performance, Security, CodeQuality, Satisfation, EarlyAdopters, Returns,
+        PaymentMethods, UserCost, ConversionRate, Virality, RevenuePerUser
+    }
 
 	private TopicID topicID;
 

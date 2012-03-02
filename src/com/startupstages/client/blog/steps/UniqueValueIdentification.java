@@ -46,7 +46,7 @@ public class UniqueValueIdentification {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				// Branding.initialize();
+				BrandValidation.initialize();
 			}
 		});
 		absolutePanel.add(image_1, 503, 237);
@@ -86,6 +86,9 @@ public class UniqueValueIdentification {
 		HTML htmlmeasure = new HTML("<b>MEASURE:</b>", true);
 		verticalPanel_3.add(htmlmeasure);
 
+		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.NonCodedMVPUse)));
+
 		return verticalPanel_2;
 	}
 
@@ -103,7 +106,7 @@ public class UniqueValueIdentification {
 		verticalPanel_5.add(htmllearn);
 
 		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.NonCodedMvps)));
+				.get(TopicID.NonCodedMVP)));
 
 		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Wireframes)));

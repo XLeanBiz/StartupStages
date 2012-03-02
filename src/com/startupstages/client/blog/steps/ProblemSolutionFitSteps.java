@@ -12,141 +12,148 @@ import com.startupstages.client.blog.BlogPanel;
 
 public class ProblemSolutionFitSteps {
 
-    public static void initialize() {
+	public static void initialize() {
 
-        BlogPanel.stagePanel.clear();
-        BlogPanel.stagePanel.add(setPanel());
-        
-        Ideation.initialize();
-  }
+		BlogPanel.stagePanel.clear();
+		BlogPanel.stagePanel.add(setPanel());
 
-    public static HorizontalPanel setPanel() {
+		Ideation.initialize();
+	}
 
-        HorizontalPanel hp = new HorizontalPanel();
+	public static HorizontalPanel setPanel() {
 
-        hp.setSpacing(10);
+		HorizontalPanel hp = new HorizontalPanel();
 
-        hp.add(vpIdea());
+		hp.setSpacing(10);
 
-        hp.add(vpProblem());
+		hp.add(vpIdea());
 
-        hp.add(vpFeature());
+		hp.add(vpProblem());
 
-        hp.add(vpBrand());
+		hp.add(vpFeature());
 
-        return hp;
-    }
+		hp.add(vpBrand());
 
-    private static VerticalPanel vpIdea() {
+		return hp;
+	}
 
-        VerticalPanel vpIdea = new VerticalPanel();
-        vpIdea.setSpacing(10);
-        vpIdea.setWidth("130px");
-        vpIdea.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+	private static VerticalPanel vpIdea() {
 
-        ClickHandler ideaClick = new ClickHandler() {
+		VerticalPanel vpIdea = new VerticalPanel();
+		vpIdea.setSpacing(10);
+		vpIdea.setWidth("130px");
+		vpIdea.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 
-            @Override
-            public void onClick(ClickEvent event) {
+		ClickHandler ideaClick = new ClickHandler() {
 
-                Ideation.initialize();
-            }
-        };
+			@Override
+			public void onClick(ClickEvent event) {
 
-        Anchor anchorIdea = new Anchor("<font size=3><b>Idea</b></font>", true);
-        anchorIdea.addClickHandler(ideaClick);
-        vpIdea.add(anchorIdea);
+				Ideation.initialize();
+			}
+		};
 
-        Image imgIdea = new Image(GWT.getModuleBaseURL() + "startupstages/IdeaIcon.png");
-        imgIdea.setSize("50px", "50px");
-        imgIdea.addClickHandler(ideaClick);
-        vpIdea.add(imgIdea);
+		Anchor anchorIdea = new Anchor("<font size=3><b>Idea</b></font>", true);
+		anchorIdea.addClickHandler(ideaClick);
+		vpIdea.add(anchorIdea);
 
-        return vpIdea;
-    }
+		Image imgIdea = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/IdeaIcon.png");
+		imgIdea.setSize("50px", "50px");
+		imgIdea.addClickHandler(ideaClick);
+		vpIdea.add(imgIdea);
 
-    private static VerticalPanel vpProblem() {
+		return vpIdea;
+	}
 
-        VerticalPanel vpProblem = new VerticalPanel();
-        vpProblem.setSpacing(10);
-        vpProblem.setWidth("130px");
-        vpProblem.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+	private static VerticalPanel vpProblem() {
 
-        ClickHandler problemClick = new ClickHandler() {
+		VerticalPanel vpProblem = new VerticalPanel();
+		vpProblem.setSpacing(10);
+		vpProblem.setWidth("130px");
+		vpProblem.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 
-            @Override
-            public void onClick(ClickEvent event) {
+		ClickHandler problemClick = new ClickHandler() {
 
-                AssumptionsValidation.initialize();
-            }
-        };
+			@Override
+			public void onClick(ClickEvent event) {
 
-        Anchor anchorProblem = new Anchor("<font size=3><b>Assumptions</b></font>", true);
-        anchorProblem.addClickHandler(problemClick);
-        vpProblem.add(anchorProblem);
+				AssumptionsValidation.initialize();
+			}
+		};
 
-        Image imgProblem = new Image(GWT.getModuleBaseURL() + "startupstages/ProblemIcon.jpg");
-        imgProblem.setSize("50px", "50px");
-        imgProblem.addClickHandler(problemClick);
-        vpProblem.add(imgProblem);
+		Anchor anchorProblem = new Anchor(
+				"<font size=3><b>Assumptions</b></font>", true);
+		anchorProblem.addClickHandler(problemClick);
+		vpProblem.add(anchorProblem);
 
-        return vpProblem;
-    }
+		Image imgProblem = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/ProblemIcon.jpg");
+		imgProblem.setSize("50px", "50px");
+		imgProblem.addClickHandler(problemClick);
+		vpProblem.add(imgProblem);
 
-    private static VerticalPanel vpFeature() {
+		return vpProblem;
+	}
 
-        VerticalPanel vpFeature = new VerticalPanel();
-        vpFeature.setSpacing(10);
-        vpFeature.setWidth("130px");
-        vpFeature.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+	private static VerticalPanel vpFeature() {
 
-        ClickHandler stepClick = new ClickHandler() {
+		VerticalPanel vpFeature = new VerticalPanel();
+		vpFeature.setSpacing(10);
+		vpFeature.setWidth("130px");
+		vpFeature.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 
-            @Override
-            public void onClick(ClickEvent event) {
+		ClickHandler stepClick = new ClickHandler() {
 
-                UniqueValueIdentification.initialize();
-            }
-        };
+			@Override
+			public void onClick(ClickEvent event) {
 
-        Anchor anchorFeature = new Anchor("<font size=3><b>Unique Value</b></font>", true);
-        anchorFeature.addClickHandler(stepClick);
-        vpFeature.add(anchorFeature);
+				UniqueValueIdentification.initialize();
+			}
+		};
 
-        Image imgFeature = new Image(GWT.getModuleBaseURL() + "startupstages/target.jpg");
-        imgFeature.setSize("50px", "50px");
-        imgFeature.addClickHandler(stepClick);
-        vpFeature.add(imgFeature);
+		Anchor anchorFeature = new Anchor(
+				"<font size=3><b>Unique Value</b></font>", true);
+		anchorFeature.addClickHandler(stepClick);
+		vpFeature.add(anchorFeature);
 
-        return vpFeature;
-    }
+		Image imgFeature = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/target.jpg");
+		imgFeature.setSize("50px", "50px");
+		imgFeature.addClickHandler(stepClick);
+		vpFeature.add(imgFeature);
 
-    private static VerticalPanel vpBrand() {
+		return vpFeature;
+	}
 
-        VerticalPanel vpBrand = new VerticalPanel();
-        vpBrand.setSpacing(10);
-        vpBrand.setWidth("130px");
-        vpBrand.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+	private static VerticalPanel vpBrand() {
 
-        ClickHandler stepClick = new ClickHandler() {
+		VerticalPanel vpBrand = new VerticalPanel();
+		vpBrand.setSpacing(10);
+		vpBrand.setWidth("130px");
+		vpBrand.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 
-            @Override
-            public void onClick(ClickEvent event) {
+		ClickHandler stepClick = new ClickHandler() {
 
-              //  Branding.initialize();
-            }
-        };
+			@Override
+			public void onClick(ClickEvent event) {
 
-        Anchor anchorBrand = new Anchor("<font size=3><b>Brand</b></font>", true);
-        anchorBrand.addClickHandler(stepClick);
-        vpBrand.add(anchorBrand);
+				BrandValidation.initialize();
+			}
+		};
 
-        Image imgBrand = new Image(GWT.getModuleBaseURL() + "startupstages/TryButton.jpg");
-        imgBrand.setSize("50px", "50px");
-        imgBrand.addClickHandler(stepClick);
-        vpBrand.add(imgBrand);
+		Anchor anchorBrand = new Anchor("<font size=3><b>Brand</b></font>",
+				true);
+		anchorBrand.addClickHandler(stepClick);
+		vpBrand.add(anchorBrand);
 
-        return vpBrand;
-    }
+		Image imgBrand = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/TryButton.jpg");
+		imgBrand.setSize("50px", "50px");
+		imgBrand.addClickHandler(stepClick);
+		vpBrand.add(imgBrand);
+
+		return vpBrand;
+	}
 
 }

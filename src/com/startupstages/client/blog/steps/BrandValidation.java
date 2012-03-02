@@ -13,7 +13,7 @@ import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
 
-public class Prototyping {
+public class BrandValidation {
 
 	public static void initialize() {
 
@@ -22,8 +22,7 @@ public class Prototyping {
 
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics
-						.get(TopicID.FeaturePrototype)));
+				StartupStagesGlobalVariables.topics.get(TopicID.BrandName)));
 	}
 
 	public static AbsolutePanel getPanel() {
@@ -32,7 +31,7 @@ public class Prototyping {
 		absolutePanel.setSize("700px", "500px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/Prototyping.png");
+				+ "startupstages/Branding.png");
 		absolutePanel.add(image, 0, 24);
 
 		absolutePanel.add(vpBuild(), 27, 265);
@@ -46,7 +45,7 @@ public class Prototyping {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				Enhancing.initialize();
+				ProductMarketFitSteps.initialize();
 			}
 		});
 		absolutePanel.add(image_1, 503, 237);
@@ -68,10 +67,19 @@ public class Prototyping {
 		verticalPanel.add(htmlBuild);
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ProductionEnvironment)));
+				.get(TopicID.BrandName)));
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeaturePrototype)));
+				.get(TopicID.Logo)));
+
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.LandingPage)));
+
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Blog)));
+
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.FeedbackChanels)));
 
 		return verticalPanel_1;
 	}
@@ -90,10 +98,10 @@ public class Prototyping {
 		verticalPanel_3.add(htmlmeasure);
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeatureClicks)));
+				.get(TopicID.Visits)));
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeatureUse)));
+				.get(TopicID.SignUps)));
 
 		return verticalPanel_2;
 	}
@@ -112,7 +120,7 @@ public class Prototyping {
 		verticalPanel_5.add(htmllearn);
 
 		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.UsabilityTests)));
+				.get(TopicID.Advertising)));
 
 		return verticalPanel_4;
 	}
