@@ -23,7 +23,7 @@ public class Prototyping {
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
 				StartupStagesGlobalVariables.topics
-						.get(TopicID.FeaturePrototype)));
+						.get(TopicID.Prototype)));
 	}
 
 	public static AbsolutePanel getPanel() {

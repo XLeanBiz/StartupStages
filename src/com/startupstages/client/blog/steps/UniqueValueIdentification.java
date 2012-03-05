@@ -23,7 +23,7 @@ public class UniqueValueIdentification {
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
 				StartupStagesGlobalVariables.topics
-						.get(TopicID.UniqueValueProposition)));
+						.get(TopicID.UniqueValue)));
 	}
 
 	public static AbsolutePanel getPanel() {

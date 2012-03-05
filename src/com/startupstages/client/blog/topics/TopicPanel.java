@@ -25,7 +25,7 @@ public class TopicPanel extends VerticalPanel {
 
 		Image image = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/EditIcon.jpg");
-		image.setSize("22px", "26px");
+		image.setSize("22px", "20px");
 		image.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 

@@ -1,4 +1,4 @@
-package com.startupstages.client.blog.steps;
+package com.startupstages.client.blog.stages;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -8,9 +8,14 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
+import com.startupstages.client.blog.steps.Enhancing;
+import com.startupstages.client.blog.steps.Prototyping;
+import com.startupstages.client.blog.topics.TopicPanel;
+import com.startupstages.client.model.Topic.TopicID;
 
-public class ProductMarketFitSteps {
+public class ProductMarketFit {
 
 	public static void initialize() {
 
@@ -18,6 +23,11 @@ public class ProductMarketFitSteps {
 		BlogPanel.stagePanel.add(setPanel());
 
 		Prototyping.initialize();
+		
+		BlogPanel.topicPanel.clear();
+		BlogPanel.topicPanel.add(new TopicPanel(
+				StartupStagesGlobalVariables.topics
+						.get(TopicID.ProductMarketFit)));
 	}
 
 	public static HorizontalPanel setPanel() {

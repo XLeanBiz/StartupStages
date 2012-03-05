@@ -24,7 +24,7 @@ public class Ideation {
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
 				StartupStagesGlobalVariables.topics
-						.get(TopicID.VisionStatement)));
+						.get(TopicID.Idea)));
 	}
 
 	public static AbsolutePanel setPanel() {

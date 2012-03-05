@@ -22,7 +22,7 @@ public class AssumptionsValidation {
 
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics.get(TopicID.Uses)));
+				StartupStagesGlobalVariables.topics.get(TopicID.Assumptions)));
 	}
 
 	public static AbsolutePanel getPanel() {

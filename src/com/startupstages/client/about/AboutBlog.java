@@ -21,8 +21,10 @@ public class AboutBlog extends AbsolutePanel {
 		this.add(htmlTheXleanInteractive, 70, 40);
 
 		HTML htmleachStageIs = new HTML(
-				"<font size=3>All the topics of a startup step are inserted in a specific phase of the Eric Ries' Build-Measure-Learn Loop "
-						+ "to guide the founder in the his/her journey.</font>",
+				"<font size=3>All the topics of a startup step are inserted in a specific phase of the" +
+				" <a href='http://theleanstartup.com/principles' target='_blank'>Build-Measure-Learn Loop</a> " +
+				" from <a href='http://theleanstartup.com/principles' target='_blank'>Eric Ries</a> "
+						+ "to guide the founder in his/her journey.</font>",
 				true);
 		add(htmleachStageIs, 70, 126);
 		htmleachStageIs.setSize("759px", "35px");

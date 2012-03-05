@@ -1,4 +1,4 @@
-package com.startupstages.client.blog.steps;
+package com.startupstages.client.blog.stages;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -8,9 +8,13 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
+import com.startupstages.client.blog.steps.Scaling;
+import com.startupstages.client.blog.topics.TopicPanel;
+import com.startupstages.client.model.Topic.TopicID;
 
-public class ScaleSteps {
+public class Scale {
 
 	public static void initialize() {
 
@@ -18,6 +22,10 @@ public class ScaleSteps {
 		BlogPanel.stagePanel.add(setPanel());
 
 		Scaling.initialize();
+
+		BlogPanel.topicPanel.clear();
+		BlogPanel.topicPanel.add(new TopicPanel(
+				StartupStagesGlobalVariables.topics.get(TopicID.Scale)));
 	}
 
 	public static HorizontalPanel setPanel() {

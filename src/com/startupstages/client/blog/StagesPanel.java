@@ -4,9 +4,9 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.startupstages.client.blog.steps.ProblemSolutionFitSteps;
-import com.startupstages.client.blog.steps.ProductMarketFitSteps;
-import com.startupstages.client.blog.steps.ScaleSteps;
+import com.startupstages.client.blog.stages.ProblemSolutionFit;
+import com.startupstages.client.blog.stages.ProductMarketFit;
+import com.startupstages.client.blog.stages.Scale;
 
 public class StagesPanel extends HorizontalPanel {
 
@@ -21,7 +21,7 @@ public class StagesPanel extends HorizontalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				ProblemSolutionFitSteps.initialize();
+				ProblemSolutionFit.initialize();
 			}
 		});
 		this.add(problemSolutionFit);
@@ -36,7 +36,7 @@ public class StagesPanel extends HorizontalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				ProductMarketFitSteps.initialize();
+				ProductMarketFit.initialize();
 			}
 		});
 		this.add(productMarketFit);
@@ -50,7 +50,7 @@ public class StagesPanel extends HorizontalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				ScaleSteps.initialize();
+				Scale.initialize();
 			}
 		});
 		this.add(scale);

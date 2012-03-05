@@ -21,7 +21,7 @@ public class Scaling {
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
 				StartupStagesGlobalVariables.topics
-						.get(TopicID.PaymentMethods)));
+						.get(TopicID.Scaling)));
 	}
 
 	public static AbsolutePanel setPanel() {

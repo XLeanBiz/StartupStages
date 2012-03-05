@@ -9,6 +9,7 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
+import com.startupstages.client.blog.stages.ProductMarketFit;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
@@ -22,7 +23,7 @@ public class BrandValidation {
 
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics.get(TopicID.BrandName)));
+				StartupStagesGlobalVariables.topics.get(TopicID.Brand)));
 	}
 
 	public static AbsolutePanel getPanel() {
@@ -45,7 +46,7 @@ public class BrandValidation {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				ProductMarketFitSteps.initialize();
+				ProductMarketFit.initialize();
 			}
 		});
 		absolutePanel.add(image_1, 450, 237);

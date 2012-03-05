@@ -8,6 +8,7 @@ import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.startupstages.client.StartupStagesGlobalVariables;
+import com.startupstages.client.utilities.UseTracking;
 
 public class BlogIntroduction extends AbsolutePanel {
 
@@ -42,21 +43,30 @@ public class BlogIntroduction extends AbsolutePanel {
 						+ "startupstages/XLeanBiz.jpg\" width=\"60px\" height=\"30px\"> "
 						+ "<b><i>Interactive Blog</i></b>  &nbsp; will help you understand "
 						+ "and identify yourself with the stages above,"
-						+ "<br> in a way that you will be able to compare yourself with others "
+						+ "<br> in a way that you will be able to be compared with others "
 						+ "and move forward towards the success!</font>", true);
 		this.add(htmlTheXleanInteractive, 109, 500);
 
+		this.add(getKnowMoreAnchor(buttonStartBlog), 109, 560);
+
+		this.add(buttonStartBlog, 356, 593);
+	}
+	
+	private Anchor getKnowMoreAnchor(final Image buttonStartBlog){
+		
 		Anchor htmlNewHtml = new Anchor("Know more...");
 		htmlNewHtml.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
+				
+				new UseTracking("com.startupstages.client.about.BlogIntroduction#KnowMore");
 
 				StartupStagesGlobalVariables.blogPanel.clear();
 				StartupStagesGlobalVariables.blogPanel.add(new AboutBlog(
 						buttonStartBlog));
 			}
 		});
-		add(htmlNewHtml, 109, 560);
-
-		this.add(buttonStartBlog, 356, 593);
+		
+		
+		return htmlNewHtml;
 	}
 }
