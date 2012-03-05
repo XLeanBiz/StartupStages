@@ -7,6 +7,7 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.startupstages.client.blog.stages.ProblemSolutionFit;
 import com.startupstages.client.blog.stages.ProductMarketFit;
 import com.startupstages.client.blog.stages.Scale;
+import com.startupstages.client.utilities.UseTracking;
 
 public class StagesPanel extends HorizontalPanel {
 
@@ -20,6 +21,9 @@ public class StagesPanel extends HorizontalPanel {
 
 			@Override
 			public void onClick(ClickEvent event) {
+
+				new UseTracking(
+						"com.startupstages.client.blog.StagesPanel#ProblemSolutionFitLink");
 
 				ProblemSolutionFit.initialize();
 			}
@@ -36,6 +40,9 @@ public class StagesPanel extends HorizontalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
+				new UseTracking(
+						"com.startupstages.client.blog.StagesPanel#ProductMarketFitLink");
+
 				ProductMarketFit.initialize();
 			}
 		});
@@ -49,6 +56,9 @@ public class StagesPanel extends HorizontalPanel {
 
 			@Override
 			public void onClick(ClickEvent event) {
+
+				new UseTracking(
+						"com.startupstages.client.blog.StagesPanel#ScaleLink");
 
 				Scale.initialize();
 			}

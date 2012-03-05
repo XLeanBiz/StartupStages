@@ -15,16 +15,21 @@ import com.startupstages.client.model.Topic.TopicID;
 
 public class Ideation {
 
-
 	public static void initialize() {
+		initialize(true);
+	}
+
+	public static void initialize(final boolean initTopicPanel) {
 
 		BlogPanel.stepPanel.clear();
 		BlogPanel.stepPanel.add(setPanel());
 
-		BlogPanel.topicPanel.clear();
-		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics
-						.get(TopicID.Idea)));
+		if (initTopicPanel) {
+
+			BlogPanel.topicPanel.clear();
+			BlogPanel.topicPanel.add(new TopicPanel(
+					StartupStagesGlobalVariables.topics.get(TopicID.Idea)));
+		}
 	}
 
 	public static AbsolutePanel setPanel() {

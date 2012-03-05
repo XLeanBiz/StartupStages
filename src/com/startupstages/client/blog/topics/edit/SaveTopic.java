@@ -1,9 +1,12 @@
-package com.startupstages.client.blog.topics;
+package com.startupstages.client.blog.topics.edit;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
+import com.startupstages.client.blog.topics.TopicPanel;
+import com.startupstages.client.blog.topics.TopicsService;
+import com.startupstages.client.blog.topics.TopicsServiceAsync;
 import com.startupstages.client.model.Topic;
 
 public class SaveTopic {

@@ -13,6 +13,7 @@ import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.steps.Scaling;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
+import com.startupstages.client.utilities.UseTracking;
 
 public class Scale {
 
@@ -21,7 +22,7 @@ public class Scale {
 		BlogPanel.stagePanel.clear();
 		BlogPanel.stagePanel.add(setPanel());
 
-		Scaling.initialize();
+		Scaling.initialize(false);
 
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
@@ -50,6 +51,9 @@ public class Scale {
 
 			@Override
 			public void onClick(ClickEvent event) {
+
+				new UseTracking(
+						"com.startupstages.client.blog.stages.Scale#ScaleLink");
 
 				Scaling.initialize();
 			}

@@ -16,6 +16,7 @@ import com.startupstages.client.blog.steps.Ideation;
 import com.startupstages.client.blog.steps.UniqueValueIdentification;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
+import com.startupstages.client.utilities.UseTracking;
 
 public class ProblemSolutionFit {
 
@@ -24,8 +25,8 @@ public class ProblemSolutionFit {
 		BlogPanel.stagePanel.clear();
 		BlogPanel.stagePanel.add(setPanel());
 
-		Ideation.initialize();
-		
+		Ideation.initialize(false);
+
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
 				StartupStagesGlobalVariables.topics
@@ -61,6 +62,9 @@ public class ProblemSolutionFit {
 			@Override
 			public void onClick(ClickEvent event) {
 
+				new UseTracking(
+						"com.startupstages.client.blog.stages.ProblemSolutionFit#IdeaLink");
+
 				Ideation.initialize();
 			}
 		};
@@ -89,6 +93,9 @@ public class ProblemSolutionFit {
 
 			@Override
 			public void onClick(ClickEvent event) {
+
+				new UseTracking(
+						"com.startupstages.client.blog.stages.ProblemSolutionFit#AssumptionLink");
 
 				AssumptionsValidation.initialize();
 			}
@@ -120,6 +127,9 @@ public class ProblemSolutionFit {
 			@Override
 			public void onClick(ClickEvent event) {
 
+				new UseTracking(
+						"com.startupstages.client.blog.stages.ProblemSolutionFit#UniqueValueLink");
+
 				UniqueValueIdentification.initialize();
 			}
 		};
@@ -149,6 +159,9 @@ public class ProblemSolutionFit {
 
 			@Override
 			public void onClick(ClickEvent event) {
+
+				new UseTracking(
+						"com.startupstages.client.blog.stages.ProblemSolutionFit#BrandLink");
 
 				BrandValidation.initialize();
 			}

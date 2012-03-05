@@ -16,14 +16,21 @@ import com.startupstages.client.model.Topic.TopicID;
 public class Prototyping {
 
 	public static void initialize() {
+		initialize(true);
+	}
+
+	public static void initialize(final boolean initTopicPanel) {
 
 		BlogPanel.stepPanel.clear();
 		BlogPanel.stepPanel.add(getPanel());
 
-		BlogPanel.topicPanel.clear();
-		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics
-						.get(TopicID.Prototype)));
+		if (initTopicPanel) {
+
+			BlogPanel.topicPanel.clear();
+			BlogPanel.topicPanel
+					.add(new TopicPanel(StartupStagesGlobalVariables.topics
+							.get(TopicID.Prototype)));
+		}
 	}
 
 	public static AbsolutePanel getPanel() {

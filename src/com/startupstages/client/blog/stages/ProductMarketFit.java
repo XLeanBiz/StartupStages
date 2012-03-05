@@ -14,6 +14,7 @@ import com.startupstages.client.blog.steps.Enhancing;
 import com.startupstages.client.blog.steps.Prototyping;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
+import com.startupstages.client.utilities.UseTracking;
 
 public class ProductMarketFit {
 
@@ -22,8 +23,8 @@ public class ProductMarketFit {
 		BlogPanel.stagePanel.clear();
 		BlogPanel.stagePanel.add(setPanel());
 
-		Prototyping.initialize();
-		
+		Prototyping.initialize(false);
+
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
 				StartupStagesGlobalVariables.topics
@@ -55,6 +56,9 @@ public class ProductMarketFit {
 			@Override
 			public void onClick(ClickEvent event) {
 
+				new UseTracking(
+						"com.startupstages.client.blog.stages.ProductMarketFit#PrototypeLink");
+
 				Prototyping.initialize();
 			}
 		};
@@ -84,6 +88,9 @@ public class ProductMarketFit {
 
 			@Override
 			public void onClick(ClickEvent event) {
+
+				new UseTracking(
+						"com.startupstages.client.blog.stages.ProductMarketFit#EnhanceLink");
 
 				Enhancing.initialize();
 			}
