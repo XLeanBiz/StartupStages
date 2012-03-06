@@ -10,7 +10,7 @@ import com.startupstages.client.utilities.RichTextToolbar;
 
 public class TopicEdit extends VerticalPanel {
 
-	private static RichTextArea area = new RichTextArea();
+	public static RichTextArea area = new RichTextArea();
 
 	public TopicEdit(final Topic topic) {
 
@@ -37,7 +37,7 @@ public class TopicEdit extends VerticalPanel {
 		vp.add(area);
 		this.add(vp);
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-		this.add(new ButtonSaveTopic(topic, area.getHTML()));
+		this.add(new ButtonSaveTopic(topic));
 		Label label = new Label(" ");
 		add(label);
 	}

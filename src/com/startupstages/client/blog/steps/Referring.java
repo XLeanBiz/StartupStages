@@ -1,8 +1,6 @@
 package com.startupstages.client.blog.steps;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
@@ -13,23 +11,16 @@ import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
 
-public class Scaling {
+public class Referring {
 
 	public static void initialize() {
-		initialize(true);
-	}
-
-	public static void initialize(final boolean initTopicPanel) {
 
 		BlogPanel.stepPanel.clear();
 		BlogPanel.stepPanel.add(setPanel());
 
-		if (initTopicPanel) {
-
-			BlogPanel.topicPanel.clear();
-			BlogPanel.topicPanel.add(new TopicPanel(
-					StartupStagesGlobalVariables.topics.get(TopicID.Scaling)));
-		}
+		BlogPanel.topicPanel.clear();
+		BlogPanel.topicPanel.add(new TopicPanel(
+				StartupStagesGlobalVariables.topics.get(TopicID.Referring)));
 	}
 
 	public static AbsolutePanel setPanel() {
@@ -38,7 +29,7 @@ public class Scaling {
 		absolutePanel.setSize("590px", "470px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/Scaling.png");
+				+ "startupstages/referring.png");
 		absolutePanel.add(image, 0, 0);
 
 		absolutePanel.add(vpBuild(), 27, 255);
@@ -46,16 +37,6 @@ public class Scaling {
 		absolutePanel.add(vpMeasure(), 230, 215);
 
 		absolutePanel.add(vpLearn(), 410, 337);
-		
-		Image image_1 = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/arrow.png");
-		image_1.addClickHandler(new ClickHandler() {
-			public void onClick(ClickEvent event) {
-
-				Profiting.initialize();
-			}
-		});
-		absolutePanel.add(image_1, 450, 237);
 
 		return absolutePanel;
 	}
@@ -90,10 +71,7 @@ public class Scaling {
 		verticalPanel_3.add(htmlmeasure);
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.VisitsIncreasingRate)));
-
-		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ConversionRate)));
+				.get(TopicID.ReferralRate)));
 
 		return verticalPanel_2;
 	}

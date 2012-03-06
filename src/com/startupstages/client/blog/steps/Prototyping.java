@@ -97,10 +97,10 @@ public class Prototyping {
 		verticalPanel_3.add(htmlmeasure);
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeatureClicks)));
+				.get(TopicID.FeatureVisits)));
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeatureUse)));
+				.get(TopicID.FeatureUses)));
 
 		return verticalPanel_2;
 	}

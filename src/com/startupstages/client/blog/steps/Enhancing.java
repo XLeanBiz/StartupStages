@@ -69,6 +69,9 @@ public class Enhancing {
 		verticalPanel.add(htmlBuild);
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Support)));
+		
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Performance)));
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics

@@ -8,7 +8,7 @@ import com.startupstages.client.utilities.UseTracking;
 
 public class ButtonSaveTopic extends Button {
 
-	public ButtonSaveTopic(final Topic topic, final String description) {
+	public ButtonSaveTopic(final Topic topic) {
 
 		this.setHTML("Save");
 
@@ -19,7 +19,7 @@ public class ButtonSaveTopic extends Button {
 				new UseTracking(
 						"com.startupstages.client.blog.topics.edit.ButtonSaveTopic");
 
-				topic.setTopicDescription(description);
+				topic.setTopicDescription(TopicEdit.area.getHTML());
 
 				SaveTopic.save(topic);
 			}

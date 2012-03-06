@@ -13,23 +13,16 @@ import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
 
-public class Scaling {
+public class Profiting {
 
 	public static void initialize() {
-		initialize(true);
-	}
-
-	public static void initialize(final boolean initTopicPanel) {
 
 		BlogPanel.stepPanel.clear();
 		BlogPanel.stepPanel.add(setPanel());
 
-		if (initTopicPanel) {
-
-			BlogPanel.topicPanel.clear();
-			BlogPanel.topicPanel.add(new TopicPanel(
-					StartupStagesGlobalVariables.topics.get(TopicID.Scaling)));
-		}
+		BlogPanel.topicPanel.clear();
+		BlogPanel.topicPanel.add(new TopicPanel(
+				StartupStagesGlobalVariables.topics.get(TopicID.Profiting)));
 	}
 
 	public static AbsolutePanel setPanel() {
@@ -38,7 +31,7 @@ public class Scaling {
 		absolutePanel.setSize("590px", "470px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/Scaling.png");
+				+ "startupstages/profiting.png");
 		absolutePanel.add(image, 0, 0);
 
 		absolutePanel.add(vpBuild(), 27, 255);
@@ -52,7 +45,7 @@ public class Scaling {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				Profiting.initialize();
+				Referring.initialize();
 			}
 		});
 		absolutePanel.add(image_1, 450, 237);
@@ -73,6 +66,9 @@ public class Scaling {
 		HTML htmlBuild = new HTML("<b>BUILD:</b>", true);
 		verticalPanel.add(htmlBuild);
 
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.PaymentMethods)));
+
 		return verticalPanel_1;
 	}
 
@@ -90,10 +86,10 @@ public class Scaling {
 		verticalPanel_3.add(htmlmeasure);
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.VisitsIncreasingRate)));
+				.get(TopicID.CostPerUser)));
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ConversionRate)));
+				.get(TopicID.RevenuePerUser)));
 
 		return verticalPanel_2;
 	}

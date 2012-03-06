@@ -82,6 +82,9 @@ public class BrandValidation {
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.FeedbackChanels)));
 
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.SEO)));
+		
 		return verticalPanel_1;
 	}
 

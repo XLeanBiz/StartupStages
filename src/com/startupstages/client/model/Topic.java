@@ -8,16 +8,19 @@ public class Topic {
 
 		ProblemSolutionFit,
         Idea, VisionStatement, Persona, Team, Goals, TeamSize, MarketResearch, Surveys, 
-        Assumptions, Uses, UsesRate, Interviews, Causes, 
-        UniqueValue, UniqueValueProposition, NonCodedMVP, Wireframes, ABTests, LeanCanvas, NonCodedMVPUse,
-        Brand, BrandName, Logo, LandingPage, Blog, FeedbackChanels, Visits, SignUps, Advertising,
+        Assumptions, Uses, UsesRate, Interviews, LeanCanvas,
+        UniqueValue, UniqueValueProposition, NonCodedMVP, Wireframes, ABTests, NonCodedMVPUse,
+        Brand, BrandName, Logo, LandingPage, Blog, FeedbackChanels, SEO, Visits, SignUps, Advertising,
 
         ProductMarketFit,
-        Prototype, ProductionEnvironment, FeaturePrototype, FeatureClicks, FeatureUse, UsabilityTests,
-        Enhance, Performance, Security, CodeQuality, Satisfation, EarlyAdopters, Returns,
+        Prototype, ProductionEnvironment, FeaturePrototype, FeatureVisits, FeatureUses, UsabilityTests,
+        Enhance, Support, Performance, Security, CodeQuality, Satisfation, EarlyAdopters, Returns,
 
         Scale,
-        Scaling, PaymentMethods, CostPerUser, ConversionRate, RevenuePerUser
+        Scaling, VisitsIncreasingRate, ConversionRate,
+        Profiting, PaymentMethods, CostPerUser, RevenuePerUser,
+        Referring, ReferralRate
+       
     }
 
 	private TopicID topicID;
