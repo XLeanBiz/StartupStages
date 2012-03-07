@@ -5,7 +5,7 @@ public class UseTracking {
 
 	public UseTracking(String trackingString) {
 
-		//useTrack(trackingString);
+		useTrack(trackingString);
 	}
 
 	public static native void useTrack(String trackingString)/*-{

@@ -35,7 +35,7 @@ public class BrandValidation {
 				+ "startupstages/Branding.png");
 		absolutePanel.add(image, 0, 0);
 
-		absolutePanel.add(vpBuild(), 27, 255);
+		absolutePanel.add(vpBuild(), 27, 200);
 
 		absolutePanel.add(vpMeasure(), 230, 215);
 
@@ -75,6 +75,9 @@ public class BrandValidation {
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.LandingPage)));
+		
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Domain)));
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Blog)));

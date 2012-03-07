@@ -75,6 +75,12 @@ public class Prototyping {
 		verticalPanel.add(htmlBuild);
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.SourceRepository)));
+
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Database)));
+
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.ProductionEnvironment)));
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
@@ -101,6 +107,9 @@ public class Prototyping {
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.FeatureUses)));
+
+		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.LOC)));
 
 		return verticalPanel_2;
 	}

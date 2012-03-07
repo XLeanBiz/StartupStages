@@ -78,7 +78,13 @@ public class Enhancing {
 				.get(TopicID.Security)));
 		
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Privacy)));
+		
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.CodeQuality)));
+		
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Rewards)));
 
 		return verticalPanel_1;
 	}

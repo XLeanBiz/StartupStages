@@ -65,6 +65,9 @@ public class Profiting {
 
 		HTML htmlBuild = new HTML("<b>BUILD:</b>", true);
 		verticalPanel.add(htmlBuild);
+		
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Pricing)));
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.PaymentMethods)));

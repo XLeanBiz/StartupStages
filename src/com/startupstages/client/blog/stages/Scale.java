@@ -10,7 +10,6 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
-import com.startupstages.client.blog.steps.Profiting;
 import com.startupstages.client.blog.steps.Referring;
 import com.startupstages.client.blog.steps.Scaling;
 import com.startupstages.client.blog.topics.TopicPanel;
@@ -37,79 +36,11 @@ public class Scale {
 
 		hp.setSpacing(10);
 
-		hp.add(vpScaling());
-
-		hp.add(vpProfiting());
-
 		hp.add(vpReferring());
 
+		hp.add(vpScaling());
+
 		return hp;
-	}
-
-	private static VerticalPanel vpScaling() {
-
-		VerticalPanel vp = new VerticalPanel();
-		vp.setSpacing(10);
-		vp.setWidth("130px");
-		vp.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-
-		ClickHandler ideaClick = new ClickHandler() {
-
-			@Override
-			public void onClick(ClickEvent event) {
-
-				new UseTracking(
-						"com.startupstages.client.blog.stages.Scale#ScaleLink");
-
-				Scaling.initialize();
-			}
-		};
-
-		Anchor anchorIdea = new Anchor("<font size=3><b>Scaling</b></font>",
-				true);
-		anchorIdea.addClickHandler(ideaClick);
-		vp.add(anchorIdea);
-
-		Image imgIdea = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/ScaleIcon.png");
-		imgIdea.setSize("50px", "50px");
-		imgIdea.addClickHandler(ideaClick);
-		vp.add(imgIdea);
-
-		return vp;
-	}
-
-	private static VerticalPanel vpProfiting() {
-
-		VerticalPanel vp = new VerticalPanel();
-		vp.setSpacing(10);
-		vp.setWidth("130px");
-		vp.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-
-		ClickHandler ideaClick = new ClickHandler() {
-
-			@Override
-			public void onClick(ClickEvent event) {
-
-				new UseTracking(
-						"com.startupstages.client.blog.stages.Scale#ProfitingLink");
-
-				Profiting.initialize();
-			}
-		};
-
-		Anchor anchorIdea = new Anchor("<font size=3><b>Profiting</b></font>",
-				true);
-		anchorIdea.addClickHandler(ideaClick);
-		vp.add(anchorIdea);
-
-		Image imgIdea = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/profitingIcon.png");
-		imgIdea.setSize("50px", "50px");
-		imgIdea.addClickHandler(ideaClick);
-		vp.add(imgIdea);
-
-		return vp;
 	}
 
 	private static VerticalPanel vpReferring() {
@@ -138,6 +69,39 @@ public class Scale {
 
 		Image imgIdea = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/referringIcon.png");
+		imgIdea.setSize("50px", "50px");
+		imgIdea.addClickHandler(ideaClick);
+		vp.add(imgIdea);
+
+		return vp;
+	}
+
+	private static VerticalPanel vpScaling() {
+
+		VerticalPanel vp = new VerticalPanel();
+		vp.setSpacing(10);
+		vp.setWidth("130px");
+		vp.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+
+		ClickHandler ideaClick = new ClickHandler() {
+
+			@Override
+			public void onClick(ClickEvent event) {
+
+				new UseTracking(
+						"com.startupstages.client.blog.stages.Scale#ScaleLink");
+
+				Scaling.initialize();
+			}
+		};
+
+		Anchor anchorIdea = new Anchor("<font size=3><b>Scaling</b></font>",
+				true);
+		anchorIdea.addClickHandler(ideaClick);
+		vp.add(anchorIdea);
+
+		Image imgIdea = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/ScaleIcon.png");
 		imgIdea.setSize("50px", "50px");
 		imgIdea.addClickHandler(ideaClick);
 		vp.add(imgIdea);

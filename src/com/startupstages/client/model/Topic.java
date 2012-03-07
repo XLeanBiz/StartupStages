@@ -7,21 +7,30 @@ public class Topic {
 	public enum TopicID {
 
 		ProblemSolutionFit,
-        Idea, VisionStatement, Persona, Team, Goals, TeamSize, MarketResearch, Surveys, 
-        Assumptions, Uses, UsesRate, Interviews, LeanCanvas,
-        UniqueValue, UniqueValueProposition, NonCodedMVP, Wireframes, ABTests, NonCodedMVPUse,
-        Brand, BrandName, Logo, LandingPage, Blog, FeedbackChanels, SEO, Visits, SignUps, Advertising,
 
-        ProductMarketFit,
-        Prototype, ProductionEnvironment, FeaturePrototype, FeatureVisits, FeatureUses, UsabilityTests,
-        Enhance, Support, Performance, Security, CodeQuality, Satisfation, EarlyAdopters, Returns,
+		Idea, VisionStatement, Persona, Team, Goals, TeamSize, MarketResearch, Surveys,
 
-        Scale,
-        Scaling, VisitsIncreasingRate, ConversionRate,
-        Profiting, PaymentMethods, CostPerUser, RevenuePerUser,
-        Referring, ReferralRate
-       
-    }
+		Assumptions, Uses, UsesRate, Interviews, LeanCanvas,
+
+		UniqueValue, UniqueValueProposition, NonCodedMVP, Wireframes, ABTests, NonCodedMVPUse,
+
+		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, Advertising,
+
+		ProductMarketFit,
+
+		Prototype, SourceRepository, Database, ProductionEnvironment, FeaturePrototype, FeatureVisits, FeatureUses, LOC, UsabilityTests,
+
+		Enhance, Support, Performance, Security, Privacy, CodeQuality, Rewards, Satisfation, EarlyAdopters, Returns,
+
+		Profiting, Pricing, PaymentMethods, CostPerUser, RevenuePerUser,
+
+		Scale,
+
+		Referring, ReferralModels, ReferralRate,
+
+		Scaling, VisitsIncreasingRate, ConversionRate
+
+	}
 
 	private TopicID topicID;
 

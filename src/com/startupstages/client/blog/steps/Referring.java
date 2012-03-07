@@ -1,6 +1,8 @@
 package com.startupstages.client.blog.steps;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
@@ -38,6 +40,16 @@ public class Referring {
 
 		absolutePanel.add(vpLearn(), 410, 337);
 
+		Image image_1 = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/arrow.png");
+		image_1.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+
+				Scaling.initialize();
+			}
+		});
+		absolutePanel.add(image_1, 450, 237);
+
 		return absolutePanel;
 	}
 
@@ -53,6 +65,9 @@ public class Referring {
 
 		HTML htmlBuild = new HTML("<b>BUILD:</b>", true);
 		verticalPanel.add(htmlBuild);
+
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.ReferralModels)));
 
 		return verticalPanel_1;
 	}
