@@ -14,19 +14,27 @@ import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
 
-public class Referring {
+public class Funding {
 
 	public static void initialize() {
+		initialize(true);
+	}
+
+	public static void initialize(final boolean initTopicPanel) {
 		
 		StagesPanel.unselectStagesTabs();
 		StagesPanel.hpScale.setStyleName("backgroundColorWhite");
 
+
 		BlogPanel.stepPanel.clear();
 		BlogPanel.stepPanel.add(setPanel());
 
-		BlogPanel.topicPanel.clear();
-		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics.get(TopicID.Referring)));
+		if (initTopicPanel) {
+
+			BlogPanel.topicPanel.clear();
+			BlogPanel.topicPanel.add(new TopicPanel(
+					StartupStagesGlobalVariables.topics.get(TopicID.Funding)));
+		}
 	}
 
 	public static AbsolutePanel setPanel() {
@@ -35,7 +43,7 @@ public class Referring {
 		absolutePanel.setSize("590px", "470px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/referring.png");
+				+ "startupstages/funding.png");
 		absolutePanel.add(image, 0, 0);
 
 		absolutePanel.add(vpBuild(), 12, 150);
@@ -51,7 +59,7 @@ public class Referring {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				Scaling.initialize();
+				Referring.initialize();
 			}
 		});
 		absolutePanel.add(image_1, 450, 137);
@@ -73,7 +81,10 @@ public class Referring {
 		verticalPanel.add(htmlBuild);
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ReferralModels)));
+				.get(TopicID.AdvisorsBoard)));
+
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.InvestorsMeetings)));
 
 		return verticalPanel_1;
 	}
@@ -92,7 +103,7 @@ public class Referring {
 		verticalPanel_3.add(htmlmeasure);
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ReferralRate)));
+				.get(TopicID.TeamSize)));
 
 		return verticalPanel_2;
 	}
@@ -109,6 +120,12 @@ public class Referring {
 
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		verticalPanel_5.add(htmllearn);
+
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.MarketResearch)));
+
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Surveys)));
 
 		return verticalPanel_4;
 	}

@@ -10,6 +10,7 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
+import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.steps.Enhancing;
 import com.startupstages.client.blog.steps.Profiting;
 import com.startupstages.client.blog.steps.Prototyping;
@@ -20,6 +21,9 @@ import com.startupstages.client.utilities.UseTracking;
 public class ProductMarketFit {
 
 	public static void initialize() {
+		
+		StagesPanel.unselectStagesTabs();
+		StagesPanel.hpProductMarketFit.setStyleName("backgroundColorWhite");
 
 		BlogPanel.stagePanel.clear();
 		BlogPanel.stagePanel.add(setPanel());
@@ -41,6 +45,8 @@ public class ProductMarketFit {
 		hp.add(vpPrototype());
 
 		hp.add(vpEnhance());
+		
+		hp.add(vpIncorporate());
 		
 		hp.add(vpProfiting());
 
@@ -109,6 +115,39 @@ public class ProductMarketFit {
 		imgProblem.setSize("50px", "50px");
 		imgProblem.addClickHandler(problemClick);
 		vp.add(imgProblem);
+
+		return vp;
+	}
+	
+	private static VerticalPanel vpIncorporate() {
+
+		VerticalPanel vp = new VerticalPanel();
+		vp.setSpacing(10);
+		vp.setWidth("130px");
+		vp.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+
+		ClickHandler ideaClick = new ClickHandler() {
+
+			@Override
+			public void onClick(ClickEvent event) {
+
+				new UseTracking(
+						"com.startupstages.client.blog.stages.Scale#IncorporateLink");
+
+				Profiting.initialize();
+			}
+		};
+
+		Anchor anchorIdea = new Anchor("<font size=3><b>Incorporate</b></font>",
+				true);
+		anchorIdea.addClickHandler(ideaClick);
+		vp.add(anchorIdea);
+
+		Image imgIdea = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/home.jpg");
+		imgIdea.setSize("50px", "50px");
+		imgIdea.addClickHandler(ideaClick);
+		vp.add(imgIdea);
 
 		return vp;
 	}

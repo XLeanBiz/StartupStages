@@ -9,6 +9,7 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
+import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
@@ -20,6 +21,9 @@ public class Ideation {
 	}
 
 	public static void initialize(final boolean initTopicPanel) {
+
+		StagesPanel.unselectStagesTabs();
+		StagesPanel.hpProblemSolutionFit.setStyleName("backgroundColorWhite");
 
 		BlogPanel.stepPanel.clear();
 		BlogPanel.stepPanel.add(setPanel());
@@ -46,7 +50,7 @@ public class Ideation {
 		absolutePanel.add(vpMeasure(), 152, 180);
 
 		absolutePanel.add(vpLearn(), 292, 210);
-		
+
 		absolutePanel.add(vpAchieve(), 432, 250);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
@@ -130,7 +134,7 @@ public class Ideation {
 
 		return verticalPanel_4;
 	}
-	
+
 	private static VerticalPanel vpAchieve() {
 
 		VerticalPanel verticalPanel_4 = new VerticalPanel();

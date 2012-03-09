@@ -10,6 +10,7 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
+import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.steps.AssumptionsValidation;
 import com.startupstages.client.blog.steps.BrandValidation;
 import com.startupstages.client.blog.steps.Ideation;
@@ -21,6 +22,9 @@ import com.startupstages.client.utilities.UseTracking;
 public class ProblemSolutionFit {
 
 	public static void initialize() {
+		
+		StagesPanel.unselectStagesTabs();
+		StagesPanel.hpProblemSolutionFit.setStyleName("backgroundColorWhite");
 
 		BlogPanel.stagePanel.clear();
 		BlogPanel.stagePanel.add(setPanel());

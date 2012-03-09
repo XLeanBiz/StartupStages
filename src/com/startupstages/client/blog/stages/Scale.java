@@ -10,6 +10,8 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
+import com.startupstages.client.blog.StagesPanel;
+import com.startupstages.client.blog.steps.Funding;
 import com.startupstages.client.blog.steps.Referring;
 import com.startupstages.client.blog.steps.Scaling;
 import com.startupstages.client.blog.topics.TopicPanel;
@@ -19,11 +21,14 @@ import com.startupstages.client.utilities.UseTracking;
 public class Scale {
 
 	public static void initialize() {
+		
+		StagesPanel.unselectStagesTabs();
+		StagesPanel.hpScale.setStyleName("backgroundColorWhite");
 
 		BlogPanel.stagePanel.clear();
 		BlogPanel.stagePanel.add(setPanel());
 
-		Scaling.initialize(false);
+		Funding.initialize(false);
 
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
@@ -35,6 +40,8 @@ public class Scale {
 		HorizontalPanel hp = new HorizontalPanel();
 
 		hp.setSpacing(10);
+		
+		hp.add(vpFunding());
 
 		hp.add(vpReferring());
 
@@ -42,6 +49,40 @@ public class Scale {
 
 		return hp;
 	}
+	
+	private static VerticalPanel vpFunding() {
+
+		VerticalPanel vp = new VerticalPanel();
+		vp.setSpacing(10);
+		vp.setWidth("130px");
+		vp.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+
+		ClickHandler ideaClick = new ClickHandler() {
+
+			@Override
+			public void onClick(ClickEvent event) {
+
+				new UseTracking(
+						"com.startupstages.client.blog.stages.Scale#FundingLink");
+
+				Funding.initialize();
+			}
+		};
+
+		Anchor anchorIdea = new Anchor("<font size=3><b>Funding</b></font>",
+				true);
+		anchorIdea.addClickHandler(ideaClick);
+		vp.add(anchorIdea);
+
+		Image imgIdea = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/fundingIcon.jpg");
+		imgIdea.setSize("50px", "50px");
+		imgIdea.addClickHandler(ideaClick);
+		vp.add(imgIdea);
+
+		return vp;
+	}
+
 
 	private static VerticalPanel vpReferring() {
 

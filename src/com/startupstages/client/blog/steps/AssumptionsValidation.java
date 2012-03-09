@@ -9,6 +9,7 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
+import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
@@ -16,6 +17,9 @@ import com.startupstages.client.model.Topic.TopicID;
 public class AssumptionsValidation {
 
 	public static void initialize() {
+		
+		StagesPanel.unselectStagesTabs();
+		StagesPanel.hpProblemSolutionFit.setStyleName("backgroundColorWhite");
 
 		BlogPanel.stepPanel.clear();
 		BlogPanel.stepPanel.add(getPanel());
