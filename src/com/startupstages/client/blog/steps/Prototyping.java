@@ -109,6 +109,9 @@ public class Prototyping {
 				.get(TopicID.FeatureUses)));
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.TestCoverage)));
+
+		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.LOC)));
 
 		return verticalPanel_2;
@@ -128,7 +131,19 @@ public class Prototyping {
 		verticalPanel_5.add(htmllearn);
 
 		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.UserDrivenDevelopment)));
+
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.ExtremeProgramming)));
+
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.AgileDevelopment)));
+
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.UsabilityTests)));
+
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.APIPivot)));
 
 		return verticalPanel_4;
 	}

@@ -41,21 +41,23 @@ public class Ideation {
 				+ "startupstages/ideation.png");
 		absolutePanel.add(image, 0, 0);
 
-		absolutePanel.add(vpBuild(), 27, 255);
+		absolutePanel.add(vpBuild(), 12, 150);
 
-		absolutePanel.add(vpMeasure(), 230, 215);
+		absolutePanel.add(vpMeasure(), 152, 180);
 
-		absolutePanel.add(vpLearn(), 410, 337);
+		absolutePanel.add(vpLearn(), 292, 210);
+		
+		absolutePanel.add(vpAchieve(), 432, 250);
 
-		Image image_1 = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/arrow.png");
+		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
+				+ "startupstages/arrow.png'></a>");
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
 				AssumptionsValidation.initialize();
 			}
 		});
-		absolutePanel.add(image_1, 450, 237);
+		absolutePanel.add(image_1, 450, 137);
 
 		return absolutePanel;
 	}
@@ -64,13 +66,13 @@ public class Ideation {
 
 		VerticalPanel verticalPanel_1 = new VerticalPanel();
 		verticalPanel_1.setBorderWidth(1);
-		verticalPanel_1.setSize("150px", "100px");
+		verticalPanel_1.setSize("130px", "150px");
 
 		VerticalPanel verticalPanel = new VerticalPanel();
 		verticalPanel_1.add(verticalPanel);
 		verticalPanel.setSpacing(10);
 
-		HTML htmlBuild = new HTML("<b>BUILD:</b>", true);
+		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		verticalPanel.add(htmlBuild);
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
@@ -92,13 +94,13 @@ public class Ideation {
 
 		VerticalPanel verticalPanel_2 = new VerticalPanel();
 		verticalPanel_2.setBorderWidth(1);
-		verticalPanel_2.setSize("150px", "154px");
+		verticalPanel_2.setSize("130px", "150px");
 
 		VerticalPanel verticalPanel_3 = new VerticalPanel();
 		verticalPanel_3.setSpacing(10);
 		verticalPanel_2.add(verticalPanel_3);
 
-		HTML htmlmeasure = new HTML("<b>MEASURE:</b>", true);
+		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
 		verticalPanel_3.add(htmlmeasure);
 
 		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
@@ -111,13 +113,13 @@ public class Ideation {
 
 		VerticalPanel verticalPanel_4 = new VerticalPanel();
 		verticalPanel_4.setBorderWidth(1);
-		verticalPanel_4.setSize("150px", "100px");
+		verticalPanel_4.setSize("130px", "150px");
 
 		VerticalPanel verticalPanel_5 = new VerticalPanel();
 		verticalPanel_5.setSpacing(10);
 		verticalPanel_4.add(verticalPanel_5);
 
-		HTML htmllearn = new HTML("<b>LEARN:</b>", true);
+		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		verticalPanel_5.add(htmllearn);
 
 		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
@@ -125,6 +127,25 @@ public class Ideation {
 
 		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Surveys)));
+
+		return verticalPanel_4;
+	}
+	
+	private static VerticalPanel vpAchieve() {
+
+		VerticalPanel verticalPanel_4 = new VerticalPanel();
+		verticalPanel_4.setBorderWidth(1);
+		verticalPanel_4.setSize("130px", "150px");
+
+		VerticalPanel verticalPanel_5 = new VerticalPanel();
+		verticalPanel_5.setSpacing(10);
+		verticalPanel_4.add(verticalPanel_5);
+
+		HTML htmllearn = new HTML("<center><b>ACHIEVE</b></center>", true);
+		verticalPanel_5.add(htmllearn);
+
+		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.The3Cofounders)));
 
 		return verticalPanel_4;
 	}

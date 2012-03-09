@@ -60,6 +60,9 @@ public class Scaling {
 
 		HTML htmlBuild = new HTML("<b>BUILD:</b>", true);
 		verticalPanel.add(htmlBuild);
+		
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Advertising)));
 
 		return verticalPanel_1;
 	}

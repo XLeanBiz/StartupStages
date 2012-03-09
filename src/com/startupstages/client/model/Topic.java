@@ -8,27 +8,39 @@ public class Topic {
 
 		ProblemSolutionFit,
 
-		Idea, VisionStatement, Persona, Team, Goals, TeamSize, MarketResearch, Surveys,
+		Idea, VisionStatement, Persona, Team, Goals, TeamSize, MarketResearch, Surveys, The3Cofounders,
 
-		Assumptions, Uses, UsesRate, Interviews, LeanCanvas,
+		Assumptions, Uses, UsesRate, CustomerInterviews, LeanUX, LeanCanvas, PersonaPivot, TargetProblemPivot, Mentoring, ChampionProblem,
 
-		UniqueValue, UniqueValueProposition, NonCodedMVP, Wireframes, ABTests, NonCodedMVPUse,
+		UniqueValue, UniqueValueProposition, NonCodedMVP, Wireframes, ABTests, NonCodedMVPUse, ValidatedProposition,
 
-		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, Advertising,
+		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, The30Signups,
 
+		
 		ProductMarketFit,
 
-		Prototype, SourceRepository, Database, ProductionEnvironment, FeaturePrototype, FeatureVisits, FeatureUses, LOC, UsabilityTests,
+		Prototype, SourceRepository, Database, ProductionEnvironment, FeaturePrototype, 
+		FeatureVisits, FeatureUses, TestCoverage, LOC,
+		UserDrivenDevelopment, ExtremeProgramming, AgileDevelopment, UsabilityTests, APIPivot,
+		The20Uses,
 
-		Enhance, Support, Performance, Security, Privacy, CodeQuality, Rewards, Satisfation, EarlyAdopters, Returns,
+		Enhance, Support, Performance, Security, Privacy, CodeQuality, Rewards, Satisfation, EarlyAdopters, Returns, SocialMedia, The5Returning5,
+		
+		Incorporate, FormalDocumentation, Legal, IPs, Taxes,
 
-		Profiting, Pricing, PaymentMethods, CostPerUser, RevenuePerUser,
+		Profit, Pricing, PaymentMethods, Sponsorships, CostPerUser, RevenuePerUser, DemandCurve, 
 
+		
 		Scale,
+		
+		Funding, AdvisorsBoard, InvestorsMeetings,
 
 		Referring, ReferralModels, ReferralRate,
 
-		Scaling, VisitsIncreasingRate, ConversionRate
+		Scaling, Advertising, VisitsIncreasingRate, ConversionRate, MarketSize, 
+		
+		
+		Maintenance
 
 	}
 

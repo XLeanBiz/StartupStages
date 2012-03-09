@@ -22,7 +22,7 @@ public class Profiting {
 
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics.get(TopicID.Profiting)));
+				StartupStagesGlobalVariables.topics.get(TopicID.Profit)));
 	}
 
 	public static AbsolutePanel setPanel() {

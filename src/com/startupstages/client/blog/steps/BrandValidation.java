@@ -126,9 +126,6 @@ public class BrandValidation {
 		HTML htmllearn = new HTML("<b>LEARN:</b>", true);
 		verticalPanel_5.add(htmllearn);
 
-		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Advertising)));
-
 		return verticalPanel_4;
 	}
 

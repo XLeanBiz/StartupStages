@@ -31,7 +31,7 @@ public class StagesPanel extends HorizontalPanel {
 		this.add(problemSolutionFit);
 
 		this.add(new HTML(
-				"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"));
+				"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"));
 
 		HTML productMarketFit = new HTML(
 				"<font size=3><a href=#><b>Product/Market Fit</b></a></font>");
@@ -49,7 +49,7 @@ public class StagesPanel extends HorizontalPanel {
 		this.add(productMarketFit);
 
 		this.add(new HTML(
-				"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"));
+				"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"));
 
 		HTML scale = new HTML("<font size=3><a href=#><b>Scale</b></a></font>");
 		scale.addClickHandler(new ClickHandler() {
@@ -64,5 +64,22 @@ public class StagesPanel extends HorizontalPanel {
 			}
 		});
 		this.add(scale);
+
+		this.add(new HTML(
+				"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"));
+
+		HTML maintenance = new HTML(
+				"<font size=3><a href=#><b>Maintenance</b></a></font>");
+		maintenance.addClickHandler(new ClickHandler() {
+
+			@Override
+			public void onClick(ClickEvent event) {
+
+				new UseTracking(
+						"com.startupstages.client.blog.StagesPanel#MaintenanceLink");
+
+			}
+		});
+		this.add(maintenance);
 	}
 }
