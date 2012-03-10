@@ -30,7 +30,7 @@ public class BlogIntroduction extends AbsolutePanel {
 				"<font size=3><a href=\"http://www.ashmaurya.com/\" target=_blank>Ash Maurya</a> "
 						+ "defined in his book "
 						+ "\"<a href=\"http://www.runningleanhq.com/\"  target=_blank>Running Lean</a>\" "
-						+ "the three major stages for a startup:</font>", true);
+						+ "the major stages for a startup:</font>", true);
 		this.add(htmlAhsMauryaDefined, 138, 220);
 
 		Image image = new Image(GWT.getModuleBaseURL()
@@ -41,7 +41,8 @@ public class BlogIntroduction extends AbsolutePanel {
 				"<font size=3>The <img src=\""
 						+ GWT.getModuleBaseURL()
 						+ "startupstages/XLeanBiz.jpg\" width=\"60px\" height=\"30px\"> "
-						+ "<b><i>Interactive Blog</i></b>  &nbsp; will help you understand "
+						+ "<b><i>Interactive Blog</i></b>  &nbsp;" +
+						" is a step by step roadmap that will help you understand "
 						+ "and identify yourself with the stages above,"
 						+ "<br> in a way that you will be able to be compared with others "
 						+ "and move forward towards the success!</font>", true);

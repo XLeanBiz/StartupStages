@@ -21,6 +21,7 @@ public class StagesPanel extends HorizontalPanel {
 
 		this.setStyleName("backgroundColorGray");
 
+		hpProblemSolutionFit.clear();
 		hpProblemSolutionFit.setStyleName("backgroundColorWhite");
 		hpProblemSolutionFit.setSpacing(10);
 		hpProblemSolutionFit.setWidth("180px");
@@ -45,6 +46,7 @@ public class StagesPanel extends HorizontalPanel {
 		hpProblemSolutionFit.add(problemSolutionFit);
 		this.add(hpProblemSolutionFit);
 
+		hpProductMarketFit.clear();
 		hpProductMarketFit.setSpacing(10);
 		hpProductMarketFit.setWidth("180px");
 		hpProductMarketFit
@@ -68,6 +70,7 @@ public class StagesPanel extends HorizontalPanel {
 		hpProductMarketFit.add(productMarketFit);
 		this.add(hpProductMarketFit);
 
+		hpScale.clear();
 		hpScale.setSpacing(10);
 		hpScale.setWidth("90px");
 		hpScale.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
@@ -89,6 +92,7 @@ public class StagesPanel extends HorizontalPanel {
 		hpScale.add(scale);
 		this.add(hpScale);
 
+		hpMaintenance.clear();
 		hpMaintenance.setSpacing(10);
 		hpMaintenance.setWidth("110px");
 		hpMaintenance
