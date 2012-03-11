@@ -11,10 +11,10 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.StagesPanel;
-import com.startupstages.client.blog.steps.AssumptionsValidation;
+import com.startupstages.client.blog.steps.Assumptions;
 import com.startupstages.client.blog.steps.BrandValidation;
 import com.startupstages.client.blog.steps.Ideation;
-import com.startupstages.client.blog.steps.UniqueValueIdentification;
+import com.startupstages.client.blog.steps.UniqueValue;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
 import com.startupstages.client.utilities.UseTracking;
@@ -43,11 +43,11 @@ public class ProblemSolutionFit {
 
 		hp.setSpacing(10);
 
+		hp.add(vpAssumptions());
+
+		hp.add(vpUniqueValue());
+		
 		hp.add(vpIdea());
-
-		hp.add(vpProblem());
-
-		hp.add(vpFeature());
 
 		hp.add(vpBrand());
 
@@ -86,7 +86,7 @@ public class ProblemSolutionFit {
 		return vpIdea;
 	}
 
-	private static VerticalPanel vpProblem() {
+	private static VerticalPanel vpAssumptions() {
 
 		VerticalPanel vpProblem = new VerticalPanel();
 		vpProblem.setSpacing(10);
@@ -101,7 +101,7 @@ public class ProblemSolutionFit {
 				new UseTracking(
 						"com.startupstages.client.blog.stages.ProblemSolutionFit#AssumptionLink");
 
-				AssumptionsValidation.initialize();
+				Assumptions.initialize();
 			}
 		};
 
@@ -119,7 +119,7 @@ public class ProblemSolutionFit {
 		return vpProblem;
 	}
 
-	private static VerticalPanel vpFeature() {
+	private static VerticalPanel vpUniqueValue() {
 
 		VerticalPanel vpFeature = new VerticalPanel();
 		vpFeature.setSpacing(10);
@@ -134,7 +134,7 @@ public class ProblemSolutionFit {
 				new UseTracking(
 						"com.startupstages.client.blog.stages.ProblemSolutionFit#UniqueValueLink");
 
-				UniqueValueIdentification.initialize();
+				UniqueValue.initialize();
 			}
 		};
 

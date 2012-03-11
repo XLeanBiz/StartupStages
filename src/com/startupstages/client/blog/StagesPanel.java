@@ -24,7 +24,7 @@ public class StagesPanel extends HorizontalPanel {
 		hpProblemSolutionFit.clear();
 		hpProblemSolutionFit.setStyleName("backgroundColorWhite");
 		hpProblemSolutionFit.setSpacing(10);
-		hpProblemSolutionFit.setWidth("180px");
+		hpProblemSolutionFit.setWidth("190px");
 		hpProblemSolutionFit
 				.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		HTML problemSolutionFit = new HTML(
@@ -48,7 +48,7 @@ public class StagesPanel extends HorizontalPanel {
 
 		hpProductMarketFit.clear();
 		hpProductMarketFit.setSpacing(10);
-		hpProductMarketFit.setWidth("180px");
+		hpProductMarketFit.setWidth("190px");
 		hpProductMarketFit
 				.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		HTML productMarketFit = new HTML(
@@ -72,7 +72,7 @@ public class StagesPanel extends HorizontalPanel {
 
 		hpScale.clear();
 		hpScale.setSpacing(10);
-		hpScale.setWidth("90px");
+		hpScale.setWidth("110px");
 		hpScale.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		HTML scale = new HTML("<font size=3><a href=#><b>Scale</b></a></font>");
 		scale.addClickHandler(new ClickHandler() {
@@ -94,7 +94,7 @@ public class StagesPanel extends HorizontalPanel {
 
 		hpMaintenance.clear();
 		hpMaintenance.setSpacing(10);
-		hpMaintenance.setWidth("110px");
+		hpMaintenance.setWidth("130px");
 		hpMaintenance
 				.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		HTML maintenance = new HTML(

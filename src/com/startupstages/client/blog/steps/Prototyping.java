@@ -40,7 +40,7 @@ public class Prototyping {
 	public static AbsolutePanel getPanel() {
 
 		AbsolutePanel absolutePanel = new AbsolutePanel();
-		absolutePanel.setSize("590px", "470px");
+		absolutePanel.setSize("610px", "470px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/Prototyping.png");
@@ -48,11 +48,11 @@ public class Prototyping {
 
 		absolutePanel.add(vpBuild(), 12, 150);
 
-		absolutePanel.add(vpMeasure(), 152, 180);
+		absolutePanel.add(vpMeasure(), 162, 180);
 
-		absolutePanel.add(vpLearn(), 292, 210);
-		
-		absolutePanel.add(vpAchieve(), 432, 250);
+		absolutePanel.add(vpLearn(), 312, 210);
+
+		absolutePanel.add(vpAchieve(), 462, 250);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
 				+ "startupstages/arrow.png'></a>");
@@ -62,7 +62,7 @@ public class Prototyping {
 				Enhancing.initialize();
 			}
 		});
-		absolutePanel.add(image_1, 450, 137);
+		absolutePanel.add(image_1, 480, 137);
 		
 		return absolutePanel;
 	}
@@ -168,7 +168,7 @@ public class Prototyping {
 		verticalPanel_5.add(htmllearn);
 
 		verticalPanel_5.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.The20Uses)));
+				.get(TopicID._20Uses)));
 
 		return verticalPanel_4;
 	}

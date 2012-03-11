@@ -19,11 +19,12 @@ public class BlogPanel extends HorizontalPanel {
 		VerticalPanel verticalPanel = new VerticalPanel();
 
 		verticalPanel.setStyleName("backgroundColorGray");
-		verticalPanel.setWidth("600px");
+		verticalPanel.setWidth("650px");
 		verticalPanel
 				.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		verticalPanel.add(new StagesPanel());
 
+		stagePanel.setWidth("610px");
 		stagePanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		stagePanel.setStyleName("backgroundColorWhite");
 		stagePanel.clear();
@@ -36,7 +37,7 @@ public class BlogPanel extends HorizontalPanel {
 		stepPanel.setSize("95%", "95%");
 		stepPanel.clear();
 		verticalPanel.add(stepPanel);
-		
+
 		verticalPanel.add(new Label(". "));
 
 		this.add(verticalPanel);
@@ -46,5 +47,14 @@ public class BlogPanel extends HorizontalPanel {
 		topicPanel.setStyleName("backgroundColorWhite");
 		topicPanel.clear();
 		this.add(topicPanel);
+	}
+
+	public static VerticalPanel vpTopic() {
+
+		VerticalPanel vpOutter = new VerticalPanel();
+		vpOutter.setBorderWidth(1);
+		vpOutter.setSize("140px", "150px");
+
+		return vpOutter;
 	}
 }

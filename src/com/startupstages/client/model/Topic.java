@@ -7,18 +7,18 @@ public class Topic {
 	public enum TopicID {
 
 		ProblemSolutionFit,
-		Idea, VisionStatement, Persona, Team, Goals, TeamSize, MarketResearch, Surveys, The3Cofounders,
-		Assumptions, Uses, UsesRate, CustomerInterviews, LeanUX, LeanCanvas, PersonaPivot, TargetProblemPivot, Mentoring, ChampionProblem,
+		Idea, VisionStatement, Persona, Team, Goals, TeamSize, MarketResearch, Surveys, _3Cofounders,
+		Assumptions, Uses, UsesRate, CustomerInterviews, LeanUX, Sketching, LeanCanvas, PersonaPivot, TargetProblemPivot, Mentoring, ChampionProblem,
 		UniqueValue, UniqueValueProposition, NonCodedMVPUse, NonCodedMVP, Wireframes, ABTests, ValidatedProposition,
-		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, The30Signups,
+		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, _30Signups,
 		
 		ProductMarketFit,
 		Prototype, SourceRepository, Database, ProductionEnvironment, FeaturePrototype, 
 		FeatureVisits, FeatureUses, TestCoverage, LOC,
 		UserDrivenDevelopment, ExtremeProgramming, AgileDevelopment, UsabilityTests, APIPivot,
-		The20Uses,
+		_20Uses,
 
-		Enhance, Support, Performance, Security, Privacy, CodeQuality, SocialMedia, Rewards, Satisfation, EarlyAdopters, Returns, The5Returning5,
+		Enhance, Support, Performance, Security, Privacy, CodeQuality, SocialMedia, Rewards, Satisfation, EarlyAdopters, Returns, _5Returning5,
 		Incorporate, FormalDocumentation, Legal, IPs, Taxes,
 		Profit, Pricing, PaymentMethods, Sponsorships, CostPerUser, RevenuePerUser, DemandCurve, 
 		
