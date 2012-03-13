@@ -24,7 +24,7 @@ public class BlogPanel extends HorizontalPanel {
 				.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		verticalPanel.add(new StagesPanel());
 
-		stagePanel.setWidth("610px");
+		stagePanel.setWidth("620px");
 		stagePanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		stagePanel.setStyleName("backgroundColorWhite");
 		stagePanel.clear();

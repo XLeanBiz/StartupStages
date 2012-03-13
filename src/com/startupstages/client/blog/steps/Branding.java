@@ -15,7 +15,7 @@ import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic.TopicID;
 
-public class BrandValidation {
+public class Branding {
 
 	public static void initialize() {
 

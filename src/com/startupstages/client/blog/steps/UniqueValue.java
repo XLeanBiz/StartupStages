@@ -51,7 +51,7 @@ public class UniqueValue {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				BrandValidation.initialize();
+				Ideation.initialize();
 			}
 		});
 		absolutePanel.add(image_1, 480, 137);

@@ -17,23 +17,31 @@ import com.startupstages.client.model.Topic.TopicID;
 public class Assumptions {
 
 	public static void initialize() {
-		
+		initialize(true);
+	}
+
+	public static void initialize(final boolean initTopicPanel) {
+
 		StagesPanel.unselectStagesTabs();
 		StagesPanel.hpProblemSolutionFit.setStyleName("backgroundColorWhite");
 
 		BlogPanel.stepPanel.clear();
 		BlogPanel.stepPanel.add(getPanel());
 
-		BlogPanel.topicPanel.clear();
-		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics.get(TopicID.Assumptions)));
+		if (initTopicPanel) {
+
+			BlogPanel.topicPanel.clear();
+			BlogPanel.topicPanel.add(new TopicPanel(
+					StartupStagesGlobalVariables.topics
+							.get(TopicID.Assumptions)));
+		}
 	}
 
 	public static AbsolutePanel getPanel() {
 
 		AbsolutePanel absolutePanel = new AbsolutePanel();
-		absolutePanel.setSize("610px", "470px");
-		
+		absolutePanel.setSize("610px", "480px");
+
 		Image image = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/AssumptionsValidation.png");
 		absolutePanel.add(image, 0, 0);
@@ -43,7 +51,7 @@ public class Assumptions {
 		absolutePanel.add(vpMeasure(), 162, 180);
 
 		absolutePanel.add(vpLearn(), 312, 210);
-		
+
 		absolutePanel.add(vpAchieve(), 462, 250);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
@@ -71,7 +79,9 @@ public class Assumptions {
 		vpInner.add(htmlBuild);
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Uses)));
+				.get(TopicID.Persona)));
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Cenarios)));
 
 		return vpTopic;
 	}
@@ -84,12 +94,11 @@ public class Assumptions {
 		vpInner.setSpacing(10);
 		vpTopic.add(vpInner);
 
-
 		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
 		vpInner.add(htmlmeasure);
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.UsesRate)));
+				.get(TopicID.AssumptionRating)));
 
 		return vpTopic;
 	}
@@ -102,16 +111,18 @@ public class Assumptions {
 		vpInner.setSpacing(10);
 		vpTopic.add(vpInner);
 
-
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.CustomerInterviews)));
+		
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Negatives)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.LeanUX)));
-		
+
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Sketching)));
 
@@ -123,13 +134,13 @@ public class Assumptions {
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.TargetProblemPivot)));
-		
+
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Mentoring)));
 
 		return vpTopic;
 	}
-	
+
 	private static VerticalPanel vpAchieve() {
 
 		VerticalPanel vpTopic = BlogPanel.vpTopic();
@@ -137,7 +148,6 @@ public class Assumptions {
 		VerticalPanel vpInner = new VerticalPanel();
 		vpInner.setSpacing(10);
 		vpTopic.add(vpInner);
-
 
 		HTML htmllearn = new HTML("<center><b>ACHIEVE</b></center>", true);
 		vpInner.add(htmllearn);

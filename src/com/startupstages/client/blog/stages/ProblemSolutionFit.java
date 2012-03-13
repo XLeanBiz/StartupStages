@@ -12,7 +12,7 @@ import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.steps.Assumptions;
-import com.startupstages.client.blog.steps.BrandValidation;
+import com.startupstages.client.blog.steps.Branding;
 import com.startupstages.client.blog.steps.Ideation;
 import com.startupstages.client.blog.steps.UniqueValue;
 import com.startupstages.client.blog.topics.TopicPanel;
@@ -29,7 +29,7 @@ public class ProblemSolutionFit {
 		BlogPanel.stagePanel.clear();
 		BlogPanel.stagePanel.add(setPanel());
 
-		Ideation.initialize(false);
+		Assumptions.initialize(false);
 
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
@@ -167,7 +167,7 @@ public class ProblemSolutionFit {
 				new UseTracking(
 						"com.startupstages.client.blog.stages.ProblemSolutionFit#BrandLink");
 
-				BrandValidation.initialize();
+				Branding.initialize();
 			}
 		};
 

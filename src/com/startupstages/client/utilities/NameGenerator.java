@@ -10,7 +10,7 @@ public class NameGenerator {
 		if (name != null && name.length() > 0) {
 
 			name = name.replaceAll("_", " ");
-			String[] words = (name.substring(1)).split("[A-Z]");
+			String[] words = (name.substring(1)).split("[A-Z0-9]");
 			if (words.length > 0) {
 				spacedName = name.substring(0, 1).toUpperCase() + words[0];
 				int wordPosition = spacedName.length();
@@ -20,7 +20,8 @@ public class NameGenerator {
 							wordPosition + 1);
 					firstLetter = firstLetter.toUpperCase();
 
-					if (words[i-1].length() > 1 || words[i].length() > 1) {
+					if (words[i - 1].length() > 1 || words[i].length() > 1) {
+
 						spacedName += " ";
 					}
 
@@ -28,8 +29,14 @@ public class NameGenerator {
 
 					wordPosition += (words[i].length() + 1);
 				}
+
+				if (wordPosition < name.length()) {
+
+					spacedName += " " + name.substring(wordPosition);
+				}
+
 			} else {
-				
+
 				spacedName = name.toUpperCase();
 			}
 		}

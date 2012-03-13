@@ -58,7 +58,7 @@ public class Ideation {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				Assumptions.initialize();
+				Branding.initialize();
 			}
 		});
 		absolutePanel.add(image_1, 480, 137);
