@@ -81,9 +81,6 @@ public class Ideation {
 				.get(TopicID.VisionStatement)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Persona)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Team)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics

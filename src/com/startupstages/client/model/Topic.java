@@ -7,25 +7,34 @@ public class Topic {
 	public enum TopicID {
 
 		ProblemSolutionFit,
-		Assumptions, Persona, Cenarios, AssumptionRating, CustomerInterviews, Negatives, LeanUX, Sketching, LeanCanvas, PersonaPivot, TargetProblemPivot, Mentoring, ChampionProblem,
+		Assumptions, 
+		Persona, Scenarios,
+		AssumptionRating, CustomerInterviews, Negatives, LeanUX, Sketching, LeanCanvas, PersonaPivot, TargetProblemPivot, Mentoring,
+		ChampionProblem,
+		
 		UniqueValue, UniqueValueProposition, NonCodedMVPUse, NonCodedMVP, Wireframes, ABTests, ValidatedProposition,
-		Idea, VisionStatement, Team, Goals, TeamSize, MarketResearch, Surveys, _3Cofounders,
+		Idea, VisionStatement, Team, Goals, TeamSize, MarketResearch, Surveys,  _3Cofounders,
 		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, _30Signups,
 		
 		ProductMarketFit,
-		Prototype, SourceRepository, Database, ProductionEnvironment, FeaturePrototype, 
+		
+		Prototype, 
+		SourceRepository, Database, ProductionEnvironment, FeaturePrototype, 
 		FeatureVisits, FeatureUses, TestCoverage, LOC,
 		UserDrivenDevelopment, ExtremeProgramming, AgileDevelopment, UsabilityTests, APIPivot,
 		_20Uses,
 
-		Enhance, Support, Performance, Security, Privacy, CodeQuality, SocialMedia, Rewards, Satisfation, EarlyAdopters, Returns, _5Returning5,
+		Enhance, 
+		UIDesign, Performance, Security, Privacy, CodeQuality, CustomerSupport, SocialMedia, Rewards, 
+		Satisfation, EarlyAdopters, Returns, _5Returning5,
+		
 		Incorporate, FormalDocumentation, Legal, IPs, Taxes,
-		Profit, Pricing, PaymentMethods, Sponsorships, CostPerUser, RevenuePerUser, DemandCurve, 
+		Profit, CostStructure, Pricing, PaymentMethods, Sponsorships, CostPerUser, RevenuePerUser, DemandCurve, 
 		
 		Scale,
-		Funding, AdvisorsBoard, InvestorsMeetings,
+		Funding, AdvisorsBoard, InvestorsMeetings, Bootstrapping,
 		Referring, ReferralModels, ReferralRate,
-		Scaling, Advertising, VisitsIncreasingRate, ConversionRate, MarketSize, 
+		Scaling, DistributionChannels, Advertising, VisitsIncreasingRate, ConversionRate, MarketSize, 
 		
 		Maintenance
 

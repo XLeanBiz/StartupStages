@@ -12,6 +12,7 @@ import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.steps.Enhancing;
+import com.startupstages.client.blog.steps.Incorporate;
 import com.startupstages.client.blog.steps.Profiting;
 import com.startupstages.client.blog.steps.Prototyping;
 import com.startupstages.client.blog.topics.TopicPanel;
@@ -134,7 +135,7 @@ public class ProductMarketFit {
 				new UseTracking(
 						"com.startupstages.client.blog.stages.Scale#IncorporateLink");
 
-				Profiting.initialize();
+				Incorporate.initialize();
 			}
 		};
 

@@ -98,9 +98,6 @@ public class Funding {
 		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
 		vpInner.add(htmlmeasure);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.TeamSize)));
-
 		return vpTopic;
 	}
 
@@ -114,12 +111,10 @@ public class Funding {
 
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
+		
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.MarketResearch)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Surveys)));
+				.get(TopicID.Bootstrapping)));
 
 		return vpTopic;
 	}

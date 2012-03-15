@@ -81,6 +81,9 @@ public class Scaling {
 
 		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Advertising)));
+		
+		verticalPanel.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.DistributionChannels)));
 
 		return verticalPanel_1;
 	}

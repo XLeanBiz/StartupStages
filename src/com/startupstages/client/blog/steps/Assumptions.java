@@ -81,7 +81,7 @@ public class Assumptions {
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Persona)));
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Cenarios)));
+				.get(TopicID.Scenarios)));
 
 		return vpTopic;
 	}

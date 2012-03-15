@@ -73,6 +73,9 @@ public class Profiting {
 		vpInner.add(htmlBuild);
 		
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.CostStructure)));
+		
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Pricing)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics

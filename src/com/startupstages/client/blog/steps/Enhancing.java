@@ -34,7 +34,7 @@ public class Enhancing {
 	public static AbsolutePanel getPanel() {
 
 		AbsolutePanel absolutePanel = new AbsolutePanel();
-		absolutePanel.setSize("610px", "470px");
+		absolutePanel.setSize("610px", "480px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/Enhancing.png");
@@ -71,18 +71,21 @@ public class Enhancing {
 
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Support)));
 		
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Performance)));
+				.get(TopicID.UIDesign)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Security)));
 		
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Privacy)));
+		
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Performance)));
+		
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.CustomerSupport)));
 		
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.CodeQuality)));

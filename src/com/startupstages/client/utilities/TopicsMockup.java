@@ -87,11 +87,11 @@ public class TopicsMockup {
         topics.put(Topic.TopicID.Surveys, surveys);
 
         Topic uses = new Topic();
-        uses.setTopicName(NameGenerator.spacedName(Topic.TopicID.Cenarios.toString()));
+        uses.setTopicName(NameGenerator.spacedName(Topic.TopicID.Scenarios.toString()));
         uses.setTopicDescription("<blockquote>Quickly sketch your problems.<br><br>"
                 + "<a href=\"http://custdevday.com/pages/content/lean-ux/\" target=\"_blank\">See example here</a>."
                 + "</blockquote>");
-        topics.put(Topic.TopicID.Cenarios, uses);
+        topics.put(Topic.TopicID.Scenarios, uses);
 
 
         return topics;
