@@ -17,25 +17,25 @@ public class BlogIntroduction extends AbsolutePanel {
 		this.setSize("900px", "750px");
 
 		HTML htmlIntroduction = new HTML(
-				"<font size=7 color=navy><i><b>INTRODUCTION</b></i></font>",
+				"<font size=5 color=navy><i><b>INTRODUCTION</b></i></font>",
 				true);
-		this.add(htmlIntroduction, 265, 29);
+		this.add(htmlIntroduction, 265, 20);
 
 		HTML htmlWhatStageAre = new HTML(
 				"<font size=6 color=#545464><i><b>What stage are you?</b></i></font>",
 				true);
-		this.add(htmlWhatStageAre, 55, 151);
+		this.add(htmlWhatStageAre, 55, 100);
 
 		HTML htmlAhsMauryaDefined = new HTML(
 				"<font size=3><a href=\"http://www.ashmaurya.com/\" target=_blank>Ash Maurya</a> "
 						+ "defined in his book "
 						+ "\"<a href=\"http://www.runningleanhq.com/\"  target=_blank>Running Lean</a>\" "
 						+ "the major stages for a startup:</font>", true);
-		this.add(htmlAhsMauryaDefined, 138, 220);
+		this.add(htmlAhsMauryaDefined, 138, 170);
 
 		Image image = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/StartupStages.jpg");
-		this.add(image, 21, 260);
+		this.add(image, 21, 210);
 
 		HTML htmlTheXleanInteractive = new HTML(
 				"<font size=3>The <img src=\""
@@ -46,11 +46,11 @@ public class BlogIntroduction extends AbsolutePanel {
 						+ "and identify yourself with the stages above,"
 						+ "<br> in a way that you will be able to be compared with others "
 						+ "and move forward towards the success!</font>", true);
-		this.add(htmlTheXleanInteractive, 109, 500);
+		this.add(htmlTheXleanInteractive, 109, 450);
 
-		this.add(getKnowMoreAnchor(buttonStartBlog), 109, 560);
+		this.add(getKnowMoreAnchor(buttonStartBlog), 109, 530);
 
-		this.add(buttonStartBlog, 356, 593);
+		this.add(buttonStartBlog, 356, 543);
 	}
 	
 	private Anchor getKnowMoreAnchor(final Image buttonStartBlog){

@@ -1,11 +1,10 @@
-package com.startupstages.client.blog.topics;
+package com.startupstages.client.blog.topics.edit;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Anchor;
 import com.startupstages.client.blog.BlogPanel;
-import com.startupstages.client.blog.topics.edit.TopicEdit;
 import com.startupstages.client.model.Topic;
 import com.startupstages.client.utilities.UseTracking;
 
