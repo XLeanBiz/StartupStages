@@ -18,7 +18,7 @@ import com.startupstages.client.model.Topic.TopicID;
 public class Profiting {
 
 	public static void initialize() {
-		
+
 		StagesPanel.unselectStagesTabs();
 		StagesPanel.hpProductMarketFit.setStyleName("backgroundColorWhite");
 
@@ -48,7 +48,7 @@ public class Profiting {
 		absolutePanel.add(vpAchieve(), 462, 250);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
-				+ "startupstages/arrow.png'></a>");
+				+ "startupstages/arrow.png' border=0></a>");
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
@@ -62,7 +62,6 @@ public class Profiting {
 
 	private static VerticalPanel vpBuild() {
 
-
 		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
 		VerticalPanel vpInner = new VerticalPanel();
@@ -71,24 +70,17 @@ public class Profiting {
 
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
-		
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.CostStructure)));
-		
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Pricing)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.PaymentMethods)));
+				.get(TopicID.RevenueModel)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Sponsorships)));
-		
+				.get(TopicID.Partnerships)));
+
 		return vpTopic;
 	}
 
 	private static VerticalPanel vpMeasure() {
-
 
 		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
@@ -121,12 +113,11 @@ public class Profiting {
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.DemandCurve)));
-		
+
 		return vpTopic;
 	}
-	
-	private static VerticalPanel vpAchieve() {
 
+	private static VerticalPanel vpAchieve() {
 
 		VerticalPanel vpTopic = BlogPanel.vpTopic();
 

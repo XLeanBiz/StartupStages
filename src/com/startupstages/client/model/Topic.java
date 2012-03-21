@@ -9,12 +9,12 @@ public class Topic {
 		ProblemSolutionFit,
 		Assumptions, 
 		Persona, Scenarios,
-		AssumptionRating, CustomerInterviews, Negatives, LeanUX, Sketching, LeanCanvas, PersonaPivot, TargetProblemPivot, Mentoring,
+		AssumptionRating, CustomerInterviews, Negatives, LeanUX, Sketching, PersonaPivot, TargetProblemPivot,
 		ChampionProblem,
 		
-		UniqueValue, UniqueValueProposition, NonCodedMVPUse, NonCodedMVP, Wireframes, ABTests, ValidatedProposition,
-		Idea, VisionStatement, Team, Goals, TeamSize, MarketResearch, Surveys,  _3Cofounders,
-		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, _30Signups,
+		UniqueValue, UniqueValueProposition, NonCodedMVPUse, LeanCanvas, NonCodedMVP, Wireframes, ABTests, ValidatedProposition,
+		Idea, VisionStatement, Team, Goals, TeamSize, Feedback, MarketResearch, Surveys, BusinessModel, Mentoring, Empathy, _3Cofounders,
+		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, UnderstandingTime, _30Signups,
 		
 		ProductMarketFit,
 		
@@ -25,11 +25,11 @@ public class Topic {
 		_20Uses,
 
 		Enhance, 
-		UIDesign, Performance, Security, Privacy, CodeQuality, CustomerSupport, SocialMedia, Rewards, 
+		UIDesign, Privacy, CodeQuality, CustomerSupport, SocialMedia, Rewards, 
 		Satisfation, EarlyAdopters, Returns, _5Returning5,
 		
 		Incorporate, FormalDocumentation, Legal, IPs, Taxes,
-		Profit, CostStructure, Pricing, PaymentMethods, Sponsorships, CostPerUser, RevenuePerUser, DemandCurve, 
+		Profit, RevenueModel, Partnerships, CostPerUser, RevenuePerUser, DemandCurve, 
 		
 		Scale,
 		Funding, AdvisorsBoard, InvestorsMeetings, Bootstrapping,

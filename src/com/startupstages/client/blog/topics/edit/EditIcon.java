@@ -13,7 +13,7 @@ public class EditIcon extends Anchor {
 	public EditIcon(final Topic topic) {
 
 		this.setHTML("<a href=#><img src='" + GWT.getModuleBaseURL()
-				+ "startupstages/EditIcon.jpg' width='22px' height='20px'></a>");
+				+ "startupstages/EditIcon.jpg' width='22px' height='20px' border=0></a>");
 
 		this.setSize("22px", "20px");
 

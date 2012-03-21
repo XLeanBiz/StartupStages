@@ -17,18 +17,16 @@ import com.startupstages.client.model.Topic.TopicID;
 public class Enhancing {
 
 	public static void initialize() {
-		
+
 		StagesPanel.unselectStagesTabs();
 		StagesPanel.hpProductMarketFit.setStyleName("backgroundColorWhite");
-
 
 		BlogPanel.stepPanel.clear();
 		BlogPanel.stepPanel.add(getPanel());
 
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics
-						.get(TopicID.Enhance)));
+				StartupStagesGlobalVariables.topics.get(TopicID.Enhance)));
 	}
 
 	public static AbsolutePanel getPanel() {
@@ -49,7 +47,7 @@ public class Enhancing {
 		absolutePanel.add(vpAchieve(), 462, 250);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
-				+ "startupstages/arrow.png'></a>");
+				+ "startupstages/arrow.png' border=0></a>");
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
@@ -71,28 +69,22 @@ public class Enhancing {
 
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
-		
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.UIDesign)));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Security)));
-		
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Privacy)));
-		
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Performance)));
-		
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.CustomerSupport)));
-		
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.CodeQuality)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.UIDesign)));
+
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.Privacy)));
+
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.CustomerSupport)));
+
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.SocialMedia)));
-		
+
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Rewards)));
 
@@ -115,7 +107,7 @@ public class Enhancing {
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Satisfation)));
-		
+
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Returns)));
 
@@ -135,7 +127,7 @@ public class Enhancing {
 
 		return vpTopic;
 	}
-	
+
 	private static VerticalPanel vpAchieve() {
 
 		VerticalPanel vpTopic = BlogPanel.vpTopic();

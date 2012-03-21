@@ -55,7 +55,7 @@ public class Assumptions {
 		absolutePanel.add(vpAchieve(), 462, 250);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
-				+ "startupstages/arrow.png'></a>");
+				+ "startupstages/arrow.png' border=0></a>");
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
@@ -127,16 +127,10 @@ public class Assumptions {
 				.get(TopicID.Sketching)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.LeanCanvas)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.PersonaPivot)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.TargetProblemPivot)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Mentoring)));
 
 		return vpTopic;
 	}

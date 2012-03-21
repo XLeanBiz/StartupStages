@@ -54,7 +54,7 @@ public class Scaling {
 		absolutePanel.add(vpAchieve(), 462, 250);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
-				+ "startupstages/arrow.png'></a>");
+				+ "startupstages/arrow.png' border=0></a>");
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 

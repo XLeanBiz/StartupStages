@@ -54,7 +54,7 @@ public class Incorporate {
 		absolutePanel.add(vpAchieve(), 462, 250);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
-				+ "startupstages/arrow.png'></a>");
+				+ "startupstages/arrow.png' border=0></a>");
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
@@ -118,12 +118,6 @@ public class Incorporate {
 
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.MarketResearch)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Surveys)));
 
 		return vpTopic;
 	}
