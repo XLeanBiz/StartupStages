@@ -5,12 +5,15 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.blog.topics.edit.EditIcon;
+import com.startupstages.client.comments.CommentsPanel;
 import com.startupstages.client.model.Topic;
 import com.startupstages.client.utilities.LoadingPanel;
 
 public class TopicPanel extends VerticalPanel {
 
 	public static VerticalPanel vpTopicDescription = new VerticalPanel();
+	
+	public static VerticalPanel vpComments = new VerticalPanel();
 
 	public TopicPanel(final Topic topic) {
 
@@ -40,6 +43,10 @@ public class TopicPanel extends VerticalPanel {
 
 		Label label = new Label(" ");
 		add(label);
+		
+		vpComments.clear();
+		vpComments.add(new CommentsPanel(topic));
+		this.add(vpComments);
 	}
 
 	private void getDescription(final Topic topic) {
