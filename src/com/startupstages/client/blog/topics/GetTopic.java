@@ -1,5 +1,7 @@
 package com.startupstages.client.blog.topics;
 
+import co.uniqueid.authentication.client.utilities.ConvertJson;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
@@ -7,7 +9,6 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.HTML;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.model.Topic;
-import com.startupstages.client.utilities.ConvertJson;
 
 public class GetTopic {
 

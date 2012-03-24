@@ -1,6 +1,6 @@
 package com.startupstages.server.topics;
 
-import com.startupstages.server.URLUtilities;
+import co.uniqueid.authentication.server.utilities.URLUtilities;
 
 public class SaveTopic {
 

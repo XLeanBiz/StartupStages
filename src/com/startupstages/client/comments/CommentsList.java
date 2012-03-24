@@ -7,11 +7,9 @@ import com.startupstages.client.comments.add.ButtonSendComment;
 import com.startupstages.client.comments.add.CommentField;
 import com.startupstages.client.model.Topic;
 
-public class CommentsPanel extends VerticalPanel {
+public class CommentsList extends VerticalPanel {
 
-	public static VerticalPanel vpCommentsList = new VerticalPanel();
-
-	public CommentsPanel(final Topic topic) {
+	public CommentsList(final Topic topic) {
 
 		HTML html = new HTML("<font size=3><b>Comments:</b></font>", true);
 		add(html);
@@ -22,10 +20,6 @@ public class CommentsPanel extends VerticalPanel {
 
 		this.add(new ButtonSendComment(topic));
 
-		vpCommentsList.setSpacing(20);
-		this.add(vpCommentsList);
-
-		GetComments.get(topic.getTopicName());
 	}
 
 }

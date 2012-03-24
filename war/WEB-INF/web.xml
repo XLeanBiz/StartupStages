@@ -15,6 +15,16 @@
     <servlet-name>topicsServlet</servlet-name>
     <url-pattern>/startupstages/topics</url-pattern>
   </servlet-mapping>
+
+	<servlet>
+		<servlet-name>commentsServlet</servlet-name>
+		<servlet-class>com.startupstages.server.comments.CommentsServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>commentsServlet</servlet-name>
+		<url-pattern>/startupstages/comments</url-pattern>
+	</servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>

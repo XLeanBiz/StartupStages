@@ -1,9 +1,11 @@
-package com.startupstages.client.comments;
+package com.startupstages.client.comments.add;
+
+import co.uniqueid.authentication.client.UniqueIDGlobalVariables;
+import co.uniqueid.authentication.client.utilities.ConvertJson;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
-import com.startupstages.client.model.Comment;
 import com.startupstages.client.model.Topic;
 import com.startupstages.client.utilities.UseTracking;
 
@@ -19,12 +21,13 @@ public class ButtonSendComment extends Button {
 
 				new UseTracking(
 						"com.startupstages.client.blog.topics.edit.ButtonSendComment");
-				
-				Comment newComment = new Comment();
 
-				newComment.setComment(CommentField.newComment.getValue());
-				
-				SaveComment.save(newComment);
+				String uniqueID = ConvertJson.getStringValue(
+						UniqueIDGlobalVariables.uniqueID, "ID");
+
+				String comment = CommentField.newComment.getValue();
+
+				SaveComment.save(uniqueID, topic, comment);
 			}
 		});
 

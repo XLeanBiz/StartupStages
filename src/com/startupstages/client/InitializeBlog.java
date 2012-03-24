@@ -10,11 +10,15 @@ public class InitializeBlog extends VerticalPanel {
 
 	public InitializeBlog() {
 
+		StartupStagesGlobalVariables.blogPanel.clear();
+
 		startTopics();
 
 		this.add(new BlogPanel());
 
 		ProblemSolutionFit.initialize();
+
+		StartupStagesGlobalVariables.blogPanel.add(this);
 	}
 
 	public static void startTopics() {
