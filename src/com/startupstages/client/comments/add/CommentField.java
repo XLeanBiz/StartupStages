@@ -14,6 +14,8 @@ public class CommentField extends HorizontalPanel {
 
 	public CommentField(final Topic topic) {
 
+		newComment.setValue(null);
+		
 		this.setSpacing(10);
 		this.setVerticalAlignment(HasVerticalAlignment.ALIGN_MIDDLE);
 

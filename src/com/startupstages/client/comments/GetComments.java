@@ -1,7 +1,5 @@
 package com.startupstages.client.comments;
 
-
-
 import co.uniqueid.authentication.client.utilities.ConvertJson;
 
 import com.google.gwt.core.client.GWT;
@@ -9,7 +7,6 @@ import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.Label;
 
 public class GetComments {
 
@@ -17,7 +14,7 @@ public class GetComments {
 
 		final CommentsServiceAsync commentsService = GWT
 				.create(CommentsService.class);
-		
+
 		CommentsPanel.vpCommentsList.clear();
 
 		commentsService.getComments(topicName, new AsyncCallback<String>() {
@@ -27,6 +24,8 @@ public class GetComments {
 			}
 
 			public void onSuccess(String jsonResults) {
+				
+				CommentsPanel.vpCommentsList.clear();
 
 				JSONArray jsonArray = (JSONArray) JSONParser
 						.parseStrict(jsonResults);
@@ -38,9 +37,11 @@ public class GetComments {
 					String comment = ConvertJson.convertToString(jsonObject
 							.get("comment"));
 
-					Label htmlComment = new Label(comment);
+					String uniqueID = ConvertJson.convertToString(jsonObject
+							.get("uniqueID"));
 
-					CommentsPanel.vpCommentsList.add(htmlComment);
+					CommentsPanel.vpCommentsList.add(new CommentsList(uniqueID,
+							comment));
 				}
 
 			}

@@ -1,24 +1,23 @@
 package com.startupstages.client.comments;
 
-import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.VerticalPanel;
-import com.startupstages.client.comments.add.ButtonSendComment;
-import com.startupstages.client.comments.add.CommentField;
-import com.startupstages.client.model.Topic;
+import com.google.gwt.user.client.ui.HasVerticalAlignment;
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.Label;
 
-public class CommentsList extends VerticalPanel {
+public class CommentsList extends HorizontalPanel {
 
-	public CommentsList(final Topic topic) {
+	public CommentsList(final String uniqueID, final String comment) {
 
-		HTML html = new HTML("<font size=3><b>Comments:</b></font>", true);
-		add(html);
+		this.setSpacing(10);
+		this.setVerticalAlignment(HasVerticalAlignment.ALIGN_MIDDLE);
 
-		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+		HorizontalPanel hpPhoto = new HorizontalPanel();
 
-		add(new CommentField(topic));
+		this.add(hpPhoto);
 
-		this.add(new ButtonSendComment(topic));
+		GetUniqueID.getFromID(uniqueID, hpPhoto);
+
+		this.add(new Label(comment));
 
 	}
 

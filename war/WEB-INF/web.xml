@@ -6,6 +6,16 @@
          xmlns="http://java.sun.com/xml/ns/javaee">
 
   <!-- Servlets -->
+  	<servlet>
+		<servlet-name>uniqueIDServlet</servlet-name>
+		<servlet-class>co.uniqueid.authentication.server.uniqueID.UniqueIDServiceImpl</servlet-class>
+	</servlet>
+  
+  	<servlet-mapping>
+		<servlet-name>uniqueIDServlet</servlet-name>
+		<url-pattern>/startupstages/uniqueID</url-pattern>
+	</servlet-mapping>
+  
   <servlet>
     <servlet-name>topicsServlet</servlet-name>
     <servlet-class>com.startupstages.server.topics.TopicsServiceImpl</servlet-class>
