@@ -21,6 +21,8 @@ public class CommentsPanel extends VerticalPanel {
 		add(new CommentField(topic));
 
 		this.add(new ButtonSendComment(topic));
+		
+		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
 
 		vpCommentsList.setSpacing(20);
 		this.add(vpCommentsList);

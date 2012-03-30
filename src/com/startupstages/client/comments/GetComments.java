@@ -24,13 +24,13 @@ public class GetComments {
 			}
 
 			public void onSuccess(String jsonResults) {
-				
+
 				CommentsPanel.vpCommentsList.clear();
 
 				JSONArray jsonArray = (JSONArray) JSONParser
 						.parseStrict(jsonResults);
 
-				for (int i = 0; i < jsonArray.size(); i++) {
+				for (int i = (jsonArray.size()-1); i >= 0; i--) {
 
 					JSONObject jsonObject = (JSONObject) jsonArray.get(i);
 
