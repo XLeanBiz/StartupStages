@@ -1,6 +1,6 @@
 package com.startupstages.client.model;
 
-import com.startupstages.client.utilities.NameGenerator;
+import com.startupstages.client.utilities.FeatureNameGenerator;
 
 public class Topic {
 
@@ -53,7 +53,7 @@ public class Topic {
 	public Topic(TopicID topicID) {
 
 		this.topicID = topicID;
-		this.topicName = NameGenerator.spacedName(topicID.toString());
+		this.topicName = FeatureNameGenerator.spacedName(topicID.toString());
 	}
 
 	public TopicID getTopicID() {
