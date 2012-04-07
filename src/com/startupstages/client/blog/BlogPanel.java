@@ -53,7 +53,7 @@ public class BlogPanel extends HorizontalPanel {
 
 		VerticalPanel vpOutter = new VerticalPanel();
 		vpOutter.setBorderWidth(1);
-		vpOutter.setSize("140px", "150px");
+		vpOutter.setSize("150px", "150px");
 
 		return vpOutter;
 	}

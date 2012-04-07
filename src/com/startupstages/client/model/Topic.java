@@ -7,14 +7,11 @@ public class Topic {
 	public enum TopicID {
 
 		ProblemSolutionFit,
-		Assumptions, 
-		Persona, Scenarios,
-		AssumptionRating, CustomerInterviews, Negatives, LeanUX, Sketching, PersonaPivot, TargetProblemPivot,
-		ChampionProblem,
 		
-		UniqueValue, UniqueValueProposition, NonCodedMVPUse, LeanCanvas, NonCodedMVP, Wireframes, ABTests, ValidatedProposition,
-		Idea, VisionStatement, Team, Goals, TeamSize, Feedback, MarketResearch, Surveys, BusinessModel, Mentoring, Empathy, _3Cofounders,
-		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, UnderstandingTime, _30Signups,
+		Assumptions, Persona, Scenarios, CustomerInterviews, Negatives, LeanUX, PersonaPivot, TargetProblemPivot, MustHaveScoreForIdea,
+		UniqueValue, UniqueValueProposition, LeanCanvas, NonCodedMVP, Wireframes, ABTests, MVPScore,
+		Idea, VisionStatement, Team, Goals, TeamSize, Feedback, MarketResearch, Surveys, BusinessModel, Mentoring, Empathy,
+		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, UnderstandingTime,
 		
 		ProductMarketFit,
 		
@@ -22,19 +19,15 @@ public class Topic {
 		SourceRepository, Database, ProductionEnvironment, FeaturePrototype, 
 		FeatureVisits, FeatureUses, TestCoverage, LOC,
 		UserDrivenDevelopment, ExtremeProgramming, AgileDevelopment, UsabilityTests, APIPivot,
-		_20Uses,
 
-		Enhance, 
-		UIDesign, Privacy, CodeQuality, CustomerSupport, SocialMedia, Rewards, 
-		Satisfation, EarlyAdopters, Returns, _5Returning5,
+		Enhance, UIDesign, Privacy, CodeQuality, CustomerSupport, SocialMedia, Rewards, EarlyAdopters, Returns,
 		
 		Incorporate, FormalDocumentation, Legal, IPs, Taxes,
-		Profit, RevenueModel, Partnerships, CostPerUser, RevenuePerUser, DemandCurve, 
+		Profit, RevenueModel, Partnerships, CostPerUser, RevenuePerUser, MustHaveScore, DemandCurve, 
 		
 		Scale,
-		Funding, AdvisorsBoard, InvestorsMeetings, Bootstrapping,
-		Referring, ReferralModels, ReferralRate,
-		Scaling, DistributionChannels, Advertising, VisitsIncreasingRate, ConversionRate, MarketSize, 
+		Funding, AdvisorsBoard, InvestorsMeetings, Bootstrapping, SeedFunding, AngelsAndVCs, InvestmentScore,
+		Scaling, DistributionChannels, Advertising, ReferralModels, IncreasingRate, ConversionRate, ReferralRate, MarketSize, 
 		
 		Maintenance
 

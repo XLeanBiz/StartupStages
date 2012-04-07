@@ -21,10 +21,9 @@ public class Funding {
 	}
 
 	public static void initialize(final boolean initTopicPanel) {
-		
+
 		StagesPanel.unselectStagesTabs();
 		StagesPanel.hpScale.setStyleName("backgroundColorWhite");
-
 
 		BlogPanel.stepPanel.clear();
 		BlogPanel.stepPanel.add(setPanel());
@@ -46,20 +45,18 @@ public class Funding {
 				+ "startupstages/funding.png");
 		absolutePanel.add(image, 0, 0);
 
-		absolutePanel.add(vpBuild(), 12, 150);
+		absolutePanel.add(vpBuild(), 30, 200);
 
-		absolutePanel.add(vpMeasure(), 162, 180);
+		absolutePanel.add(vpLearn(), 235, 225);
 
-		absolutePanel.add(vpLearn(), 312, 210);
-
-		absolutePanel.add(vpAchieve(), 462, 250);
+		absolutePanel.add(vpMeasure(), 450, 250);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
 				+ "startupstages/arrow.png' border=0></a>");
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				Referring.initialize();
+				Scaling.initialize();
 			}
 		});
 		absolutePanel.add(image_1, 480, 137);
@@ -72,6 +69,7 @@ public class Funding {
 		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
 		VerticalPanel vpInner = new VerticalPanel();
+		vpInner.setWidth("150px");
 		vpInner.setSpacing(10);
 		vpTopic.add(vpInner);
 
@@ -92,11 +90,15 @@ public class Funding {
 		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
 		VerticalPanel vpInner = new VerticalPanel();
+		vpInner.setWidth("150px");
 		vpInner.setSpacing(10);
 		vpTopic.add(vpInner);
 
 		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
 		vpInner.add(htmlmeasure);
+
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.InvestmentScore)));
 
 		return vpTopic;
 	}
@@ -106,29 +108,21 @@ public class Funding {
 		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
 		VerticalPanel vpInner = new VerticalPanel();
+		vpInner.setWidth("150px");
 		vpInner.setSpacing(10);
 		vpTopic.add(vpInner);
 
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
-		
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Bootstrapping)));
 
-		return vpTopic;
-	}
-	
-	private static VerticalPanel vpAchieve() {
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.SeedFunding)));
 
-		VerticalPanel vpTopic = BlogPanel.vpTopic();
-
-		VerticalPanel vpInner = new VerticalPanel();
-		vpInner.setSpacing(10);
-		vpTopic.add(vpInner);
-
-		HTML htmllearn = new HTML("<center><b>ACHIEVE</b></center>", true);
-		vpInner.add(htmllearn);
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+				.get(TopicID.AngelsAndVCs)));
 
 		return vpTopic;
 	}

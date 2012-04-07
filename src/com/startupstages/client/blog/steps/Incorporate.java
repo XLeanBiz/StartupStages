@@ -45,13 +45,11 @@ public class Incorporate {
 				+ "startupstages/incorporate.png");
 		absolutePanel.add(image, 0, 0);
 
-		absolutePanel.add(vpBuild(), 12, 150);
+		absolutePanel.add(vpBuild(), 30, 200);
 
-		absolutePanel.add(vpMeasure(), 162, 180);
+		absolutePanel.add(vpLearn(), 235, 225);
 
-		absolutePanel.add(vpLearn(), 312, 210);
-
-		absolutePanel.add(vpAchieve(), 462, 250);
+		absolutePanel.add(vpMeasure(), 450, 250);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
 				+ "startupstages/arrow.png' border=0></a>");
@@ -71,6 +69,7 @@ public class Incorporate {
 		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
 		VerticalPanel vpInner = new VerticalPanel();
+		vpInner.setWidth("150px");
 		vpInner.setSpacing(10);
 		vpTopic.add(vpInner);
 
@@ -91,21 +90,20 @@ public class Incorporate {
 
 	private static VerticalPanel vpMeasure() {
 
-		VerticalPanel verticalPanel_2 = new VerticalPanel();
-		verticalPanel_2.setBorderWidth(1);
-		verticalPanel_2.setSize("130px", "150px");
+		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
-		VerticalPanel verticalPanel_3 = new VerticalPanel();
-		verticalPanel_3.setSpacing(10);
-		verticalPanel_2.add(verticalPanel_3);
+		VerticalPanel vpInner = new VerticalPanel();
+		vpInner.setWidth("150px");
+		vpInner.setSpacing(10);
+		vpTopic.add(vpInner);
 
 		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
-		verticalPanel_3.add(htmlmeasure);
+		vpInner.add(htmlmeasure);
 
-		verticalPanel_3.add(new TopicAnchor(StartupStagesGlobalVariables.topics
+		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Taxes)));
 
-		return verticalPanel_2;
+		return vpTopic;
 	}
 
 	private static VerticalPanel vpLearn() {
@@ -118,21 +116,6 @@ public class Incorporate {
 
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
-
-		return vpTopic;
-	}
-	
-	private static VerticalPanel vpAchieve() {
-
-		VerticalPanel vpTopic = BlogPanel.vpTopic();
-
-		VerticalPanel vpInner = new VerticalPanel();
-		vpInner.setSpacing(10);
-		vpTopic.add(vpInner);
-
-		HTML htmllearn = new HTML("<center><b>ACHIEVE</b></center>", true);
-		vpInner.add(htmllearn);
-
 
 		return vpTopic;
 	}

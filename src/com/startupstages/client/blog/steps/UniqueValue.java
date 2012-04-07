@@ -38,13 +38,11 @@ public class UniqueValue {
 				+ "startupstages/UniqueValueIdentification.png");
 		absolutePanel.add(image, 0, 0);
 
-		absolutePanel.add(vpBuild(), 12, 150);
+		absolutePanel.add(vpBuild(), 30, 200);
 
-		absolutePanel.add(vpMeasure(), 162, 180);
+		absolutePanel.add(vpLearn(), 235, 225);
 
-		absolutePanel.add(vpLearn(), 312, 210);
-
-		absolutePanel.add(vpAchieve(), 462, 250);
+		absolutePanel.add(vpMeasure(), 450, 250);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
 				+ "startupstages/arrow.png' border=0></a>");
@@ -64,6 +62,7 @@ public class UniqueValue {
 		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
 		VerticalPanel vpInner = new VerticalPanel();
+		vpInner.setWidth("150px");
 		vpInner.setSpacing(10);
 		vpTopic.add(vpInner);
 
@@ -81,6 +80,7 @@ public class UniqueValue {
 		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
 		VerticalPanel vpInner = new VerticalPanel();
+		vpInner.setWidth("150px");
 		vpInner.setSpacing(10);
 		vpTopic.add(vpInner);
 
@@ -88,7 +88,7 @@ public class UniqueValue {
 		vpInner.add(htmlmeasure);
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.NonCodedMVPUse)));
+				.get(TopicID.MVPScore)));
 
 		return vpTopic;
 	}
@@ -98,6 +98,7 @@ public class UniqueValue {
 		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
 		VerticalPanel vpInner = new VerticalPanel();
+		vpInner.setWidth("150px");
 		vpInner.setSpacing(10);
 		vpTopic.add(vpInner);
 
@@ -115,23 +116,6 @@ public class UniqueValue {
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.ABTests)));
-
-		return vpTopic;
-	}
-
-	private static VerticalPanel vpAchieve() {
-
-		VerticalPanel vpTopic = BlogPanel.vpTopic();
-
-		VerticalPanel vpInner = new VerticalPanel();
-		vpInner.setSpacing(10);
-		vpTopic.add(vpInner);
-
-		HTML htmllearn = new HTML("<center><b>ACHIEVE</b></center>", true);
-		vpInner.add(htmllearn);
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ValidatedProposition)));
 
 		return vpTopic;
 	}
