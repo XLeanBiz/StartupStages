@@ -1,6 +1,7 @@
 package com.startupstages.client;
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Window.Location;
 import com.google.gwt.user.client.ui.RootPanel;
 
 /**
@@ -16,7 +17,9 @@ public class GWTEntryPoint implements EntryPoint {
 		RootPanel.get().clear();
 
 		RootPanel.get().add(StartupStagesGlobalVariables.blogPanel);
+		
+		final String topic = Location.getParameter("topic");
 
-		new InitializeBlog();
+		new InitializeBlog(topic);
 	}
 }

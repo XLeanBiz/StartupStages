@@ -7,36 +7,23 @@ import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.startupstages.client.InitializeBlog;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
-import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
+import com.startupstages.client.model.Topic;
 import com.startupstages.client.model.Topic.TopicID;
 
 public class Scaling {
-
+	
 	public static void initialize() {
-		initialize(true);
+
+		InitializeBlog.initializeStep(getPanel());
+		TopicPanel.initializeTopic(Topic.TopicID.Scale);
 	}
 
-	public static void initialize(final boolean initTopicPanel) {
-
-		StagesPanel.unselectStagesTabs();
-		StagesPanel.hpScale.setStyleName("backgroundColorWhite");
-
-		BlogPanel.stepPanel.clear();
-		BlogPanel.stepPanel.add(setPanel());
-
-		if (initTopicPanel) {
-
-			BlogPanel.topicPanel.clear();
-			BlogPanel.topicPanel.add(new TopicPanel(
-					StartupStagesGlobalVariables.topics.get(TopicID.Scaling)));
-		}
-	}
-
-	public static AbsolutePanel setPanel() {
+	public static AbsolutePanel getPanel() {
 
 		AbsolutePanel absolutePanel = new AbsolutePanel();
 		absolutePanel.setSize("610px", "470px");

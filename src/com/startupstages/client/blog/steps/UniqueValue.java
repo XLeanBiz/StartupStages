@@ -7,26 +7,20 @@ import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.startupstages.client.InitializeBlog;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
-import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
+import com.startupstages.client.model.Topic;
 import com.startupstages.client.model.Topic.TopicID;
 
 public class UniqueValue {
 
 	public static void initialize() {
 
-		StagesPanel.unselectStagesTabs();
-		StagesPanel.hpProblemSolutionFit.setStyleName("backgroundColorWhite");
-
-		BlogPanel.stepPanel.clear();
-		BlogPanel.stepPanel.add(getPanel());
-
-		BlogPanel.topicPanel.clear();
-		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics.get(TopicID.UniqueValue)));
+		InitializeBlog.initializeStep(getPanel());
+		TopicPanel.initializeTopic(Topic.TopicID.UniqueValue);
 	}
 
 	public static AbsolutePanel getPanel() {
@@ -104,12 +98,12 @@ public class UniqueValue {
 
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
-		
+
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.LeanCanvas)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.NonCodedMVP)));
+				.get(TopicID.MVP)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.Wireframes)));

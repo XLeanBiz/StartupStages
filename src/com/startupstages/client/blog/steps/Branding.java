@@ -7,27 +7,21 @@ import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.startupstages.client.InitializeBlog;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
-import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.stages.ProductMarketFit;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
+import com.startupstages.client.model.Topic;
 import com.startupstages.client.model.Topic.TopicID;
 
 public class Branding {
-
+	
 	public static void initialize() {
 
-		StagesPanel.unselectStagesTabs();
-		StagesPanel.hpProblemSolutionFit.setStyleName("backgroundColorWhite");
-
-		BlogPanel.stepPanel.clear();
-		BlogPanel.stepPanel.add(getPanel());
-
-		BlogPanel.topicPanel.clear();
-		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics.get(TopicID.Brand)));
+		InitializeBlog.initializeStep(getPanel());
+		TopicPanel.initializeTopic(Topic.TopicID.Brand);
 	}
 
 	public static AbsolutePanel getPanel() {
@@ -50,7 +44,7 @@ public class Branding {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				ProductMarketFit.initialize();
+				ProductMarketFit.initializeStage();
 			}
 		});
 		absolutePanel.add(image_1, 480, 137);
@@ -111,7 +105,7 @@ public class Branding {
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.SignUps)));
-		
+
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.UnderstandingTime)));
 

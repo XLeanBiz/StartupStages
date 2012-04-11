@@ -7,30 +7,24 @@ import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.startupstages.client.InitializeBlog;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
-import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.stages.Scale;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
+import com.startupstages.client.model.Topic;
 import com.startupstages.client.model.Topic.TopicID;
 
 public class Profiting {
 
 	public static void initialize() {
 
-		StagesPanel.unselectStagesTabs();
-		StagesPanel.hpProductMarketFit.setStyleName("backgroundColorWhite");
-
-		BlogPanel.stepPanel.clear();
-		BlogPanel.stepPanel.add(setPanel());
-
-		BlogPanel.topicPanel.clear();
-		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics.get(TopicID.Profit)));
+		InitializeBlog.initializeStep(getPanel());
+		TopicPanel.initializeTopic(Topic.TopicID.Profit);
 	}
 
-	public static AbsolutePanel setPanel() {
+	public static AbsolutePanel getPanel() {
 
 		AbsolutePanel absolutePanel = new AbsolutePanel();
 		absolutePanel.setSize("610px", "470px");
@@ -50,7 +44,7 @@ public class Profiting {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				Scale.initialize();
+				Scale.initializeStage();
 			}
 		});
 		absolutePanel.add(image_1, 480, 137);
@@ -96,7 +90,7 @@ public class Profiting {
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.RevenuePerUser)));
-		
+
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.MustHaveScore)));
 

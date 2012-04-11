@@ -8,8 +8,8 @@ public class Topic {
 
 		ProblemSolutionFit,
 		
-		Assumptions, Persona, Scenarios, CustomerInterviews, Negatives, LeanUX, PersonaPivot, TargetProblemPivot, MustHaveScoreForIdea,
-		UniqueValue, UniqueValueProposition, LeanCanvas, NonCodedMVP, Wireframes, ABTests, MVPScore,
+		Assumptions, Persona, Scenarios, CustomerInterviews, Negatives, LeanUX, PersonaPivot, TargetProblemPivot, ProblemScore,
+		UniqueValue, UniqueValueProposition, LeanCanvas, MVP, Wireframes, ABTests, MVPScore,
 		Idea, VisionStatement, Team, Goals, TeamSize, Feedback, MarketResearch, Surveys, BusinessModel, Mentoring, Empathy,
 		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, UnderstandingTime,
 		

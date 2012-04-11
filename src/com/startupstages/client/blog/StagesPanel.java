@@ -21,6 +21,30 @@ public class StagesPanel extends HorizontalPanel {
 
 		this.setStyleName("backgroundColorGray");
 
+		setProblemSolutionPanel();
+		this.add(hpProblemSolutionFit);
+
+		setProductMarketPanel();
+		this.add(hpProductMarketFit);
+
+		setScalePanel();
+		this.add(hpScale);
+
+		setMaintenancePanel();
+		this.add(hpMaintenance);
+	}
+
+	public static void unselectStagesTabs() {
+
+		hpProblemSolutionFit.setStyleName("backgroundColorGray");
+		hpProductMarketFit.setStyleName("backgroundColorGray");
+		hpScale.setStyleName("backgroundColorGray");
+		hpMaintenance.setStyleName("backgroundColorGray");
+
+	}
+
+	private void setProblemSolutionPanel() {
+
 		hpProblemSolutionFit.clear();
 		hpProblemSolutionFit.setStyleName("backgroundColorWhite");
 		hpProblemSolutionFit.setSpacing(10);
@@ -34,17 +58,24 @@ public class StagesPanel extends HorizontalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				new UseTracking(
-						"com.startupstages.client.blog.StagesPanel#ProblemSolutionFitLink");
-
-				unselectStagesTabs();
-				hpProblemSolutionFit.setStyleName("backgroundColorWhite");
-
-				ProblemSolutionFit.initialize();
+				setClickProblemSolutionStage();
 			}
 		});
 		hpProblemSolutionFit.add(problemSolutionFit);
-		this.add(hpProblemSolutionFit);
+	}
+
+	private void setClickProblemSolutionStage() {
+
+		new UseTracking(
+				"com.startupstages.client.blog.StagesPanel#ProblemSolutionFitLink");
+
+		unselectStagesTabs();
+		hpProblemSolutionFit.setStyleName("backgroundColorWhite");
+
+		ProblemSolutionFit.initializeStage();
+	}
+
+	private void setProductMarketPanel() {
 
 		hpProductMarketFit.clear();
 		hpProductMarketFit.setSpacing(10);
@@ -58,17 +89,24 @@ public class StagesPanel extends HorizontalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				new UseTracking(
-						"com.startupstages.client.blog.StagesPanel#ProductMarketFitLink");
-
-				unselectStagesTabs();
-				hpProductMarketFit.setStyleName("backgroundColorWhite");
-				
-				ProductMarketFit.initialize();
+				setClickProductMarketStage();
 			}
 		});
 		hpProductMarketFit.add(productMarketFit);
-		this.add(hpProductMarketFit);
+	}
+
+	private void setClickProductMarketStage() {
+
+		new UseTracking(
+				"com.startupstages.client.blog.StagesPanel#ProductMarketFitLink");
+
+		unselectStagesTabs();
+		hpProductMarketFit.setStyleName("backgroundColorWhite");
+
+		ProductMarketFit.initializeStage();
+	}
+
+	private void setScalePanel() {
 
 		hpScale.clear();
 		hpScale.setSpacing(10);
@@ -80,17 +118,23 @@ public class StagesPanel extends HorizontalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				new UseTracking(
-						"com.startupstages.client.blog.StagesPanel#ScaleLink");
-
-				unselectStagesTabs();
-				hpScale.setStyleName("backgroundColorWhite");
-				
-				Scale.initialize();
+				setClickScaleStage();
 			}
 		});
 		hpScale.add(scale);
-		this.add(hpScale);
+	}
+
+	private void setClickScaleStage() {
+
+		new UseTracking("com.startupstages.client.blog.StagesPanel#ScaleLink");
+
+		unselectStagesTabs();
+		hpScale.setStyleName("backgroundColorWhite");
+
+		Scale.initializeStage();
+	}
+
+	private void setMaintenancePanel() {
 
 		hpMaintenance.clear();
 		hpMaintenance.setSpacing(10);
@@ -104,23 +148,19 @@ public class StagesPanel extends HorizontalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				new UseTracking(
-						"com.startupstages.client.blog.StagesPanel#MaintenanceLink");
-
-				unselectStagesTabs();
-				hpMaintenance.setStyleName("backgroundColorWhite");
+				setClickMaintenanceStage();
 			}
 		});
 		hpMaintenance.add(maintenance);
-		this.add(hpMaintenance);
 	}
 
-	public static void unselectStagesTabs() {
+	private void setClickMaintenanceStage() {
 
-		hpProblemSolutionFit.setStyleName("backgroundColorGray");
-		hpProductMarketFit.setStyleName("backgroundColorGray");
-		hpScale.setStyleName("backgroundColorGray");
-		hpMaintenance.setStyleName("backgroundColorGray");
+		new UseTracking(
+				"com.startupstages.client.blog.StagesPanel#MaintenanceLink");
 
+		unselectStagesTabs();
+		hpMaintenance.setStyleName("backgroundColorWhite");
 	}
+
 }

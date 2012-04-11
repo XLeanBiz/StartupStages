@@ -8,7 +8,7 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.startupstages.client.StartupStagesGlobalVariables;
+import com.startupstages.client.InitializeBlog;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.steps.Enhancing;
@@ -16,25 +16,26 @@ import com.startupstages.client.blog.steps.Incorporate;
 import com.startupstages.client.blog.steps.Profiting;
 import com.startupstages.client.blog.steps.Prototyping;
 import com.startupstages.client.blog.topics.TopicPanel;
-import com.startupstages.client.model.Topic.TopicID;
+import com.startupstages.client.model.Topic;
 import com.startupstages.client.utilities.UseTracking;
 
 public class ProductMarketFit {
 
-	public static void initialize() {
-		
+	public static void initializeStage() {
+
 		StagesPanel.unselectStagesTabs();
 		StagesPanel.hpProductMarketFit.setStyleName("backgroundColorWhite");
 
 		BlogPanel.stagePanel.clear();
 		BlogPanel.stagePanel.add(setPanel());
 
-		Prototyping.initialize(false);
+	}
 
-		BlogPanel.topicPanel.clear();
-		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics
-						.get(TopicID.ProductMarketFit)));
+	public static void initializeAll() {
+
+		initializeStage();
+		InitializeBlog.initializeStep(Prototyping.getPanel());
+		TopicPanel.initializeTopic(Topic.TopicID.ProductMarketFit);
 	}
 
 	public static HorizontalPanel setPanel() {
@@ -46,9 +47,9 @@ public class ProductMarketFit {
 		hp.add(vpPrototype());
 
 		hp.add(vpEnhance());
-		
+
 		hp.add(vpIncorporate());
-		
+
 		hp.add(vpProfiting());
 
 		return hp;
@@ -119,7 +120,7 @@ public class ProductMarketFit {
 
 		return vp;
 	}
-	
+
 	private static VerticalPanel vpIncorporate() {
 
 		VerticalPanel vp = new VerticalPanel();
@@ -139,8 +140,8 @@ public class ProductMarketFit {
 			}
 		};
 
-		Anchor anchorIdea = new Anchor("<font size=3><b>Incorporate</b></font>",
-				true);
+		Anchor anchorIdea = new Anchor(
+				"<font size=3><b>Incorporate</b></font>", true);
 		anchorIdea.addClickHandler(ideaClick);
 		vp.add(anchorIdea);
 
@@ -152,7 +153,7 @@ public class ProductMarketFit {
 
 		return vp;
 	}
-	
+
 	private static VerticalPanel vpProfiting() {
 
 		VerticalPanel vp = new VerticalPanel();

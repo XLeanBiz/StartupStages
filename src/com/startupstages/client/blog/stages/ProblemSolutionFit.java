@@ -8,7 +8,7 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.startupstages.client.StartupStagesGlobalVariables;
+import com.startupstages.client.InitializeBlog;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.steps.Assumptions;
@@ -16,25 +16,25 @@ import com.startupstages.client.blog.steps.Branding;
 import com.startupstages.client.blog.steps.Ideation;
 import com.startupstages.client.blog.steps.UniqueValue;
 import com.startupstages.client.blog.topics.TopicPanel;
-import com.startupstages.client.model.Topic.TopicID;
+import com.startupstages.client.model.Topic;
 import com.startupstages.client.utilities.UseTracking;
 
 public class ProblemSolutionFit {
 
-	public static void initialize() {
-		
+	public static void initializeStage() {
+
 		StagesPanel.unselectStagesTabs();
 		StagesPanel.hpProblemSolutionFit.setStyleName("backgroundColorWhite");
 
 		BlogPanel.stagePanel.clear();
 		BlogPanel.stagePanel.add(setPanel());
+	}
 
-		Assumptions.initialize(false);
+	public static void initializeAll() {
 
-		BlogPanel.topicPanel.clear();
-		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics
-						.get(TopicID.ProblemSolutionFit)));
+		initializeStage();
+		InitializeBlog.initializeStep(Assumptions.getPanel());
+		TopicPanel.initializeTopic(Topic.TopicID.ProblemSolutionFit);
 	}
 
 	public static HorizontalPanel setPanel() {
@@ -46,7 +46,7 @@ public class ProblemSolutionFit {
 		hp.add(vpAssumptions());
 
 		hp.add(vpUniqueValue());
-		
+
 		hp.add(vpIdea());
 
 		hp.add(vpBrand());

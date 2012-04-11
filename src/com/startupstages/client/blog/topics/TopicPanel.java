@@ -4,15 +4,18 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.startupstages.client.StartupStagesGlobalVariables;
+import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.topics.edit.EditIcon;
 import com.startupstages.client.comments.CommentsPanel;
 import com.startupstages.client.model.Topic;
 import com.startupstages.client.utilities.LoadingPanel;
+import com.startupstages.client.utilities.UseTracking;
 
 public class TopicPanel extends VerticalPanel {
 
 	public static VerticalPanel vpTopicDescription = new VerticalPanel();
-	
+
 	public static VerticalPanel vpComments = new VerticalPanel();
 
 	public TopicPanel(final Topic topic) {
@@ -43,7 +46,7 @@ public class TopicPanel extends VerticalPanel {
 
 		Label label = new Label(" ");
 		add(label);
-		
+
 		vpComments.clear();
 		vpComments.add(new CommentsPanel(topic));
 		this.add(vpComments);
@@ -64,5 +67,21 @@ public class TopicPanel extends VerticalPanel {
 		}
 
 	}
+
+	public static void initializeTopic(final Topic.TopicID topicId) {
+
+		initializeTopic(StartupStagesGlobalVariables.topics.get(topicId));
+	}
+
+	public static void initializeTopic(final Topic topic) {
+
+		new UseTracking("com.startupstages.client.blog.topics.TopicAnchor#"
+				+ topic.getTopicID());
+
+		BlogPanel.topicPanel.clear();
+		BlogPanel.topicPanel.add(new TopicPanel(topic));
+	}
+
+	
 
 }

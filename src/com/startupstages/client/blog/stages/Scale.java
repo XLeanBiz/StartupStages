@@ -8,30 +8,31 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.startupstages.client.StartupStagesGlobalVariables;
+import com.startupstages.client.InitializeBlog;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.StagesPanel;
 import com.startupstages.client.blog.steps.Funding;
 import com.startupstages.client.blog.steps.Scaling;
 import com.startupstages.client.blog.topics.TopicPanel;
-import com.startupstages.client.model.Topic.TopicID;
+import com.startupstages.client.model.Topic;
 import com.startupstages.client.utilities.UseTracking;
 
 public class Scale {
 
-	public static void initialize() {
+	public static void initializeStage() {
 
 		StagesPanel.unselectStagesTabs();
 		StagesPanel.hpScale.setStyleName("backgroundColorWhite");
 
 		BlogPanel.stagePanel.clear();
 		BlogPanel.stagePanel.add(setPanel());
+	}
 
-		Funding.initialize(false);
+	public static void initializeAll() {
 
-		BlogPanel.topicPanel.clear();
-		BlogPanel.topicPanel.add(new TopicPanel(
-				StartupStagesGlobalVariables.topics.get(TopicID.Scale)));
+		initializeStage();
+		InitializeBlog.initializeStep(Funding.getPanel());
+		TopicPanel.initializeTopic(Topic.TopicID.Scale);
 	}
 
 	public static HorizontalPanel setPanel() {
