@@ -119,11 +119,82 @@ public class InitializeBlog extends VerticalPanel {
 			case CustomerInterviews:
 			case Negatives:
 			case LeanUX:
-			case PersonaPivot:
-			case TargetProblemPivot:
+			case Pivot:
 			case ProblemScore:
-				ProductMarketFit.initializeStage();
+				ProblemSolutionFit.initializeStage();
 				InitializeBlog.initializeStep(Assumptions.getPanel());
+				TopicPanel.initializeTopic(topicEnum);
+				break;
+
+			case UniqueValueProposition:
+			case LeanCanvas:
+			case MVP:
+			case Wireframes:
+			case ABTests:
+			case MVPScore:
+				ProblemSolutionFit.initializeStage();
+				InitializeBlog.initializeStep(UniqueValue.getPanel());
+				TopicPanel.initializeTopic(topicEnum);
+				break;
+
+			case VisionStatement:
+			case Team:
+			case Goals:
+			case TeamSize:
+			case Feedback:
+			case MarketResearch:
+			case Surveys:
+			case BusinessModel:
+			case Mentoring:
+			case Empathy:
+
+				ProblemSolutionFit.initializeStage();
+				InitializeBlog.initializeStep(Ideation.getPanel());
+				TopicPanel.initializeTopic(topicEnum);
+				break;
+
+			case BrandName:
+			case Logo:
+			case LandingPage:
+			case Domain:
+			case Blog:
+			case FeedbackChanels:
+			case SEO:
+			case Visits:
+			case SignUps:
+			case UnderstandingTime:
+
+				ProblemSolutionFit.initializeStage();
+				InitializeBlog.initializeStep(Branding.getPanel());
+				TopicPanel.initializeTopic(topicEnum);
+				break;
+
+			case SourceRepository:
+			case Database:
+			case ProductionEnvironment:
+			case FeaturePrototype:
+			case FeatureVisits:
+			case FeatureUses:
+			case TestCoverage:
+			case LOC:
+			case AgileDevelopment:
+			case UsabilityTests:
+			case APIPivot:
+
+				ProductMarketFit.initializeStage();
+				InitializeBlog.initializeStep(Prototyping.getPanel());
+				TopicPanel.initializeTopic(topicEnum);
+				break;
+
+			case RevenueModel:
+			case Partnerships:
+			case CostPerUser:
+			case RevenuePerUser:
+			case MustHaveScore:
+			case DemandCurve:
+
+				ProductMarketFit.initializeStage();
+				InitializeBlog.initializeStep(Profiting.getPanel());
 				TopicPanel.initializeTopic(topicEnum);
 				break;
 

@@ -44,7 +44,7 @@ public class Profiting {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				Scale.initializeStage();
+				Scale.initializeAll();
 			}
 		});
 		absolutePanel.add(image_1, 480, 137);

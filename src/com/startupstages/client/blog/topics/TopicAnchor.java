@@ -3,9 +3,15 @@ package com.startupstages.client.blog.topics;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.HTML;
+import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.model.Topic;
 
 public class TopicAnchor extends HTML {
+
+	public TopicAnchor(final Topic.TopicID topicid) {
+
+		this(StartupStagesGlobalVariables.topics.get(topicid));
+	}
 
 	public TopicAnchor(final Topic topic) {
 

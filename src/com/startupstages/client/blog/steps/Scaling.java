@@ -20,7 +20,7 @@ public class Scaling {
 	public static void initialize() {
 
 		InitializeBlog.initializeStep(getPanel());
-		TopicPanel.initializeTopic(Topic.TopicID.Scale);
+		TopicPanel.initializeTopic(Topic.TopicID.Scaling);
 	}
 
 	public static AbsolutePanel getPanel() {

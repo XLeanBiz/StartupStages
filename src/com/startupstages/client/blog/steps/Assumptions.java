@@ -8,7 +8,6 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.InitializeBlog;
-import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
@@ -63,10 +62,8 @@ public class Assumptions {
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Persona)));
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Scenarios)));
+		vpInner.add(new TopicAnchor(TopicID.Persona));
+		vpInner.add(new TopicAnchor(TopicID.Scenarios));
 
 		return vpTopic;
 	}
@@ -83,8 +80,7 @@ public class Assumptions {
 		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
 		vpInner.add(htmlmeasure);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ProblemScore)));
+		vpInner.add(new TopicAnchor(TopicID.ProblemScore));
 
 		return vpTopic;
 	}
@@ -101,20 +97,13 @@ public class Assumptions {
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.CustomerInterviews)));
+		vpInner.add(new TopicAnchor(TopicID.CustomerInterviews));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Negatives)));
+		vpInner.add(new TopicAnchor(TopicID.Negatives));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.LeanUX)));
+		vpInner.add(new TopicAnchor(TopicID.LeanUX));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.PersonaPivot)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.TargetProblemPivot)));
+		vpInner.add(new TopicAnchor(TopicID.Pivot));
 
 		return vpTopic;
 	}

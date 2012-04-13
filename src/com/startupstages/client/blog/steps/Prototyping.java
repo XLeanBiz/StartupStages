@@ -118,12 +118,6 @@ public class Prototyping {
 		vpInner.add(htmllearn);
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.UserDrivenDevelopment)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ExtremeProgramming)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.AgileDevelopment)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics

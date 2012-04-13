@@ -8,17 +8,15 @@ public class Topic {
 
 		ProblemSolutionFit,
 		
-		Assumptions, Persona, Scenarios, CustomerInterviews, Negatives, LeanUX, PersonaPivot, TargetProblemPivot, ProblemScore,
+		Assumptions, Persona, Scenarios, CustomerInterviews, Negatives, LeanUX, Pivot, ProblemScore,
 		UniqueValue, UniqueValueProposition, LeanCanvas, MVP, Wireframes, ABTests, MVPScore,
 		Idea, VisionStatement, Team, Goals, TeamSize, Feedback, MarketResearch, Surveys, BusinessModel, Mentoring, Empathy,
 		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, UnderstandingTime,
 		
 		ProductMarketFit,
 		
-		Prototype, 
-		SourceRepository, Database, ProductionEnvironment, FeaturePrototype, 
-		FeatureVisits, FeatureUses, TestCoverage, LOC,
-		UserDrivenDevelopment, ExtremeProgramming, AgileDevelopment, UsabilityTests, APIPivot,
+		Prototype, SourceRepository, Database, ProductionEnvironment, FeaturePrototype, 
+		       FeatureVisits, FeatureUses, TestCoverage, LOC, AgileDevelopment, UsabilityTests, APIPivot,
 
 		Enhance, UIDesign, Privacy, CodeQuality, CustomerSupport, SocialMedia, Rewards, EarlyAdopters, Returns,
 		

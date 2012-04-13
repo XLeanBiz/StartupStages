@@ -44,7 +44,7 @@ public class Branding {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				ProductMarketFit.initializeStage();
+				ProductMarketFit.initializeAll();
 			}
 		});
 		absolutePanel.add(image_1, 480, 137);

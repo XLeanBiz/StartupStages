@@ -8,17 +8,14 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.InitializeBlog;
-import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
-import com.startupstages.client.blog.StagesPanel;
-import com.startupstages.client.blog.stages.ProblemSolutionFit;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic;
 import com.startupstages.client.model.Topic.TopicID;
 
 public class Enhancing {
-	
+
 	public static void initialize() {
 
 		InitializeBlog.initializeStep(getPanel());
@@ -48,8 +45,7 @@ public class Enhancing {
 				Incorporate.initialize();
 			}
 		});
-		
-		
+
 		absolutePanel.add(image_1, 480, 137);
 
 		return absolutePanel;
@@ -67,23 +63,17 @@ public class Enhancing {
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.CodeQuality)));
+		vpInner.add(new TopicAnchor(TopicID.CodeQuality));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.UIDesign)));
+		vpInner.add(new TopicAnchor(TopicID.UIDesign));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Privacy)));
+		vpInner.add(new TopicAnchor(TopicID.Privacy));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.CustomerSupport)));
+		vpInner.add(new TopicAnchor(TopicID.CustomerSupport));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.SocialMedia)));
+		vpInner.add(new TopicAnchor(TopicID.SocialMedia));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Rewards)));
+		vpInner.add(new TopicAnchor(TopicID.Rewards));
 
 		return vpTopic;
 	}
@@ -100,11 +90,9 @@ public class Enhancing {
 		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
 		vpInner.add(htmlmeasure);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.EarlyAdopters)));
+		vpInner.add(new TopicAnchor(TopicID.EarlyAdopters));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Returns)));
+		vpInner.add(new TopicAnchor(TopicID.Returns));
 
 		return vpTopic;
 	}
