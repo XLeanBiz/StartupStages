@@ -43,14 +43,14 @@ public class TopicsMockup {
 
 		Topic leanCanvas = new Topic();
 		leanCanvas.setTopicName(FeatureNameGenerator
-				.spacedName(Topic.TopicID.LeanCanvas.toString()));
+				.spacedName(Topic.TopicID.BusinessCanvas.toString()));
 		leanCanvas
 				.setTopicDescription("<blockquote><a href=\"http://www.ashmaurya.com/2010/08/businessmodelcanvas/\" target=\"_blank\">"
 						+ "\"How I Document my Business Model Hypotheses\" - Ash Maurya's Blog</a>"
 						+ "<br><br>"
 						+ "\"A single page business model.\" - <a href=\"http://leancanvas.com\""
 						+ " target=\"_blank\">http://leancanvas.com</a></blockquote>");
-		topics.put(Topic.TopicID.LeanCanvas, leanCanvas);
+		topics.put(Topic.TopicID.BusinessCanvas, leanCanvas);
 
 		Topic team = new Topic();
 		team.setTopicName(FeatureNameGenerator.spacedName(Topic.TopicID.Team

@@ -99,9 +99,9 @@ public class Assumptions {
 
 		vpInner.add(new TopicAnchor(TopicID.CustomerInterviews));
 
-		vpInner.add(new TopicAnchor(TopicID.Negatives));
-
 		vpInner.add(new TopicAnchor(TopicID.LeanUX));
+
+		vpInner.add(new TopicAnchor(TopicID.BusinessCanvas));
 
 		vpInner.add(new TopicAnchor(TopicID.Pivot));
 

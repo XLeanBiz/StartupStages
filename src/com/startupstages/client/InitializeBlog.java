@@ -117,7 +117,6 @@ public class InitializeBlog extends VerticalPanel {
 			case Persona:
 			case Scenarios:
 			case CustomerInterviews:
-			case Negatives:
 			case LeanUX:
 			case Pivot:
 			case ProblemScore:
@@ -127,11 +126,12 @@ public class InitializeBlog extends VerticalPanel {
 				break;
 
 			case UniqueValueProposition:
-			case LeanCanvas:
+			case BusinessCanvas:
 			case MVP:
 			case Wireframes:
 			case ABTests:
-			case MVPScore:
+			case UniqueValueScore:
+			case MVPResults:
 				ProblemSolutionFit.initializeStage();
 				InitializeBlog.initializeStep(UniqueValue.getPanel());
 				TopicPanel.initializeTopic(topicEnum);
@@ -144,7 +144,6 @@ public class InitializeBlog extends VerticalPanel {
 			case Feedback:
 			case MarketResearch:
 			case Surveys:
-			case BusinessModel:
 			case Mentoring:
 			case Empathy:
 

@@ -8,7 +8,6 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.InitializeBlog;
-import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
@@ -63,8 +62,7 @@ public class UniqueValue {
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.UniqueValueProposition)));
+		vpInner.add(new TopicAnchor(TopicID.UniqueValueProposition));
 
 		return vpTopic;
 	}
@@ -81,8 +79,9 @@ public class UniqueValue {
 		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
 		vpInner.add(htmlmeasure);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.MVPScore)));
+		vpInner.add(new TopicAnchor(TopicID.UniqueValueScore));
+
+		vpInner.add(new TopicAnchor(TopicID.MVPResults));
 
 		return vpTopic;
 	}
@@ -99,17 +98,11 @@ public class UniqueValue {
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.LeanCanvas)));
+		vpInner.add(new TopicAnchor(TopicID.MVP));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.MVP)));
+		vpInner.add(new TopicAnchor(TopicID.Wireframes));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Wireframes)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ABTests)));
+		vpInner.add(new TopicAnchor(TopicID.ABTests));
 
 		return vpTopic;
 	}

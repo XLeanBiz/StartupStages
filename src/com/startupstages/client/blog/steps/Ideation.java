@@ -63,14 +63,11 @@ public class Ideation {
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.VisionStatement)));
+		vpInner.add(new TopicAnchor(TopicID.VisionStatement));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Team)));
+		vpInner.add(new TopicAnchor(TopicID.Team));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Goals)));
+		vpInner.add(new TopicAnchor(TopicID.Goals));
 
 		return vpTopic;
 	}
@@ -87,8 +84,7 @@ public class Ideation {
 		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
 		vpInner.add(htmlmeasure);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.TeamSize)));
+		vpInner.add(new TopicAnchor(TopicID.TeamSize));
 
 		return vpTopic;
 	}
@@ -108,17 +104,11 @@ public class Ideation {
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
 				.get(TopicID.MarketResearch)));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Surveys)));
+		vpInner.add(new TopicAnchor(TopicID.Surveys));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.BusinessModel)));
+		vpInner.add(new TopicAnchor(TopicID.Empathy));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Empathy)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Mentoring)));
+		vpInner.add(new TopicAnchor(TopicID.Mentoring));
 
 		return vpTopic;
 	}
