@@ -42,7 +42,7 @@ public class Enhancing {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				Incorporate.initialize();
+				Profiting.initialize();
 			}
 		});
 

@@ -8,7 +8,6 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.InitializeBlog;
-import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.stages.Scale;
 import com.startupstages.client.blog.topics.TopicAnchor;
@@ -64,11 +63,11 @@ public class Profiting {
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.RevenueModel)));
+		vpInner.add(new TopicAnchor(TopicID.Incorporation));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Partnerships)));
+		vpInner.add(new TopicAnchor(TopicID.RevenueModel));
+
+		vpInner.add(new TopicAnchor(TopicID.Partnerships));
 
 		return vpTopic;
 	}
@@ -85,14 +84,11 @@ public class Profiting {
 		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
 		vpInner.add(htmlmeasure);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.CostPerUser)));
+		vpInner.add(new TopicAnchor(TopicID.CostPerUser));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.RevenuePerUser)));
+		vpInner.add(new TopicAnchor(TopicID.RevenuePerUser));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.MustHaveScore)));
+		vpInner.add(new TopicAnchor(TopicID.MustHaveScore));
 
 		return vpTopic;
 	}
@@ -109,8 +105,7 @@ public class Profiting {
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.DemandCurve)));
+		vpInner.add(new TopicAnchor(TopicID.DemandCurve));
 
 		return vpTopic;
 	}

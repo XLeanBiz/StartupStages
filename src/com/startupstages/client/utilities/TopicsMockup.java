@@ -13,7 +13,7 @@ public class TopicsMockup {
 
 		Topic vision = new Topic();
 		vision.setTopicName(FeatureNameGenerator
-				.spacedName(Topic.TopicID.VisionStatement.toString()));
+				.spacedName(Topic.TopicID.Vision.toString()));
 		vision.setTopicDescription("From "
 				+ "<a href=\"http://en.wikipedia.org/wiki/Vision_statement#Mission_statements_and_vision_statements/\" target=\"_blank\">"
 				+ "Wikipedia</a>: <br>"
@@ -27,7 +27,7 @@ public class TopicsMockup {
 				+ "to bring into the world by realizing the idea to it's fullest potential.\""
 				+ "<br>- <a href=\"http://www.ashmaurya.com/2010/05/there-is-an-i-in-vision/\""
 				+ " target=\"_blank\">There is an \"I\" in Vision - Ash Maurya</a></center>");
-		topics.put(Topic.TopicID.VisionStatement, vision);
+		topics.put(Topic.TopicID.Vision, vision);
 
 		Topic persona = new Topic();
 		persona.setTopicName(FeatureNameGenerator

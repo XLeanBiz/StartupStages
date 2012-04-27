@@ -11,7 +11,6 @@ import com.startupstages.client.blog.steps.Branding;
 import com.startupstages.client.blog.steps.Enhancing;
 import com.startupstages.client.blog.steps.Funding;
 import com.startupstages.client.blog.steps.Ideation;
-import com.startupstages.client.blog.steps.Incorporate;
 import com.startupstages.client.blog.steps.Profiting;
 import com.startupstages.client.blog.steps.Prototyping;
 import com.startupstages.client.blog.steps.Scaling;
@@ -94,11 +93,6 @@ public class InitializeBlog extends VerticalPanel {
 				Enhancing.initialize();
 				break;
 
-			case Incorporate:
-				ProductMarketFit.initializeStage();
-				Incorporate.initialize();
-				break;
-
 			case Profit:
 				ProductMarketFit.initializeStage();
 				Profiting.initialize();
@@ -137,7 +131,7 @@ public class InitializeBlog extends VerticalPanel {
 				TopicPanel.initializeTopic(topicEnum);
 				break;
 
-			case VisionStatement:
+			case Vision:
 			case Team:
 			case Goals:
 			case TeamSize:
@@ -161,7 +155,7 @@ public class InitializeBlog extends VerticalPanel {
 			case SEO:
 			case Visits:
 			case SignUps:
-			case UnderstandingTime:
+			case CommunicationSkills:
 
 				ProblemSolutionFit.initializeStage();
 				InitializeBlog.initializeStep(Branding.getPanel());

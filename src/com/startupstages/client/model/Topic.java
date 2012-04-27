@@ -10,18 +10,14 @@ public class Topic {
 		
 		Assumptions, Persona, Scenarios, CustomerInterviews, LeanUX, Pivot, ProblemScore,
 		UniqueValue, UniqueValueProposition, BusinessCanvas, MVP, Wireframes, ABTests, UniqueValueScore, MVPResults,
-		Idea, VisionStatement, Team, Goals, TeamSize, Feedback, MarketResearch, Surveys, Mentoring, Empathy,
-		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, UnderstandingTime,
+		Idea, Vision, Team, Goals, TeamSize, Feedback, MarketResearch, Surveys, Mentoring, Empathy,
+		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, CommunicationSkills,
 		
 		ProductMarketFit,
-		
 		Prototype, SourceRepository, Database, ProductionEnvironment, FeaturePrototype, 
 		       FeatureVisits, FeatureUses, TestCoverage, LOC, AgileDevelopment, UsabilityTests, APIPivot,
-
 		Enhance, UIDesign, Privacy, CodeQuality, CustomerSupport, SocialMedia, Rewards, EarlyAdopters, Returns,
-		
-		Incorporate, FormalDocumentation, Legal, IPs, Taxes,
-		Profit, RevenueModel, Partnerships, CostPerUser, RevenuePerUser, MustHaveScore, DemandCurve, 
+		Profit, Incorporation, RevenueModel, Partnerships, CostPerUser, RevenuePerUser, MustHaveScore, DemandCurve, 
 		
 		Scale,
 		Funding, AdvisorsBoard, InvestorsMeetings, Bootstrapping, SeedFunding, AngelsAndVCs, InvestmentScore,

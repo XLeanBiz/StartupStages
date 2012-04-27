@@ -63,7 +63,7 @@ public class Ideation {
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
 
-		vpInner.add(new TopicAnchor(TopicID.VisionStatement));
+		vpInner.add(new TopicAnchor(TopicID.Vision));
 
 		vpInner.add(new TopicAnchor(TopicID.Team));
 

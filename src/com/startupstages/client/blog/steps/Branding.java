@@ -107,7 +107,7 @@ public class Branding {
 				.get(TopicID.SignUps)));
 
 		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.UnderstandingTime)));
+				.get(TopicID.CommunicationSkills)));
 
 		return vpTopic;
 	}
