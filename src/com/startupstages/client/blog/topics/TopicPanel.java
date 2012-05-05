@@ -1,7 +1,10 @@
 package com.startupstages.client.blog.topics;
 
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.StartupStagesGlobalVariables;
@@ -35,9 +38,7 @@ public class TopicPanel extends VerticalPanel {
 
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
 
-		HTML htmlReferences = new HTML(
-				"<font size=4><b>References:</b></font>", true);
-		add(htmlReferences);
+		this.add(tabsPanel());
 
 		vpTopicDescription.clear();
 		this.add(vpTopicDescription);
@@ -82,6 +83,43 @@ public class TopicPanel extends VerticalPanel {
 		BlogPanel.topicPanel.add(new TopicPanel(topic));
 	}
 
-	
+	private HorizontalPanel tabsPanel() {
 
+		HorizontalPanel hp = new HorizontalPanel();
+		hp.setWidth("100%");
+
+		HTML htmlReferences = new HTML(
+				"<font size=4><b><a href=#>References</a>:</b></font>", true);
+		htmlReferences.addClickHandler(new ClickHandler() {
+
+			@Override
+			public void onClick(ClickEvent event) {
+
+			}
+		});
+
+		hp.add(htmlReferences);
+
+		if (showMyCompany()) {
+			
+			HTML htmlMyCompany = new HTML(
+					"<font size=4><b><a href=#>My Company</a>:</b></font>",
+					true);
+			htmlMyCompany.addClickHandler(new ClickHandler() {
+
+				@Override
+				public void onClick(ClickEvent event) {
+
+				}
+			});
+			hp.add(htmlMyCompany);
+		}
+
+		return hp;
+	}
+
+	private static boolean showMyCompany() {
+
+		return false;
+	}
 }

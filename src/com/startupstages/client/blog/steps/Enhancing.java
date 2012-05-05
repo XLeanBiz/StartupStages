@@ -63,17 +63,10 @@ public class Enhancing {
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
 
-		vpInner.add(new TopicAnchor(TopicID.CodeQuality));
-
-		vpInner.add(new TopicAnchor(TopicID.UIDesign));
-
-		vpInner.add(new TopicAnchor(TopicID.Privacy));
 
 		vpInner.add(new TopicAnchor(TopicID.CustomerSupport));
 
 		vpInner.add(new TopicAnchor(TopicID.SocialMedia));
-
-		vpInner.add(new TopicAnchor(TopicID.Rewards));
 
 		return vpTopic;
 	}
@@ -108,7 +101,19 @@ public class Enhancing {
 
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
+		
+		vpInner.add(new TopicAnchor(TopicID.CodeQuality));
 
+		vpInner.add(new TopicAnchor(TopicID.UIDesign));
+		
+		vpInner.add(new TopicAnchor(TopicID.Rewards));
+		
+		vpInner.add(new TopicAnchor(TopicID.SEO));
+
+		vpInner.add(new TopicAnchor(TopicID.FeedbackChanels));
+
+		vpInner.add(new TopicAnchor(TopicID.CommunicationSkills));
+		
 		return vpTopic;
 	}
 

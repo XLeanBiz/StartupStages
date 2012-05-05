@@ -14,7 +14,7 @@ public class Topic {
 		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, CommunicationSkills,
 		
 		ProductMarketFit,
-		Prototype, SourceRepository, Database, ProductionEnvironment, FeaturePrototype, 
+		Prototype, SourceCode, Features, 
 		       FeatureVisits, FeatureUses, TestCoverage, LOC, AgileDevelopment, UsabilityTests, APIPivot,
 		Enhance, UIDesign, Privacy, CodeQuality, CustomerSupport, SocialMedia, Rewards, EarlyAdopters, Returns,
 		Profit, Incorporation, RevenueModel, Partnerships, CostPerUser, RevenuePerUser, MustHaveScore, DemandCurve, 

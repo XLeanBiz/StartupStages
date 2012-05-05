@@ -162,10 +162,8 @@ public class InitializeBlog extends VerticalPanel {
 				TopicPanel.initializeTopic(topicEnum);
 				break;
 
-			case SourceRepository:
-			case Database:
-			case ProductionEnvironment:
-			case FeaturePrototype:
+			case SourceCode:
+			case Features:
 			case FeatureVisits:
 			case FeatureUses:
 			case TestCoverage:

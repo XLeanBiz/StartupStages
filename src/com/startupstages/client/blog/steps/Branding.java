@@ -8,7 +8,6 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.InitializeBlog;
-import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.stages.ProductMarketFit;
 import com.startupstages.client.blog.topics.TopicAnchor;
@@ -17,7 +16,7 @@ import com.startupstages.client.model.Topic;
 import com.startupstages.client.model.Topic.TopicID;
 
 public class Branding {
-	
+
 	public static void initialize() {
 
 		InitializeBlog.initializeStep(getPanel());
@@ -64,26 +63,13 @@ public class Branding {
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.BrandName)));
+		vpInner.add(new TopicAnchor(TopicID.BrandName));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Logo)));
+		vpInner.add(new TopicAnchor(TopicID.Logo));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.LandingPage)));
+		vpInner.add(new TopicAnchor(TopicID.Domain));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Domain)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Blog)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeedbackChanels)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.SEO)));
+		vpInner.add(new TopicAnchor(TopicID.Blog));
 
 		return vpTopic;
 	}
@@ -100,14 +86,9 @@ public class Branding {
 		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
 		vpInner.add(htmlmeasure);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Visits)));
+		vpInner.add(new TopicAnchor(TopicID.Visits));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.SignUps)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.CommunicationSkills)));
+		vpInner.add(new TopicAnchor(TopicID.SignUps));
 
 		return vpTopic;
 	}
@@ -123,6 +104,8 @@ public class Branding {
 
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
+
+		vpInner.add(new TopicAnchor(TopicID.LandingPage));
 
 		return vpTopic;
 	}

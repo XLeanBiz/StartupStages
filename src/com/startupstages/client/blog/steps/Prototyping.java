@@ -8,7 +8,6 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.InitializeBlog;
-import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
@@ -63,17 +62,9 @@ public class Prototyping {
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.SourceRepository)));
+		vpInner.add(new TopicAnchor(TopicID.SourceCode));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.Database)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.ProductionEnvironment)));
-
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeaturePrototype)));
+		vpInner.add(new TopicAnchor(TopicID.Features));
 
 		return vpTopic;
 	}
@@ -90,17 +81,13 @@ public class Prototyping {
 		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
 		vpInner.add(htmlmeasure);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeatureVisits)));
+		vpInner.add(new TopicAnchor(TopicID.FeatureVisits));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.FeatureUses)));
+		vpInner.add(new TopicAnchor(TopicID.FeatureUses));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.TestCoverage)));
+		vpInner.add(new TopicAnchor(TopicID.TestCoverage));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.LOC)));
+		vpInner.add(new TopicAnchor(TopicID.LOC));
 
 		return vpTopic;
 	}
@@ -117,14 +104,11 @@ public class Prototyping {
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.AgileDevelopment)));
+		vpInner.add(new TopicAnchor(TopicID.AgileDevelopment));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.UsabilityTests)));
+		vpInner.add(new TopicAnchor(TopicID.UsabilityTests));
 
-		vpInner.add(new TopicAnchor(StartupStagesGlobalVariables.topics
-				.get(TopicID.APIPivot)));
+		vpInner.add(new TopicAnchor(TopicID.APIPivot));
 
 		return vpTopic;
 	}
