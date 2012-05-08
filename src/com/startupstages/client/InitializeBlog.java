@@ -138,7 +138,6 @@ public class InitializeBlog extends VerticalPanel {
 			case Feedback:
 			case MarketResearch:
 			case Surveys:
-			case Mentoring:
 			case Empathy:
 
 				ProblemSolutionFit.initializeStage();

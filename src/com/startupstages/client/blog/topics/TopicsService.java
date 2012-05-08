@@ -8,10 +8,8 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
  */
 @RemoteServiceRelativePath("topics")
 public interface TopicsService extends RemoteService {
-	
-	String getTopic(String topicName)
-			throws IllegalArgumentException;
 
-	void saveTopic(String topicName, String topicDescription)
-			throws IllegalArgumentException;
+	String getTopic(String topicName);
+
+	void saveTopic(String topicName, String topicDescription);
 }

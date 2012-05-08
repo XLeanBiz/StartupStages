@@ -10,14 +10,12 @@ import com.startupstages.client.blog.topics.TopicsService;
 public class TopicsServiceImpl extends RemoteServiceServlet implements
 		TopicsService {
 
-	public String getTopic(final String topicName)
-			throws IllegalArgumentException {
+	public String getTopic(final String topicName) {
 
 		return GetTopic.getJsonString(topicName);
 	}
 
-	public void saveTopic(final String topicName, final String topicDescription)
-			throws IllegalArgumentException {
+	public void saveTopic(final String topicName, final String topicDescription) {
 
 		SaveTopic.save(topicName, topicDescription);
 	}

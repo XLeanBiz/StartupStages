@@ -25,17 +25,17 @@ public class UniqueValue {
 	public static AbsolutePanel getPanel() {
 
 		AbsolutePanel absolutePanel = new AbsolutePanel();
-		absolutePanel.setSize("620px", "470px");
+		absolutePanel.setSize("620px", "455px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/UniqueValueIdentification.png");
 		absolutePanel.add(image, 0, 0);
 
-		absolutePanel.add(vpBuild(), 30, 200);
+		absolutePanel.add(vpBuild(), 30, 150);
 
-		absolutePanel.add(vpLearn(), 235, 225);
+		absolutePanel.add(vpLearn(), 230, 170);
 
-		absolutePanel.add(vpMeasure(), 450, 250);
+		absolutePanel.add(vpMeasure(), 440, 190);
 
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
 				+ "startupstages/arrow.png' border=0></a>");
@@ -45,7 +45,7 @@ public class UniqueValue {
 				Ideation.initialize();
 			}
 		});
-		absolutePanel.add(image_1, 480, 137);
+		absolutePanel.add(image_1, 480, 50);
 
 		return absolutePanel;
 	}

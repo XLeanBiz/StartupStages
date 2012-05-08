@@ -25,18 +25,18 @@ public class Enhancing {
 	public static AbsolutePanel getPanel() {
 
 		AbsolutePanel absolutePanel = new AbsolutePanel();
-		absolutePanel.setSize("610px", "480px");
+		absolutePanel.setSize("610px", "455px");
 
 		Image image = new Image(GWT.getModuleBaseURL()
 				+ "startupstages/Enhancing.png");
 		absolutePanel.add(image, 0, 0);
 
-		absolutePanel.add(vpBuild(), 30, 200);
+		absolutePanel.add(vpBuild(), 30, 150);
 
-		absolutePanel.add(vpLearn(), 235, 225);
+		absolutePanel.add(vpLearn(), 230, 170);
 
-		absolutePanel.add(vpMeasure(), 450, 250);
-
+		absolutePanel.add(vpMeasure(), 440, 190);
+		
 		HTML image_1 = new HTML("<a href=#><img src='" + GWT.getModuleBaseURL()
 				+ "startupstages/arrow.png' border=0></a>");
 		image_1.addClickHandler(new ClickHandler() {
@@ -46,7 +46,7 @@ public class Enhancing {
 			}
 		});
 
-		absolutePanel.add(image_1, 480, 137);
+		absolutePanel.add(image_1, 480, 50); 
 
 		return absolutePanel;
 	}
@@ -62,7 +62,6 @@ public class Enhancing {
 
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
-
 
 		vpInner.add(new TopicAnchor(TopicID.CustomerSupport));
 
@@ -87,6 +86,10 @@ public class Enhancing {
 
 		vpInner.add(new TopicAnchor(TopicID.Returns));
 
+		vpInner.add(new TopicAnchor(TopicID.TestCoverage));
+
+		vpInner.add(new TopicAnchor(TopicID.LOC));
+
 		return vpTopic;
 	}
 
@@ -101,19 +104,19 @@ public class Enhancing {
 
 		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
 		vpInner.add(htmllearn);
-		
+
 		vpInner.add(new TopicAnchor(TopicID.CodeQuality));
 
 		vpInner.add(new TopicAnchor(TopicID.UIDesign));
-		
+
 		vpInner.add(new TopicAnchor(TopicID.Rewards));
-		
+
 		vpInner.add(new TopicAnchor(TopicID.SEO));
 
 		vpInner.add(new TopicAnchor(TopicID.FeedbackChanels));
 
 		vpInner.add(new TopicAnchor(TopicID.CommunicationSkills));
-		
+
 		return vpTopic;
 	}
 

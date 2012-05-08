@@ -1,21 +1,18 @@
 package com.startupstages.client.blog.topics;
 
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.topics.edit.EditIcon;
-import com.startupstages.client.comments.CommentsPanel;
 import com.startupstages.client.model.Topic;
-import com.startupstages.client.utilities.LoadingPanel;
 import com.startupstages.client.utilities.UseTracking;
 
 public class TopicPanel extends VerticalPanel {
+
+	public static VerticalPanel vpEditIcon = new VerticalPanel();
 
 	public static VerticalPanel vpTopicDescription = new VerticalPanel();
 
@@ -28,7 +25,12 @@ public class TopicPanel extends VerticalPanel {
 
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
 
-		add(new EditIcon(topic));
+		vpEditIcon.clear();
+		vpTopicDescription.clear();
+		vpComments.clear();
+
+		vpEditIcon.add(new EditIcon(topic, true));
+		add(vpEditIcon);
 
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 
@@ -38,35 +40,16 @@ public class TopicPanel extends VerticalPanel {
 
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
 
-		this.add(tabsPanel());
+		this.add(new TopicTabsPanel(topic));
 
-		vpTopicDescription.clear();
 		this.add(vpTopicDescription);
-
-		getDescription(topic);
 
 		Label label = new Label(" ");
 		add(label);
 
-		vpComments.clear();
-		vpComments.add(new CommentsPanel(topic));
 		this.add(vpComments);
-	}
 
-	private void getDescription(final Topic topic) {
-
-		if (topic.getTopicDescription() != null) {
-
-			HTML htmlDescription = new HTML(topic.getTopicDescription(), true);
-			vpTopicDescription.add(htmlDescription);
-
-		} else {
-
-			vpTopicDescription.add(new LoadingPanel());
-
-			GetTopic.get(topic);
-		}
-
+		TopicTabsPanel.getDescription(topic);
 	}
 
 	public static void initializeTopic(final Topic.TopicID topicId) {
@@ -83,43 +66,4 @@ public class TopicPanel extends VerticalPanel {
 		BlogPanel.topicPanel.add(new TopicPanel(topic));
 	}
 
-	private HorizontalPanel tabsPanel() {
-
-		HorizontalPanel hp = new HorizontalPanel();
-		hp.setWidth("100%");
-
-		HTML htmlReferences = new HTML(
-				"<font size=4><b><a href=#>References</a>:</b></font>", true);
-		htmlReferences.addClickHandler(new ClickHandler() {
-
-			@Override
-			public void onClick(ClickEvent event) {
-
-			}
-		});
-
-		hp.add(htmlReferences);
-
-		if (showMyCompany()) {
-			
-			HTML htmlMyCompany = new HTML(
-					"<font size=4><b><a href=#>My Company</a>:</b></font>",
-					true);
-			htmlMyCompany.addClickHandler(new ClickHandler() {
-
-				@Override
-				public void onClick(ClickEvent event) {
-
-				}
-			});
-			hp.add(htmlMyCompany);
-		}
-
-		return hp;
-	}
-
-	private static boolean showMyCompany() {
-
-		return false;
-	}
 }

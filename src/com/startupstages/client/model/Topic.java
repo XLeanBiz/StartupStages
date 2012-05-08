@@ -10,7 +10,7 @@ public class Topic {
 		
 		Assumptions, Persona, Scenarios, CustomerInterviews, LeanUX, Pivot, ProblemScore,
 		UniqueValue, UniqueValueProposition, BusinessCanvas, MVP, Wireframes, ABTests, UniqueValueScore, MVPResults,
-		Idea, Vision, Team, Goals, TeamSize, Feedback, MarketResearch, Surveys, Mentoring, Empathy,
+		Idea, Vision, Team, Goals, TeamSize, Feedback, MarketResearch, Surveys, Empathy,
 		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, CommunicationSkills,
 		
 		ProductMarketFit,

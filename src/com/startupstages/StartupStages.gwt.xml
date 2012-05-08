@@ -13,12 +13,12 @@
 
 	<!-- Other module inherits -->
 	<inherits name="co.uniqueid.authentication.Authentication" />
-	<inherits name="com.google.gwt.json.JSON" />
+	<inherits name="com.startupdata.StartupData" />
 	<inherits name="com.google.gwt.json.JSON" />
 	<inherits name='com.googlecode.gwt.crypto.Crypto' />
 
 	<!-- Specify the app entry point class. -->
-	<entry-point class='com.startupstages.client.GWTEntryPoint' />
+	<!-- entry-point class='com.startupstages.client.GWTEntryPoint' / -->
 
 	<!-- Specify the paths for translatable code -->
 	<source path='client' />
