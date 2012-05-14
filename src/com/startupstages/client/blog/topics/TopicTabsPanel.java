@@ -7,7 +7,6 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.startupdata.client.MyCompanyLink;
 import com.startupdata.client.StartupData;
-import com.startupdata.client.StartupDataGlobalVariables;
 import com.startupstages.client.blog.topics.edit.EditIcon;
 import com.startupstages.client.comments.CommentsPanel;
 import com.startupstages.client.model.Topic;
@@ -80,14 +79,13 @@ public class TopicTabsPanel extends HorizontalPanel {
 		TopicPanel.vpComments.clear();
 
 		TopicPanel.vpEditIcon.add(new EditIcon(topic, false));
-		TopicPanel.vpTopicDescription
-				.add(StartupDataGlobalVariables.vpStartupTopic);
+		TopicPanel.vpTopicDescription.add(StartupData.vpStartupTopic);
 		if (!isEdit) {
 
-			StartupData.showTopic(topic.getTopicName());
+			StartupData.showTopic(topic.getTopicID().toString());
 		} else {
 
-			StartupData.editTopic(topic.getTopicName());
+			StartupData.editTopic(topic.getTopicID().toString());
 		}
 
 	}

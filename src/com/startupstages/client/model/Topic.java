@@ -11,12 +11,12 @@ public class Topic {
 		Assumptions, Persona, Scenarios, CustomerInterviews, LeanUX, Pivot, ProblemScore,
 		UniqueValue, UniqueValueProposition, BusinessCanvas, MVP, Wireframes, ABTests, UniqueValueScore, MVPResults,
 		Idea, Vision, Team, Goals, TeamSize, Feedback, MarketResearch, Surveys, Empathy,
-		Brand, BrandName, Logo, LandingPage, Domain, Blog, FeedbackChanels, SEO, Visits, SignUps, CommunicationSkills,
+		Brand, BrandName, Logo, LandingPage, Domain, Blog, Visits, SignUps, CommunicationSkills,
 		
 		ProductMarketFit,
 		Prototype, SourceCode, Features, 
 		       FeatureVisits, FeatureUses, TestCoverage, LOC, AgileDevelopment, UsabilityTests, APIPivot,
-		Enhance, UIDesign, Privacy, CodeQuality, CustomerSupport, SocialMedia, Rewards, EarlyAdopters, Returns,
+		Enhance, UIDesign, Privacy, CodeQuality, CustomerSupport, FeedbackChanels, SEO, SocialMedia, Rewards, EarlyAdopters, Returns,
 		Profit, Incorporation, RevenueModel, Partnerships, CostPerUser, RevenuePerUser, MustHaveScore, DemandCurve, 
 		
 		Scale,
