@@ -12,8 +12,11 @@ public class CommentsPanel extends VerticalPanel {
 	public static VerticalPanel vpCommentsList = new VerticalPanel();
 
 	public CommentsPanel(final Topic topic) {
+		
+		this.setSpacing(10);
+		this.setWidth("100%");
 
-		HTML html = new HTML("<font size=3><b>Comments:</b></font>", true);
+		HTML html = new HTML("<font size=3><b>Comments</b></font>", true);
 		add(html);
 
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);

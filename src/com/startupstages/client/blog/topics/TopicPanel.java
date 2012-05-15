@@ -4,17 +4,21 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.startupdata.client.MyCompanyPanel;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
-import com.startupstages.client.blog.topics.edit.EditIcon;
+import com.startupstages.client.blog.topics.references.GetTopicReferences;
+import com.startupstages.client.blog.topics.references.TopicReferences;
+import com.startupstages.client.comments.CommentsPanel;
 import com.startupstages.client.model.Topic;
+import com.startupstages.client.utilities.LoadingPanel;
 import com.startupstages.client.utilities.UseTracking;
 
 public class TopicPanel extends VerticalPanel {
 
-	public static VerticalPanel vpEditIcon = new VerticalPanel();
+	public static VerticalPanel vpMyCompany = new VerticalPanel();
 
-	public static VerticalPanel vpTopicDescription = new VerticalPanel();
+	public static VerticalPanel vpTopicReferences = new VerticalPanel();
 
 	public static VerticalPanel vpComments = new VerticalPanel();
 
@@ -25,12 +29,9 @@ public class TopicPanel extends VerticalPanel {
 
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
 
-		vpEditIcon.clear();
-		vpTopicDescription.clear();
+		vpMyCompany.clear();
+		vpTopicReferences.clear();
 		vpComments.clear();
-
-		vpEditIcon.add(new EditIcon(topic, true));
-		add(vpEditIcon);
 
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 
@@ -40,16 +41,19 @@ public class TopicPanel extends VerticalPanel {
 
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
 
-		this.add(new TopicTabsPanel(topic));
+		this.add(vpMyCompany);
+		vpMyCompany.setWidth("100%");
+		vpMyCompany.add(new MyCompanyPanel(topic.getTopicID().toString()));
 
-		this.add(vpTopicDescription);
+		this.add(vpTopicReferences);
+		vpTopicReferences.setWidth("100%");
+		showTopicReferences(topic);
 
 		Label label = new Label(" ");
 		add(label);
 
 		this.add(vpComments);
-
-		TopicTabsPanel.getDescription(topic);
+		TopicPanel.vpComments.add(new CommentsPanel(topic));
 	}
 
 	public static void initializeTopic(final Topic.TopicID topicId) {
@@ -64,6 +68,20 @@ public class TopicPanel extends VerticalPanel {
 
 		BlogPanel.topicPanel.clear();
 		BlogPanel.topicPanel.add(new TopicPanel(topic));
+	}
+
+	public static void showTopicReferences(final Topic topic) {
+
+		if (topic.getTopicDescription() != null) {
+
+			vpTopicReferences.add(new TopicReferences(topic));
+
+		} else {
+
+			vpTopicReferences.add(new LoadingPanel());
+
+			GetTopicReferences.get(topic);
+		}
 	}
 
 }

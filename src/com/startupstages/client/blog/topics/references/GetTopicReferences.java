@@ -1,4 +1,4 @@
-package com.startupstages.client.blog.topics;
+package com.startupstages.client.blog.topics.references;
 
 import co.uniqueid.authentication.client.utilities.ConvertJson;
 
@@ -6,16 +6,16 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.HTML;
 import com.startupstages.client.StartupStagesGlobalVariables;
+import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic;
 
-public class GetTopic {
+public class GetTopicReferences {
 
 	public static void get(final Topic topic) {
 
-		final TopicsServiceAsync topicsService = GWT
-				.create(TopicsService.class);
+		final TopicsReferencesServiceAsync topicsService = GWT
+				.create(TopicsReferencesService.class);
 
 		topicsService.getTopic(topic.getTopicName(),
 				new AsyncCallback<String>() {
@@ -40,9 +40,9 @@ public class GetTopic {
 									topic.getTopicID()).setTopicDescription(
 									topicDescription);
 
-							TopicPanel.vpTopicDescription.clear();
-							TopicPanel.vpTopicDescription.add(new HTML(
-									topicDescription, true));
+							TopicPanel.vpTopicReferences.clear();
+							TopicPanel.vpTopicReferences
+									.add(new TopicReferences(topic));
 						}
 					}
 				});

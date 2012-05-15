@@ -1,20 +1,20 @@
-package com.startupstages.client.blog.topics.edit;
+package com.startupstages.client.blog.topics.references.edit;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.startupstages.client.StartupStagesGlobalVariables;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.topics.TopicPanel;
-import com.startupstages.client.blog.topics.TopicsService;
-import com.startupstages.client.blog.topics.TopicsServiceAsync;
+import com.startupstages.client.blog.topics.references.TopicsReferencesService;
+import com.startupstages.client.blog.topics.references.TopicsReferencesServiceAsync;
 import com.startupstages.client.model.Topic;
 
-public class SaveTopic {
+public class SaveTopicReferences {
 
 	public static void save(final Topic topic) {
 
-		final TopicsServiceAsync topicsService = GWT
-				.create(TopicsService.class);
+		final TopicsReferencesServiceAsync topicsService = GWT
+				.create(TopicsReferencesService.class);
 
 		topicsService.saveTopic(topic.getTopicName(),
 				topic.getTopicDescription(), new AsyncCallback<Void>() {

@@ -1,14 +1,14 @@
 package com.startupstages.server.topics;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.startupstages.client.blog.topics.TopicsService;
+import com.startupstages.client.blog.topics.references.TopicsReferencesService;
 
 /**
  * The server side implementation of the RPC service.
  */
 @SuppressWarnings("serial")
-public class TopicsServiceImpl extends RemoteServiceServlet implements
-		TopicsService {
+public class TopicsReferencesServiceImpl extends RemoteServiceServlet implements
+		TopicsReferencesService {
 
 	public String getTopic(final String topicName) {
 

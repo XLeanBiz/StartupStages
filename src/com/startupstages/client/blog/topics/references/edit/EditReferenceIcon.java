@@ -1,21 +1,20 @@
-package com.startupstages.client.blog.topics.edit;
+package com.startupstages.client.blog.topics.references.edit;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Anchor;
 import com.startupstages.client.blog.BlogPanel;
-import com.startupstages.client.blog.topics.TopicTabsPanel;
 import com.startupstages.client.model.Topic;
 import com.startupstages.client.utilities.UseTracking;
 
-public class EditIcon extends Anchor {
+public class EditReferenceIcon extends Anchor {
 
-	public EditIcon(final Topic topic, final boolean isReference) {
+	public EditReferenceIcon(final Topic topic) {
 
 		this.setHTML("<a href=#><img src='"
 				+ GWT.getModuleBaseURL()
-				+ "startupstages/EditIcon.jpg' width='22px' height='20px' border=0></a>");
+				+ "startupstages/EditIcon.jpg' width='18px' height='18px' border=0></a>");
 
 		this.setSize("22px", "20px");
 
@@ -24,15 +23,8 @@ public class EditIcon extends Anchor {
 
 				new UseTracking("com.startupstages.client.blog.topics.EditIcon");
 
-				if (isReference) {
-
-					BlogPanel.topicPanel.clear();
-					BlogPanel.topicPanel.add(new TopicEdit(topic));
-
-				} else {
-
-					TopicTabsPanel.getMyCompanyTopic(topic, true);
-				}
+				BlogPanel.topicPanel.clear();
+				BlogPanel.topicPanel.add(new EditTopicReferences(topic));
 			}
 		});
 	}
