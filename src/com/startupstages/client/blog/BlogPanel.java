@@ -8,8 +8,6 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class BlogPanel extends HorizontalPanel {
 
-	public static HorizontalPanel stagePanel = new HorizontalPanel();
-
 	public static AbsolutePanel stepPanel = new AbsolutePanel();
 
 	public static VerticalPanel topicPanel = new VerticalPanel();
@@ -23,15 +21,6 @@ public class BlogPanel extends HorizontalPanel {
 		verticalPanel
 				.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		verticalPanel.add(new StagesPanel());
-
-		stagePanel.setWidth("620px");
-		stagePanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-		stagePanel.setStyleName("backgroundColorWhite");
-		stagePanel.clear();
-		verticalPanel.add(stagePanel);
-
-		verticalPanel.add(new Label(". "));
-		verticalPanel.add(new Label(". "));
 
 		stepPanel.setStyleName("backgroundColorWhite");
 		stepPanel.setSize("95%", "95%");

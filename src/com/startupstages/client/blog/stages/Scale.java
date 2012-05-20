@@ -1,116 +1,101 @@
 package com.startupstages.client.blog.stages;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.Anchor;
-import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.AbsolutePanel;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupstages.client.InitializeBlog;
 import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.StagesPanel;
-import com.startupstages.client.blog.steps.Funding;
-import com.startupstages.client.blog.steps.Scaling;
+import com.startupstages.client.blog.topics.TopicAnchor;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic;
-import com.startupstages.client.utilities.UseTracking;
+import com.startupstages.client.model.Topic.TopicID;
 
 public class Scale {
+
+	public static void initializeAll() {
+
+		initializeStage();
+		InitializeBlog.initializeStep(getPanel());
+		TopicPanel.initializeTopic(Topic.TopicID.Scale);
+	}
 
 	public static void initializeStage() {
 
 		StagesPanel.unselectStagesTabs();
 		StagesPanel.hpScale.setStyleName("backgroundColorWhite");
-
-		BlogPanel.stagePanel.clear();
-		BlogPanel.stagePanel.add(setPanel());
 	}
 
-	public static void initializeAll() {
+	public static AbsolutePanel getPanel() {
 
-		initializeStage();
-		InitializeBlog.initializeStep(Funding.getPanel());
-		TopicPanel.initializeTopic(Topic.TopicID.Scale);
+		AbsolutePanel absolutePanel = new AbsolutePanel();
+		absolutePanel.setSize("610px", "455px");
+
+		Image image = new Image(GWT.getModuleBaseURL()
+				+ "startupstages/Scaling.png");
+		absolutePanel.add(image, 0, 0);
+
+		absolutePanel.add(vpBuild(), 30, 130);
+
+		absolutePanel.add(vpMeasure(), 230, 150);
+
+		absolutePanel.add(vpLearn(), 430, 170);
+
+		return absolutePanel;
 	}
 
-	public static HorizontalPanel setPanel() {
+	private static VerticalPanel vpBuild() {
 
-		HorizontalPanel hp = new HorizontalPanel();
+		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
-		hp.setSpacing(10);
+		VerticalPanel vpInner = new VerticalPanel();
+		vpInner.setWidth("150px");
+		vpInner.setSpacing(10);
+		vpTopic.add(vpInner);
 
-		hp.add(vpFunding());
+		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
+		vpInner.add(htmlBuild);
 
-		hp.add(vpScaling());
+		vpInner.add(new TopicAnchor(TopicID.Advertising));
 
-		return hp;
+		return vpTopic;
 	}
 
-	private static VerticalPanel vpFunding() {
+	private static VerticalPanel vpMeasure() {
 
-		VerticalPanel vp = new VerticalPanel();
-		vp.setSpacing(10);
-		vp.setWidth("130px");
-		vp.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
-		ClickHandler ideaClick = new ClickHandler() {
+		VerticalPanel vpInner = new VerticalPanel();
+		vpInner.setWidth("150px");
+		vpInner.setSpacing(10);
+		vpTopic.add(vpInner);
 
-			@Override
-			public void onClick(ClickEvent event) {
+		HTML htmlmeasure = new HTML("<center><b>MEASURE</b></center>", true);
+		vpInner.add(htmlmeasure);
 
-				new UseTracking(
-						"com.startupstages.client.blog.stages.Scale#FundingLink");
+		vpInner.add(new TopicAnchor(TopicID.Revenue));
+		vpInner.add(new TopicAnchor(TopicID.ReferralRate));
 
-				Funding.initialize();
-			}
-		};
-
-		Anchor anchorIdea = new Anchor("<font size=3><b>Funding</b></font>",
-				true);
-		anchorIdea.addClickHandler(ideaClick);
-		vp.add(anchorIdea);
-
-		Image imgIdea = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/fundingIcon.jpg");
-		imgIdea.setSize("50px", "50px");
-		imgIdea.addClickHandler(ideaClick);
-		vp.add(imgIdea);
-
-		return vp;
+		return vpTopic;
 	}
 
-	private static VerticalPanel vpScaling() {
+	private static VerticalPanel vpLearn() {
 
-		VerticalPanel vp = new VerticalPanel();
-		vp.setSpacing(10);
-		vp.setWidth("130px");
-		vp.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+		VerticalPanel vpTopic = BlogPanel.vpTopic();
 
-		ClickHandler ideaClick = new ClickHandler() {
+		VerticalPanel vpInner = new VerticalPanel();
+		vpInner.setWidth("150px");
+		vpInner.setSpacing(10);
+		vpTopic.add(vpInner);
 
-			@Override
-			public void onClick(ClickEvent event) {
+		HTML htmllearn = new HTML("<center><b>LEARN</b></center>", true);
+		vpInner.add(htmllearn);
 
-				new UseTracking(
-						"com.startupstages.client.blog.stages.Scale#ScaleLink");
+		vpInner.add(new TopicAnchor(TopicID.Incorporation));
+		vpInner.add(new TopicAnchor(TopicID.Funding));
 
-				Scaling.initialize();
-			}
-		};
-
-		Anchor anchorIdea = new Anchor("<font size=3><b>Scaling</b></font>",
-				true);
-		anchorIdea.addClickHandler(ideaClick);
-		vp.add(anchorIdea);
-
-		Image imgIdea = new Image(GWT.getModuleBaseURL()
-				+ "startupstages/ScaleIcon.png");
-		imgIdea.setSize("50px", "50px");
-		imgIdea.addClickHandler(ideaClick);
-		vp.add(imgIdea);
-
-		return vp;
+		return vpTopic;
 	}
 }

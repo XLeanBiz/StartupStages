@@ -15,7 +15,6 @@ public class StagesPanel extends HorizontalPanel {
 	public static HorizontalPanel hpProblemSolutionFit = new HorizontalPanel();
 	public static HorizontalPanel hpProductMarketFit = new HorizontalPanel();
 	public static HorizontalPanel hpScale = new HorizontalPanel();
-	public static HorizontalPanel hpMaintenance = new HorizontalPanel();
 
 	public StagesPanel() {
 
@@ -29,9 +28,6 @@ public class StagesPanel extends HorizontalPanel {
 
 		setScalePanel();
 		this.add(hpScale);
-
-		setMaintenancePanel();
-		this.add(hpMaintenance);
 	}
 
 	public static void unselectStagesTabs() {
@@ -39,7 +35,6 @@ public class StagesPanel extends HorizontalPanel {
 		hpProblemSolutionFit.setStyleName("backgroundColorGray");
 		hpProductMarketFit.setStyleName("backgroundColorGray");
 		hpScale.setStyleName("backgroundColorGray");
-		hpMaintenance.setStyleName("backgroundColorGray");
 
 	}
 
@@ -132,35 +127,6 @@ public class StagesPanel extends HorizontalPanel {
 		hpScale.setStyleName("backgroundColorWhite");
 
 		Scale.initializeAll();
-	}
-
-	private void setMaintenancePanel() {
-
-		hpMaintenance.clear();
-		hpMaintenance.setSpacing(10);
-		hpMaintenance.setWidth("130px");
-		hpMaintenance
-				.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-		HTML maintenance = new HTML(
-				"<font size=3><a href=#><b>Maintenance</b></a></font>");
-		maintenance.addClickHandler(new ClickHandler() {
-
-			@Override
-			public void onClick(ClickEvent event) {
-
-				setClickMaintenanceStage();
-			}
-		});
-		hpMaintenance.add(maintenance);
-	}
-
-	private void setClickMaintenanceStage() {
-
-		new UseTracking(
-				"com.startupstages.client.blog.StagesPanel#MaintenanceLink");
-
-		unselectStagesTabs();
-		hpMaintenance.setStyleName("backgroundColorWhite");
 	}
 
 }

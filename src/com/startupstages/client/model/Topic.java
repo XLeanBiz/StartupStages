@@ -7,24 +7,17 @@ public class Topic {
 	public enum TopicID {
 
 		ProblemSolutionFit,
-		
-		Assumptions, Persona, Scenarios, CustomerInterviews, LeanUX, Pivot, ProblemScore,
-		UniqueValue, UniqueValueProposition, BusinessCanvas, MVP, Wireframes, ABTests, UniqueValueScore, MVPResults,
-		Idea, Vision, Team, Goals, TeamSize, Feedback, MarketResearch, Surveys, Empathy,
-		Brand, BrandName, Logo, LandingPage, Domain, Blog, Visits, SignUps, CommunicationSkills,
+		Persona, Problem, Solution, Experiment, Team, Brand,
+		CustomerDevelopment, LeanUX, LeanStartup,
+		ProblemScore, EarlyAdopters,
 		
 		ProductMarketFit,
-		Prototype, SourceCode, Features, 
-		       FeatureVisits, FeatureUses, TestCoverage, LOC, AgileDevelopment, UsabilityTests, APIPivot,
-		Enhance, UIDesign, Privacy, CodeQuality, CustomerSupport, FeedbackChanels, SEO, SocialMedia, Rewards, EarlyAdopters, Returns,
-		Profit, Incorporation, RevenueModel, Partnerships, CostPerUser, RevenuePerUser, MustHaveScore, DemandCurve, 
+		Features, MVP,
+		Returns, MustHaveScore,
+		AgileDevelopment, Usability, CodeQuality, BusinessModel, 
 		
 		Scale,
-		Funding, AdvisorsBoard, InvestorsMeetings, Bootstrapping, SeedFunding, AngelsAndVCs, InvestmentScore,
-		Scaling, DistributionChannels, Advertising, ReferralModels, IncreasingRate, ConversionRate, ReferralRate, MarketSize, 
-		
-		Maintenance
-
+		Funding, Advertising, ReferralRate, Revenue, Incorporation
 	}
 
 	private TopicID topicID;

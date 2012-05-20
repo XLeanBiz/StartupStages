@@ -6,15 +6,6 @@ import com.startupstages.client.blog.BlogPanel;
 import com.startupstages.client.blog.stages.ProblemSolutionFit;
 import com.startupstages.client.blog.stages.ProductMarketFit;
 import com.startupstages.client.blog.stages.Scale;
-import com.startupstages.client.blog.steps.Assumptions;
-import com.startupstages.client.blog.steps.Branding;
-import com.startupstages.client.blog.steps.Enhancing;
-import com.startupstages.client.blog.steps.Funding;
-import com.startupstages.client.blog.steps.Ideation;
-import com.startupstages.client.blog.steps.Profiting;
-import com.startupstages.client.blog.steps.Prototyping;
-import com.startupstages.client.blog.steps.Scaling;
-import com.startupstages.client.blog.steps.UniqueValue;
 import com.startupstages.client.blog.topics.TopicPanel;
 import com.startupstages.client.model.Topic;
 import com.startupstages.client.model.Topic.TopicID;
@@ -63,128 +54,37 @@ public class InitializeBlog extends VerticalPanel {
 				Scale.initializeAll();
 				break;
 
-			case Assumptions:
-				ProblemSolutionFit.initializeStage();
-				Assumptions.initialize();
-				break;
-
-			case UniqueValue:
-				ProblemSolutionFit.initializeStage();
-				UniqueValue.initialize();
-				break;
-
-			case Idea:
-				ProblemSolutionFit.initializeStage();
-				Ideation.initialize();
-				break;
-
+			case Persona:
+			case Problem:
+			case Solution:
+			case Experiment:
+			case Team:
 			case Brand:
-				ProblemSolutionFit.initializeStage();
-				Branding.initialize();
+			case ProblemScore:
+			case EarlyAdopters:
+			case CustomerDevelopment:
+			case LeanUX:
+			case LeanStartup:
+
+				ProblemSolutionFit.initializeAll();
+				TopicPanel.initializeTopic(topicEnum);
 				break;
 
-			case Prototype:
-				ProductMarketFit.initializeStage();
-				Prototyping.initialize();
-				break;
+			case Features:
+			case MVP:
+			case AgileDevelopment:
+			case Usability:
+			case BusinessModel:
+			case Revenue:
+			case MustHaveScore:
 
-			case Enhance:
-				ProductMarketFit.initializeStage();
-				Enhancing.initialize();
-				break;
-
-			case Profit:
-				ProductMarketFit.initializeStage();
-				Profiting.initialize();
+				ProductMarketFit.initializeAll();
+				TopicPanel.initializeTopic(topicEnum);
 				break;
 
 			case Funding:
-				ProductMarketFit.initializeStage();
-				Funding.initialize();
-				break;
 
-			case Scaling:
-				ProductMarketFit.initializeStage();
-				Scaling.initialize();
-				break;
-
-			case Persona:
-			case Scenarios:
-			case CustomerInterviews:
-			case LeanUX:
-			case Pivot:
-			case ProblemScore:
-				ProblemSolutionFit.initializeStage();
-				InitializeBlog.initializeStep(Assumptions.getPanel());
-				TopicPanel.initializeTopic(topicEnum);
-				break;
-
-			case UniqueValueProposition:
-			case BusinessCanvas:
-			case MVP:
-			case Wireframes:
-			case ABTests:
-			case UniqueValueScore:
-			case MVPResults:
-				ProblemSolutionFit.initializeStage();
-				InitializeBlog.initializeStep(UniqueValue.getPanel());
-				TopicPanel.initializeTopic(topicEnum);
-				break;
-
-			case Vision:
-			case Team:
-			case Goals:
-			case TeamSize:
-			case Feedback:
-			case MarketResearch:
-			case Surveys:
-			case Empathy:
-
-				ProblemSolutionFit.initializeStage();
-				InitializeBlog.initializeStep(Ideation.getPanel());
-				TopicPanel.initializeTopic(topicEnum);
-				break;
-
-			case BrandName:
-			case Logo:
-			case LandingPage:
-			case Domain:
-			case Blog:
-			case FeedbackChanels:
-			case SEO:
-			case Visits:
-			case SignUps:
-			case CommunicationSkills:
-
-				ProblemSolutionFit.initializeStage();
-				InitializeBlog.initializeStep(Branding.getPanel());
-				TopicPanel.initializeTopic(topicEnum);
-				break;
-
-			case SourceCode:
-			case Features:
-			case FeatureVisits:
-			case FeatureUses:
-			case TestCoverage:
-			case LOC:
-			case AgileDevelopment:
-			case UsabilityTests:
-			case APIPivot:
-
-				ProductMarketFit.initializeStage();
-				InitializeBlog.initializeStep(Prototyping.getPanel());
-				TopicPanel.initializeTopic(topicEnum);
-				break;
-
-			case RevenueModel:
-			case Partnerships:
-			case CostPerUser:
-			case RevenuePerUser:
-			case MustHaveScore:
-			case DemandCurve:
-
-				ProductMarketFit.initializeStage();
-				InitializeBlog.initializeStep(Profiting.getPanel());
+				Scale.initializeAll();
 				TopicPanel.initializeTopic(topicEnum);
 				break;
 
