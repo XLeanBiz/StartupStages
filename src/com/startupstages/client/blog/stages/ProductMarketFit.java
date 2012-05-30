@@ -17,11 +17,15 @@ import com.startupstages.client.model.Topic.TopicID;
 
 public class ProductMarketFit {
 
-	public static void initializeAll() {
+	public static void initializeAll(boolean initTopic) {
 
 		initializeStage();
 		InitializeBlog.initializeStep(getPanel());
-		TopicPanel.initializeTopic(Topic.TopicID.ProductMarketFit);
+
+		if (initTopic) {
+
+			TopicPanel.initializeTopic(Topic.TopicID.ProductMarketFit);
+		}
 	}
 
 	public static void initializeStage() {
@@ -50,7 +54,7 @@ public class ProductMarketFit {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				Scale.initializeAll();
+				Scale.initializeAll(true);
 			}
 		});
 		absolutePanel.add(image_1, 480, 50);

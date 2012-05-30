@@ -14,7 +14,7 @@ public class InitializeBlog extends VerticalPanel {
 
 	public InitializeBlog(final String topicRequested) {
 
-		StartupStagesGlobalVariables.blogPanel.clear();
+		StartupStagesGlobalVariables.blogPanel.clear(); 
 
 		startTopics();
 
@@ -43,15 +43,15 @@ public class InitializeBlog extends VerticalPanel {
 			switch (topicEnum) {
 
 			case ProblemSolutionFit:
-				ProblemSolutionFit.initializeAll();
+				ProblemSolutionFit.initializeAll(true);
 				break;
 
 			case ProductMarketFit:
-				ProductMarketFit.initializeAll();
+				ProductMarketFit.initializeAll(true);
 				break;
 
 			case Scale:
-				Scale.initializeAll();
+				Scale.initializeAll(true);
 				break;
 
 			case Persona:
@@ -66,7 +66,7 @@ public class InitializeBlog extends VerticalPanel {
 			case LeanUX:
 			case LeanStartup:
 
-				ProblemSolutionFit.initializeAll();
+				ProblemSolutionFit.initializeAll(false);
 				TopicPanel.initializeTopic(topicEnum);
 				break;
 
@@ -78,24 +78,24 @@ public class InitializeBlog extends VerticalPanel {
 			case Revenue:
 			case MustHaveScore:
 
-				ProductMarketFit.initializeAll();
+				ProductMarketFit.initializeAll(false);
 				TopicPanel.initializeTopic(topicEnum);
 				break;
 
 			case Funding:
 
-				Scale.initializeAll();
+				Scale.initializeAll(false);
 				TopicPanel.initializeTopic(topicEnum);
 				break;
 
 			default:
-				ProblemSolutionFit.initializeAll();
+				ProblemSolutionFit.initializeAll(true);
 				break;
 			}
 
 		} else {
 
-			ProblemSolutionFit.initializeAll();
+			ProblemSolutionFit.initializeAll(true);
 		}
 	}
 

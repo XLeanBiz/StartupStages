@@ -1,5 +1,7 @@
 package com.startupstages.client.blog.topics;
 
+import co.uniqueid.authentication.client.UniqueIDGlobalVariables;
+
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.Label;
@@ -43,7 +45,13 @@ public class TopicPanel extends VerticalPanel {
 
 		this.add(vpMyCompany);
 		vpMyCompany.setWidth("100%");
-		vpMyCompany.add(new MyCompanyPanel(topic.getTopicID().toString()));
+
+		if (UniqueIDGlobalVariables.uniqueID != null) {
+
+			vpMyCompany.add(new MyCompanyPanel(
+					UniqueIDGlobalVariables.companyUniqueID, topic.getTopicID()
+							.toString()));
+		}
 
 		this.add(vpTopicReferences);
 		vpTopicReferences.setWidth("100%");

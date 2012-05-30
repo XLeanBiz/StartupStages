@@ -17,11 +17,15 @@ import com.startupstages.client.model.Topic.TopicID;
 
 public class ProblemSolutionFit {
 
-	public static void initializeAll() {
+	public static void initializeAll(boolean initTopic) {
 
 		initializeStage();
 		InitializeBlog.initializeStep(getPanel());
-		TopicPanel.initializeTopic(Topic.TopicID.ProblemSolutionFit);
+
+		if (initTopic) {
+
+			TopicPanel.initializeTopic(Topic.TopicID.ProblemSolutionFit);
+		}
 	}
 
 	public static void initializeStage() {
@@ -50,7 +54,7 @@ public class ProblemSolutionFit {
 		image_1.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 
-				ProductMarketFit.initializeAll();
+				ProductMarketFit.initializeAll(true);
 			}
 		});
 		absolutePanel.add(image_1, 480, 30);

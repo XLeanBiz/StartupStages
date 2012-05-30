@@ -67,7 +67,7 @@ public class StagesPanel extends HorizontalPanel {
 		unselectStagesTabs();
 		hpProblemSolutionFit.setStyleName("backgroundColorWhite");
 
-		ProblemSolutionFit.initializeAll();
+		ProblemSolutionFit.initializeAll(true);
 	}
 
 	private void setProductMarketPanel() {
@@ -98,7 +98,7 @@ public class StagesPanel extends HorizontalPanel {
 		unselectStagesTabs();
 		hpProductMarketFit.setStyleName("backgroundColorWhite");
 
-		ProductMarketFit.initializeAll();
+		ProductMarketFit.initializeAll(true);
 	}
 
 	private void setScalePanel() {
@@ -126,7 +126,7 @@ public class StagesPanel extends HorizontalPanel {
 		unselectStagesTabs();
 		hpScale.setStyleName("backgroundColorWhite");
 
-		Scale.initializeAll();
+		Scale.initializeAll(true);
 	}
 
 }

@@ -15,11 +15,15 @@ import com.startupstages.client.model.Topic.TopicID;
 
 public class Scale {
 
-	public static void initializeAll() {
+	public static void initializeAll(boolean initTopic) {
 
 		initializeStage();
 		InitializeBlog.initializeStep(getPanel());
-		TopicPanel.initializeTopic(Topic.TopicID.Scale);
+
+		if (initTopic) {
+
+			TopicPanel.initializeTopic(Topic.TopicID.Scale);
+		}
 	}
 
 	public static void initializeStage() {
