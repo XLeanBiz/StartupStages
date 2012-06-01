@@ -7,7 +7,7 @@ public class Topic {
 	public enum TopicID {
 
 		ProblemSolutionFit,
-		Persona, Problem, Solution, Experiment, Team, Brand,
+		Idea, Team, Persona, Problem, Experiment, Solution, Brand,
 		CustomerDevelopment, LeanUX, LeanStartup,
 		ProblemScore, EarlyAdopters,
 		

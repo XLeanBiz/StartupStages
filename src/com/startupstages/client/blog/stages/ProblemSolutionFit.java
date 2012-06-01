@@ -74,11 +74,12 @@ public class ProblemSolutionFit {
 		HTML htmlBuild = new HTML("<center><b>BUILD</b></center>", true);
 		vpInner.add(htmlBuild);
 
+		vpInner.add(new TopicAnchor(TopicID.Idea));
+		vpInner.add(new TopicAnchor(TopicID.Team));
 		vpInner.add(new TopicAnchor(TopicID.Persona));
 		vpInner.add(new TopicAnchor(TopicID.Problem));
-		vpInner.add(new TopicAnchor(TopicID.Solution));
 		vpInner.add(new TopicAnchor(TopicID.Experiment));
-		vpInner.add(new TopicAnchor(TopicID.Team));
+		vpInner.add(new TopicAnchor(TopicID.Solution));
 		vpInner.add(new TopicAnchor(TopicID.Brand));
 
 		return vpTopic;
